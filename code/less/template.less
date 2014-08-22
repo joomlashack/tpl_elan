@@ -547,9 +547,12 @@ dl {
 
 .navbar-inverse .navbar-inner {
 	background-image: none;
+	background-color: @color_three;
 	filter: none;
 	border-radius: 0;
 	border: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
 }
 
 .nav {
@@ -670,13 +673,10 @@ legend {
 		}
 
 		> li {
-			padding: 5px 15px;
-			margin-right: 50px;
 			font-family: @altFontFamily;
 			font-size: @baseFontSize - 2;
 			> a {
 				color: @linkTopColor;
-				padding: 2px 0;
 				text-transform: uppercase;
 				text-shadow: none;
 				.caret {
@@ -698,7 +698,8 @@ legend {
 						font-family: FontAwesome;
 						margin-left: 10px;
 						font-size: @baseFontSize - 2;
-						content: '\f0d7';
+						content: '\f107';
+						color: #39424C;
 					}
 
 					&:hover , &:focus {
@@ -706,7 +707,8 @@ legend {
 							font-family: FontAwesome;
 							margin-left: 10px;
 							font-size: @baseFontSize - 2;
-							content: '\f0d7';
+							content: '\f107';
+							color: #39424C;
 						}
 					}
 				}
@@ -726,13 +728,13 @@ legend {
 				.dropdown-menu {
 					border-radius: 0px;
 					box-shadow: none;
-					padding: 0px;
+					padding: 10px;
 					&:before , &:after {
 						content: none;
 					}
 
 					li {
-						border-top: 1px solid @color_four;
+						border-top: 1px solid @white;
 						text-shadow: none;
 						a {
 							color: @linkTopColor;
@@ -750,7 +752,7 @@ legend {
 							}
 
 							&:hover , &:focus {
-								background: @color_four;
+								background: transparent;
 								.caret {
 									border-left-color: @dropdownLinkColorHover;
 								}

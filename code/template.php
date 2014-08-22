@@ -97,7 +97,7 @@ defined('_JEXEC') or die('Restricted access');
 				<?php if ($this->countModules('content')) : ?>
 				<div id="content">
 					<div class="<?php echo $containerClass ?>">	
-					
+					<w:module type="<?php echo $gridMode; ?>" name="content" chrome="wrightflexgrid" extradivs="module" />
 					</div>
 				</div>
 				<?php endif; ?>
