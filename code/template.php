@@ -31,35 +31,14 @@ defined('_JEXEC') or die('Restricted access');
 			<?php endif; ?>
 			<!-- toolbar end -->
 			<!-- header -->
-			<header id="header" class="techieBackground <?php echo (!$techieSlideshow ? '' : 'techieSlideshow');  ?>">
+			<header id="header" class="techieBackground">
 				<div class="top-object"></div>
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
 						<w:logo name="top"/>
-						<?php if ($techieLateralMenu && $this->countModules('lateral-menu') ) : ?>
-						<div class="toolbar-collapse-btn">
-						<div class="legend-menu">MENU</div>
-						<div class="menu-icons-container">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</div>
-						</div>
-						 <?php endif ?>			
 						<div class="clear"></div> 
 					</div>
-					<?php if (!$techieSlideshow) : ?>
-					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>	
-					<?php else: ?>
-					 	<div class="<?php echo $containerClass ?> slide-arrows-container">
-					 	<a id="prevslide" class="load-item"></a>
-			            <a id="nextslide" class="load-item"></a>
-			            <div id="slide-text-element">	
-					 	</div>
-					 	</div>	
-					<?php endif ?>
-						  
 					<!-- logo end -->
 				</div>
 			</header> 
