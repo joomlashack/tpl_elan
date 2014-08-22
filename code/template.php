@@ -15,9 +15,9 @@
 defined('_JEXEC') or die('Restricted access');
 ?>
 <doctype>
-	<html> 
+	<html>
 		<head>
-			<w:head /> 
+			<w:head />
 			<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 			<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		</head>
@@ -31,17 +31,17 @@ defined('_JEXEC') or die('Restricted access');
 			<header id="header">
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
-					<div class="header-inner"> 
+					<div class="header-inner">
 						<w:logo name="top"/>
-						<div class="clear"></div> 
+						<div class="clear"></div>
 					</div>
 					<!-- logo end -->
 				</div>
-			</header> 
+			</header>
 			<!-- header end -->
 			<!-- top -->
-			<?php if ($this->countModules('top')) : ?> 
-			<div id="top-header"> 
+			<?php if ($this->countModules('menu')) : ?>
+			<div id="top-header">
 				<div class="<?php echo $containerClass ?>">
 					<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-inverse" type="menu" name="menu" />
 				</div>
@@ -64,17 +64,17 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- Main container -->
 				<!-- Featured -->
 				<?php if ($this->countModules('featured')) : ?>
-				<div class="<?php echo $containerClass ?>">	
+				<div class="<?php echo $containerClass ?>">
                 <div id="featured">
                 	<w:module type="none" name="featured" chrome="xhtml" />
 				</div>
 				</div>
-                <?php endif; ?>	
+                <?php endif; ?>
                 <!-- Featured end -->
 				<!-- grid-top -->
-				<?php if ($this->countModules('grid-top')) : ?>	
+				<?php if ($this->countModules('grid-top')) : ?>
 				<div id="grid-top">
-				<div class="<?php echo $containerClass ?>">		
+				<div class="<?php echo $containerClass ?>">
 					<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" extradivs="module" />
 				</div>
 				</div>
@@ -84,7 +84,7 @@ defined('_JEXEC') or die('Restricted access');
 				<?php if ($this->countModules('grid-top2')) : ?>
 				<!-- grid-top2 -->
 				<div id="grid-top2">
-					<div class="<?php echo $containerClass ?>">	
+					<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" extradivs="module" />
 				</div>
 				</div>
@@ -92,11 +92,11 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- grid-top2 end -->
 				<?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
 				<div id="content-wrapper">
-				<?php endif; ?>	
+				<?php endif; ?>
 				<!-- content -->
 				<?php if ($this->countModules('content')) : ?>
 				<div id="content">
-					<div class="<?php echo $containerClass ?>">	
+					<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="content" chrome="wrightflexgrid" extradivs="module" />
 					</div>
 				</div>
@@ -105,7 +105,7 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- content2 -->
 				<?php if ($this->countModules('content2')) : ?>
 				<div id="content2">
-				<div class="<?php echo $containerClass ?>">	
+				<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="content2" chrome="wrightflexgrid" extradivs="module" />
 				</div>
 				</div>
@@ -113,7 +113,7 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- content2 end -->
 				<?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
 				</div>
-				<?php endif; ?>	
+				<?php endif; ?>
 				<div class="<?php echo $containerClass ?>">
 				<div id="main-content" class="<?php echo $gridMode; ?>">
 					<!-- sidebar1 -->
@@ -131,14 +131,14 @@ defined('_JEXEC') or die('Restricted access');
 						<?php endif; ?>
 						<!-- above-content end -->
 						<!-- component -->
-						<w:content /> 
+						<w:content />
 						<!-- component end -->
-						<!-- below-content --> 
+						<!-- below-content -->
 						<?php if ($this->countModules('below-content')) : ?>
 						<div id="below-content">
 							<w:module type="none" name="below-content" chrome="xhtml" />
 						</div>
-						<?php endif; ?> 
+						<?php endif; ?>
 						<!-- below-content end -->
 					</section>
 					<!-- main end -->
@@ -151,21 +151,21 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 			<!-- main container end -->
 				<!-- grid-bottom -->
-				<?php if ($this->countModules('grid-bottom')) :	?> 
+				<?php if ($this->countModules('grid-bottom')) :	?>
 				<div id="grid-bottom" >
 					<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" extradivs="module" />
 					</div>
-				</div> 
+				</div>
 				<?php endif; ?>
-				<!-- grid-bottom end --> 
-				<!-- grid-bottom2 --> 
+				<!-- grid-bottom end -->
+				<!-- grid-bottom2 -->
 				<?php if ($this->countModules('grid-bottom2')) : ?>
-				<div id="grid-bottom2" >		
+				<div id="grid-bottom2" >
 				<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" extradivs="module" />
 				</div>
-				</div>  
+				</div>
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
 			<!-- footer -->
@@ -180,7 +180,7 @@ defined('_JEXEC') or die('Restricted access');
 						<?php if ($this->countModules('footer')) : ?>
 						<w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
 						<?php endif; ?>
-						<w:footer /> 
+						<w:footer />
 					</div>
 				</footer>
 			</div>
