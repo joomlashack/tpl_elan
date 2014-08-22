@@ -728,7 +728,10 @@ legend {
 				.dropdown-menu {
 					border-radius: 0px;
 					box-shadow: none;
-					padding: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-top: 0px;
+					padding-bottom: 5px;
 					&:before , &:after {
 						content: none;
 					}
@@ -736,9 +739,13 @@ legend {
 					li {
 						border-top: 1px solid @white;
 						text-shadow: none;
+						&:first-child {
+							border-top: none;
+						}
 						a {
 							color: @linkTopColor;
 							text-transform: uppercase;
+							padding: 5px 0px;
 							&:hover , &:focus {
 								.caret {
 									border-top-color: transparent;

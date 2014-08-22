@@ -43,7 +43,7 @@ defined('_JEXEC') or die('Restricted access');
 			<?php if ($this->countModules('top')) : ?> 
 			<div id="top-header"> 
 				<div class="<?php echo $containerClass ?>">
-					<w:module type="<?php echo $gridMode; ?>" name="top" chrome="wrightflexgrid" extradivs="module" />
+					<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-inverse" type="menu" name="menu" />
 				</div>
 			</div>
 			<?php endif; ?>
