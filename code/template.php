@@ -23,16 +23,12 @@ defined('_JEXEC') or die('Restricted access');
 		</head>
 		<body class="<?php   echo $responsive ?>">
 		<!-- toolbar -->
-			<?php if ($techieLateralMenu) : ?>
-			<div class="techie-container">
-			<?php endif ?>
 			<?php if ($this->countModules('toolbar')) : ?>
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 			<?php endif; ?>
 			<!-- toolbar end -->
 			<!-- header -->
-			<header id="header" class="techieBackground">
-				<div class="top-object"></div>
+			<header id="header">
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
@@ -101,7 +97,7 @@ defined('_JEXEC') or die('Restricted access');
 				<?php if ($this->countModules('content')) : ?>
 				<div id="content">
 					<div class="<?php echo $containerClass ?>">	
-					<w:module type="<?php echo $gridMode; ?>" name="content" chrome="wrightflexgrid" extradivs="module" />
+					
 					</div>
 				</div>
 				<?php endif; ?>
@@ -172,9 +168,6 @@ defined('_JEXEC') or die('Restricted access');
 				</div>  
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
-			<?php if ($techieLateralMenu) : ?>
-			</div>
-			<?php endif ?>
 			<!-- footer -->
 			<div class="wrapper-footer">
 				<footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky" <?php endif; ?> >
