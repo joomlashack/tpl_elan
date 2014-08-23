@@ -1933,6 +1933,29 @@ dl {
 			}
 	&.active {
 		background-color: transparent;
+		&.deeper {
+			> a {
+				&:after {
+						color: @color_one;
+						font-family: FontAwesome;
+						margin-left: 10px;
+						font-size: @baseFontSize - 2;
+						content: '\f107';
+					}
+			}
+			&:focus , &:hover {
+			> a {
+				&:after {
+						color: @color_one;
+						font-family: FontAwesome;
+						margin-left: 10px;
+						font-size: @baseFontSize - 2;
+						content: '\f106';
+					}
+			}
+		}
+
+		}
 		> a {
 			background-color: transparent;
 			color: @color_one;
