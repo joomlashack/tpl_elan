@@ -21,13 +21,14 @@ defined('_JEXEC') or die('Restricted access');
 			<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 			<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		</head>
-		<body class="<?php   echo $responsive ?>">
+		<body class="<?php echo $responsive ?>">
 		<!-- toolbar -->
 			<?php if ($this->countModules('toolbar')) : ?>
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 			<?php endif; ?>
 			<!-- toolbar end -->
 			<!-- header -->
+			<div class="main-content <?php echo $containerClass ?>"> 
 			<header id="header">
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
@@ -183,6 +184,7 @@ defined('_JEXEC') or die('Restricted access');
 						<w:footer />
 					</div>
 				</footer>
+			</div>
 			</div>
 		</body>
 	</html>

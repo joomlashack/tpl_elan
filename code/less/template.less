@@ -1899,30 +1899,33 @@ dl {
 }
 
 #top-header {
-	background: @hedaer-top;
-	.container , .container-fluid {
-		.row , .row-fluid {
-			position: relative;
-			&:first-child {
-				font-size: @baseFontSize;
-				h1 , h2 , h3 , h4 , h5 , h6 {
-					font-size: @baseFontSize;
-				}
-
-				position: relative;
-				color: @activeTextColor;
-				img {
-					margin: 0px 5px;
-				}
-			}
-
-			.mod_1 {
-				&.span12 {
-					padding: 15px 0px;
-				}
-			}
+.navbar-inner {	
+	background-color: transparent;
+}
+.navbar {
+	.nav {	
+			border-top: 1px solid @color_two;
+		> li {
+			 > a {
+			 	color: @color_three;
+			 }
+			 &.hover {
+			 	> a {
+			 	background-color: transparent;
+			 }
+			 }
 		}
 	}
+	li {
+	&.active {
+		background-color: transparent;
+		> a {
+			background-color: transparent;
+			color: @color_one;
+		}
+	}
+}
+}
 }
 
 #grid-top {
@@ -2332,13 +2335,8 @@ div {
 	}
 }
 
-#main-content {
-	&.content {
-		margin-top: 50px;
-		margin-bottom: 50px;
-	}
-
-	margin-bottom: 0;
+.main-content {
+	background-color: @white;
 }
 
 #sidebar2 {
