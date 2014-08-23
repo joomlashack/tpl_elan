@@ -1909,14 +1909,28 @@ dl {
 			 > a {
 			 	color: @color_three;
 			 }
-			 &.hover {
-			 	> a {
-			 	background-color: transparent;
-			 }
-			 }
+		}
+	li {
+		&.deeper {
+			&:focus , &:hover {
+			> a {
+				&:after {
+						color: @color_one;
+						font-family: FontAwesome;
+						margin-left: 10px;
+						font-size: @baseFontSize - 2;
+						content: '\f106';
+					}
+			}
 		}
 	}
-	li {
+
+		 &:focus , &:hover {
+				background-color: transparent;
+				a {
+					color: @color_one;
+				}
+			}
 	&.active {
 		background-color: transparent;
 		> a {
@@ -1924,6 +1938,17 @@ dl {
 			color: @color_one;
 		}
 	}
+	&.dropdown {
+					.dropdown-menu {
+						background-color: @grayLighter;
+						li {
+							a {
+								color: @color_three;
+							}
+						}
+					}
+}
+}
 }
 }
 }
