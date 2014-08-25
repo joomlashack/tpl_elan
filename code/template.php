@@ -52,7 +52,6 @@
             <!-- breadcrumbs end -->
             <!-- Main container -->
             <!-- Featured -->
-            <div class="content-container">
                 <?php if ($this->countModules('featured')) : ?>
                 <div class="<?php echo $containerClass ?>">
                     <div id="featured">
@@ -104,8 +103,9 @@
                     <?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
                 </div>
                 <?php endif; ?>
+                 <div id="main-content">
                 <div class="<?php echo $containerClass ?>">
-                    <div id="main-content" class="<?php echo $gridMode; ?>">
+                 <div class="<?php echo $gridMode; ?>">
                         <!-- sidebar1 -->
                         <aside id="sidebar1">
                             <w:module name="sidebar1" chrome="xhtml" />
@@ -138,6 +138,7 @@
                         </aside>
                         <!-- sidebar2 end -->
                     </div>
+                    </div>
                 </div>
                 <!-- main container end -->
                 <!-- grid-bottom -->
@@ -157,7 +158,6 @@
                     </div>
                 </div>
                 <?php endif; ?>
-            </div>
             <!-- grid-bottom2 end -->
             <!-- footer -->
             <div class="wrapper-footer">
