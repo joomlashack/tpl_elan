@@ -18,8 +18,9 @@ defined('_JEXEC') or die('Restricted access');
 	<html>
 		<head>
 			<w:head />
-			<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-			<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+			<link href='<?php echo JURI::root(true) ?>/templates/js_voyage/css/aleo.css' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 		</head>
 		<body class="<?php echo $responsive ?>">
 		<!-- toolbar -->
