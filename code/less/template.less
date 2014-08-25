@@ -547,13 +547,21 @@ dl {
 
 .navbar-inverse .navbar-inner {
 	background-image: none;
-	background-color: @color_three;
+	background-color: transparent;
 	filter: none;
 	border-radius: 0;
 	border: 0;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 }
+
+#nav-toolbar {
+background-color: #556270;
+width: inherit;
+height: inherit;
+display: table;
+}
+
 
 .nav {
 	li {
@@ -2384,29 +2392,21 @@ div {
 	margin-top: 12px;
 }
 
+.wrapper-footer {
+	position: relative;
 #footer {
 	background-image: none;
-	background-color: @color_four;
-	color: white;
-	line-height: 20px;
+	background-color: transparent;
+	color: @color_three;
+	font-family: @altFontFamily;
+	font-weight: 100;
+	line-height: 120%;
+	font-size: @baseFontSize - 4;
 	filter: none;
 	.navbar-inner {
 		box-shadow: none;
 	}
-
-	.module {
-		margin-top: 20px;
-		font-size: @baseFontSize - 4;
-		color: @white;
-		line-height: 120%;
-		a {
-			color: @white;
-			&:hover {
-				color: @white;
-				text-decoration: underline;
-			}
-		}
-	}
+}
 }
 
 .button {
