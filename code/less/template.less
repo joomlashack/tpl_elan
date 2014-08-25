@@ -804,7 +804,7 @@ legend {
 							> a {
 								background-image: none;
 								filter: none;
-								background: @color_four;
+								background: transparent;
 								.caret {
 									border-left-color: @dropdownLinkColorActive;
 								}
@@ -1779,11 +1779,6 @@ ul {
 	position: relative;
 }
 
-.techie-container {
-	position: relative;
-	background-color: @bodyBackground;
-}
-
 .bg-wrapp {
 	height: 100%;
 	left: 0;
@@ -1904,13 +1899,17 @@ dl {
 	background-color: transparent;
 }
 .navbar {
-	.nav {	
-			border-top: 1px solid @color_two;
+	.nav {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;	
 		> li {
 			 > a {
 			 	color: @color_three;
 			 }
 		}
+		border-top: 1px solid @color_two;
 	li {
 		&.deeper {
 			&:focus , &:hover {
@@ -2393,21 +2392,30 @@ div {
 }
 
 .wrapper-footer {
-	position: relative;
-#footer {
-	background-image: none;
-	background-color: transparent;
-	color: @color_three;
-	font-family: @altFontFamily;
-	font-weight: 100;
-	line-height: 120%;
-	font-size: @baseFontSize - 4;
-	filter: none;
-	.navbar-inner {
-		box-shadow: none;
-	}
+    position: relative;
+    #footer {
+        background-image: none;
+        background-color: transparent;
+        color: @color_three;
+		font-family: @altFontFamily;
+		font-weight: 100;
+        line-height: 120%;
+        font-size: @baseFontSize - 4;
+        filter: none;
+        .navbar-inner {
+            box-shadow: none;
+        }
+        .navbar {
+            .nav {
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+                float: none;
+            }
+        }
+    }
 }
-}
+
 
 .button {
 	&.finder {
