@@ -683,6 +683,14 @@ legend {
 			a {
 				font-weight: 100;
 			}
+			> a {
+				[class^="icon-"] {
+					color: @color_three;
+					&:hover {
+						color: @color_three;
+					}
+				}
+			}
 		}
 
 		> li {
@@ -2381,12 +2389,30 @@ div {
 		.navbar-inner {
 			box-shadow: none;
 		}
-		.navbar {
-			.nav {
-				display: table;
-				margin-left: auto;
-				margin-right: auto;
-				float: none;
+		.wrapper-bottom-menu {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			.navbar {
+				.nav {
+					display: table;
+					margin-left: auto;
+					margin-right: auto;
+					float: none;
+					li {
+						a {
+							color: @color_three;
+						}
+						&.active {
+							background-color: transparent;
+							a {
+							color: @color_one;
+						}
+						}
+						&:hover {
+							background-color: transparent;
+						}
+					}
+				}
 			}
 		}
 	}
