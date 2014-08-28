@@ -1,6 +1,26 @@
 .hero-unit {
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
+	h1, h2 {
+		font-weight: 100;
+		font-size: @baseFontSize + 16;
+		text-transform: uppercase;
+		letter-spacing: 0px;
+		&:after { 
+			content: '';
+			display: block;
+			height: 2px;
+			width: 125px;
+			background: @white;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	p {
+		font-family: @altFontFamily;
+		font-weight: bold;
+	}
 }
 
 .navbar-inverse .navbar-inner {
@@ -311,6 +331,16 @@
 				> a {
 					color: @color_three;
 				}
+				&:first-child {
+					a {
+						padding: 5px 15px 5px 0px
+					}
+				}
+				&:last-child {
+					a {
+						padding: 5px 0px 5px 15px
+					}
+				}
 			}
 			border-top: 1px solid @color_two;
 			li {
@@ -372,16 +402,6 @@
 								color: @color_three;
 							}
 						}
-					}
-				}
-				&:first-child {
-					a {
-						padding: 5px 15px 5px 0px
-					}
-				}
-				&:last-child {
-					a {
-						padding: 5px 0px 5px 	15px
 					}
 				}
 			}
