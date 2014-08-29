@@ -23,6 +23,107 @@
 	}
 }
 
+
+.btn {
+	background-image: none;
+	background-color: transparent;
+	filter: none;
+	text-transform: uppercase;
+	font-family: @altFontFamily;
+	border-radius: 0px;
+	border: 1px solid @color_one;
+	font-size: @baseFontSize + 2;
+	text-shadow: none;
+	color: @color_one;
+	box-shadow: none;
+	letter-spacing: 0px;
+	font-weight: 100;
+	&:hover {
+		color: @textColor;
+		border: 1px solid @textColor;
+		background-color: @btnHoverBackground;
+	}
+
+	&.btn-large {
+		font-size: @baseFontSize + 6;
+	}
+
+	&.btn-small {
+		font-size: @baseFontSize;
+		.caret {
+			margin-top: 5px;
+		}
+	}
+
+	&.btn-mini {
+		font-size: @baseFontSize - 2;
+		.caret {
+			margin-top: 4px;
+		}
+	}
+
+	&.btn-inverse {
+		border: 1px solid @btnInverseBackgroundHighlight;
+		color: @btnInverseBackgroundHighlight;
+		&:hover {
+			color: @white;
+			background-color: @btnInverseBackgroundHighlight;
+		}
+	}
+
+	&.btn-info {
+		border: 1px solid @btnInfoBackgroundHighlight;
+		color: @btnInfoBackgroundHighlight;
+		&:hover {
+			color: @white;
+			background-color: @btnInfoBackgroundHighlight;
+		}
+	}
+
+	&.btn-success {
+		border: 1px solid @btnSuccessBackgroundHighlight;
+		color: @btnSuccessBackgroundHighlight;
+		&:hover {
+			color: @white;
+			background-color: @btnSuccessBackgroundHighlight;
+		}
+	}
+
+	&.btn-warning {
+		border: 1px solid @btnWarningBackgroundHighlight;
+		color: @btnWarningBackgroundHighlight;
+		&:hover {
+			color: @white;
+			background-color: @btnWarningBackgroundHighlight;
+		}
+	}
+
+	&.btn-danger {
+		border: 1px solid @btnDangerBackgroundHighlight;
+		color: @btnDangerBackgroundHighlight;
+		&:hover {
+			color: @white;
+			background-color: @btnDangerBackgroundHighlight;
+		}
+	}
+
+	&.btn-link {
+		border-bottom: none;
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	+ .btn {
+		margin-left: 5px;
+	}
+
+	.caret {
+		display: none;
+	}
+}
+
+
 .navbar-inverse .navbar-inner {
 	background-image: none;
 	background-color: transparent;
