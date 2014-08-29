@@ -550,6 +550,30 @@
 
 }
 
+dl {
+	&.article-info {
+		margin: 15px 0px 35px 0px;
+		font-size: @baseFontSize - 2;
+		[class ^= "icon-"] , [class *= " icon-"] {
+			margin-right: 3px;
+			text-decoration: none;
+			width: auto;
+		}
+
+		dd > div:hover , dd:hover {
+			background-color: transparent;
+			> i {
+				font-size: 1.2em;
+			}
+		}
+	}
+}
+
+.well {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
 #grid-bottom2 {
 	background-color: @color_one;
 	margin-left: -30px;
