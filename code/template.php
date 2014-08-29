@@ -21,7 +21,7 @@
                 <!-- logo -->
                 <div class="<?php echo $containerClass ?>">
                     <div class="header-inner">
-                        <w:logo name="top" />
+                        <w:logo name="logo" />
                         <div class="clear"></div>
                     </div>
                     <!-- logo end -->
