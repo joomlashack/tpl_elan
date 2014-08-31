@@ -147,6 +147,7 @@
 .item-page , .blog {
 	padding-top: 12px;
 	.page-header {
+		border-bottom: 0px;
 		h2 {
 			font-size: @baseFontSize + 12;
 		}
@@ -385,6 +386,96 @@
 	}
 }
 
+.dropdown-menu {
+	border-radius: 0px;
+	box-shadow: none;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	&:before , &:after {
+		content: none;
+	}
+
+	li {
+		border-top: 1px solid @white;
+		text-shadow: none;
+		&:first-child {
+			border-top: none;
+		}
+		a {
+			color: @linkTopColor;
+			text-transform: uppercase;
+			&:hover , &:focus {
+				.caret {
+					border-top-color: transparent;
+					border-bottom-color: transparent;
+				}
+			}
+
+			.caret {
+				border-top-color: transparent;
+				border-left-color: @dropdownLinkColor;
+			}
+
+			&:hover , &:focus {
+				background: transparent;
+				.caret {
+					border-left-color: @dropdownLinkColorHover;
+				}
+			}
+		}
+
+		&.deeper {
+			> a {
+				&:after {
+					content: '\f105';
+					position: absolute;
+					right: 12px;
+				}
+			}
+		}
+
+		.sub-menu {
+			li {
+				border-bottom: 1px solid @color_three;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+
+			&:before , &:after {
+				content: none;
+			}
+		}
+
+		&.active {
+			> a {
+				background-image: none;
+				filter: none;
+				background: transparent;
+				.caret {
+					border-left-color: @dropdownLinkColorActive;
+				}
+
+				&:hover , &:focus {
+					.caret {
+						border-left-color: @dropdownLinkColorActive;
+					}
+				}
+			}
+		}
+	}
+
+	&.active {
+		&.deeper {
+			li {
+				background-color: @color_four;
+			}
+		}
+	}
+}
+
 .header-inner {
 	margin-top: 60px;
 	padding-bottom: 30px;
@@ -527,25 +618,25 @@
 		-webkit-border-radius: 0px;
 		background-color: transparent;
 		> li {
-				&:first-child {
-					border-right: 0px;
-					padding-left: 0px;
-					padding-right: 0px;
-				}
-				&:last-child {
-					border-right: 0px;
-				}
-				a {
-					padding-right: 10px;
-
-				}
-				padding-left: 10px;
-				padding-right: 10px;
-				padding-top: 5px;
-				padding-bottom: 5px;
-				border-right: 1px solid @grayLighter;
-				text-shadow: none;
+			&:first-child {
+				border-right: 0px;
+				padding-left: 0px;
+				padding-right: 0px;
 			}
+			&:last-child {
+				border-right: 0px;
+			}
+			a {
+				padding-right: 10px;
+
+			}
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			border-right: 1px solid @grayLighter;
+			text-shadow: none;
+		}
 	}
 
 }
@@ -559,6 +650,10 @@ dl {
 			margin-right: 3px;
 			text-decoration: none;
 			width: auto;
+		}
+
+		dd {
+			display: block;
 		}
 
 		dd > div:hover , dd:hover {
