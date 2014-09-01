@@ -6,7 +6,7 @@
         <w:head />
         <link href='<?php echo JURI::root(true) ?>/templates/js_elan/css/aleo.css' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
     </head>
 
     <body class="<?php echo $responsive ?>">
@@ -21,7 +21,7 @@
                 <!-- logo -->
                 <div class="<?php echo $containerClass ?>">
                     <div class="header-inner">
-                        <w:logo name="logo" />
+                        <w:logo name="logo"/>
                         <div class="clear"></div>
                     </div>
                     <!-- logo end -->

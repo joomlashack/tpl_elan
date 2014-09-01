@@ -2,7 +2,7 @@
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
 	h1, h2 {
-		font-weight: 100;
+		font-weight: lighter;
 		font-size: @baseFontSize + 16;
 		text-transform: uppercase;
 		letter-spacing: 0px;
@@ -20,6 +20,8 @@
 	p {
 		font-family: @altFontFamily;
 		font-weight: bold;
+		font-size: @baseFontSize + 14;
+		margin: 0px 150px;
 	}
 }
 
@@ -38,7 +40,7 @@
 	color: @color_one;
 	box-shadow: none;
 	letter-spacing: 0px;
-	font-weight: 100;
+	font-weight: normal;
 	&:hover {
 		color: @textColor;
 		border: 1px solid @textColor;
@@ -202,7 +204,7 @@
 				}
 			}
 			a {
-				font-weight: 100;
+				font-weight: normal;
 			}
 			> a {
 				[class^="icon-"] {
@@ -323,8 +325,8 @@
 								}
 							}
 						}
-
 						.sub-menu {
+							margin-top: 0px;
 							li {
 								border-bottom: 1px solid @color_three;
 								&:last-child {
@@ -437,6 +439,7 @@
 		}
 
 		.sub-menu {
+			margin-top: 0px;
 			li {
 				border-bottom: 1px solid @color_three;
 				&:last-child {
@@ -747,7 +750,7 @@ dl {
 	.module-inner {
 		color: @color_three;
 		font-size: @baseFontSize;
-		font-weight: 100;
+		font-weight: normal;
 		background: @grayLighter;
 		padding: 20px;
 		p {
