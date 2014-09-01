@@ -1,6 +1,7 @@
 .hero-unit {
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
+	padding: 90px;
 	h1, h2 {
 		font-weight: lighter;
 		font-size: @baseFontSize + 16;
@@ -30,12 +31,11 @@
 	background-image: none;
 	background-color: transparent;
 	filter: none;
-	padding: 12px;
 	text-transform: uppercase;
 	font-family: @altFontFamily;
 	border-radius: 0px;
 	border: 1px solid @color_one;
-	font-size: @baseFontSize + 2;
+	font-size: @baseFontSize;
 	text-shadow: none;
 	color: @color_one;
 	box-shadow: none;
@@ -122,6 +122,50 @@
 
 	.caret {
 		display: none;
+	}
+}
+
+.btn-group {
+	.btn {
+		&:first-child {
+			-webkit-border-top-left-radius: 0px;
+			-webkit-border-top-right-radius: 0px;
+			-webkit-border-bottom-left-radius: 0px;
+			-webkit-border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+
+		}
+	}
+}
+
+.pagenav {
+	&.pager {
+		margin: 50px 0px 0px 0px;
+		li {
+			a {
+				background-image: none;
+				background-color: transparent;
+				filter: none;
+				text-transform: uppercase;
+				font-family: @altFontFamily;
+				border-radius: 0px;
+				border: 1px solid @color_one;
+				font-size: @baseFontSize;
+				text-shadow: none;
+				color: @color_one;
+				box-shadow: none;
+				letter-spacing: 0px;
+				font-weight: normal;
+				&:hover {
+					color: @textColor;
+					border: 1px solid @textColor;
+					background-color: @btnHoverBackground;
+				}
+			}
+		}
 	}
 }
 
