@@ -77,30 +77,6 @@
                 </div>
                 <?php endif; ?>
                 <!-- grid-top2 end -->
-                <?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
-                <div id="content-wrapper">
-                    <?php endif; ?>
-                    <!-- content -->
-                    <?php if ($this->countModules('content')) : ?>
-                    <div id="content">
-                        <div class="<?php echo $containerClass ?>">
-                            <w:module type="<?php echo $gridMode; ?>" name="content" chrome="wrightflexgrid" extradivs="module" />
-                        </div>
-                    </div>
-                    <?php endif; ?>
-                    <!-- content end -->
-                    <!-- content2 -->
-                    <?php if ($this->countModules('content2')) : ?>
-                    <div id="content2">
-                        <div class="<?php echo $containerClass ?>">
-                            <w:module type="<?php echo $gridMode; ?>" name="content2" chrome="wrightflexgrid" extradivs="module" />
-                        </div>
-                    </div>
-                    <?php endif; ?>
-                    <!-- content2 end -->
-                    <?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
-                </div>
-                <?php endif; ?>
                  <div id="main-content">
                 <div class="<?php echo $containerClass ?>">
                  <div class="<?php echo $gridMode; ?>">
