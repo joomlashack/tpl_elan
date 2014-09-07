@@ -38,11 +38,9 @@
 
     <positions>
         <position>toolbar</position>
-        <position>lateral-menu</position>
         <position>top</position>
         <position>logo</position>
-        <position>content</position>
-        <position>content2</position>
+        <position>top2</position>
         <position>featured</position>
         <position>grid-top</position>
         <position>grid-top2</position>
