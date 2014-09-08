@@ -31,7 +31,12 @@ $this->wrightLeadingItemElementsStructure = Array(
 	'article-info',
 	'icons');
 
-$this->wrightIntroItemElementsStructure = Array();
+$this->wrightIntroItemElementsStructure = Array(
+	'image',
+	'article-info',
+	'title',
+	'content',
+	'icons');
 
 $this->wrightIntroHasImageClass = "";  // optional extra class when image is present
 
