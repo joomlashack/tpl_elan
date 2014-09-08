@@ -193,23 +193,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.item-page , .blog {
-	padding-top: 12px;
-	.page-header {
-		border-bottom: 0px;
-		h2 {
-			font-size: @baseFontSize + 12;
-		}
-
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-
-	[class ^= "item"] {
-		padding: 20px 0px;
-	}
-}
-
 .navbar {
 	.nav {
 		li {
@@ -655,7 +638,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #breadcrumbs {
 	border-bottom: 1px solid @grayLighter;
-	margin-bottom: 30px;
 	padding: 10px 0px;
 	font-size: @baseFontSize;
 	.breadcrumb {
@@ -933,39 +915,89 @@ dl {
 	padding-right: 30px;
 }
 
-#main-content {
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
 .blog {
 	[class^="item"] {
 		padding: 30px 0px;
 	}
+	
+	.page-header {
+		margin: 40px 0px 0px 0px;
+		border-bottom: 0px;
+		h2 {
+			font-size: @baseFontSize + 26;
+		}
+	}
+
 	.items-leading {
 		margin-top: 30px;
 		margin-bottom: 0px;
 		padding: 0px;
+		padding-bottom: 30px;
 		border-top: 1px solid @grayLighter;
 		border-bottom: 1px solid @grayLighter;
 		[class^="leading-"] {
 			&:first-child {
 				margin-top: 30px;
 			}
+			h2 {
+				font-size: @baseFontSize + 12;
+				margin-bottom: 30px;
+			}
 		}
 		.item-separator {
 			padding: 30px 0px 0px 0px;
 		}
 		.readmore {
+			[class^="icon-"] {
+				display: none;
+			}
+			.btn {
+				border: none;
+				padding: 0px;
+				font-family: @sansFontFamily;
+			}
 			margin-top: 15px;
 			clear: none;
+			float: right;
+		}
+		.info-container {
+			display: block;
+			position: relative;
+			dl {
+				bottom: 0;
+			}
 		}
 	}
 	.items-row {
+		border-bottom: 1px solid @grayLighter;
+		padding: 30px 0px 0px 0px;
+		[class^="img-intro"] {
+			margin-bottom: 20px;
+			a {
+				img {
+					border-bottom: 2px solid @color_one;
+				}
+			}
+		}
+		h2 {
+			font-size: @baseFontSize + 4;
+			margin-bottom: 20px;
+		}
+		.article-info {
+			margin-bottom: 30px;
+		}
 		.item {
-				padding: 0px;
+			padding: 0px;
 		}
 		.readmore {
+			[class^="icon-"] {
+				display: none;
+			}
+			.btn {
+				border: none;
+				padding: 0px;
+				font-family: @sansFontFamily;
+			}
 			margin-top: 15px;
 			clear: none;
 			float: left;
@@ -975,8 +1007,10 @@ dl {
 
 dl {
 	font-family: @sansFontFamily;
+	font-weight: normal;
 	&.article-info {
 		margin: 0px;
+		padding: 0px;
 		&.muted {
 			color: @color_two;
 		}
@@ -992,10 +1026,12 @@ dl {
 		}
 
 		dd {
+			min-height: 0px;
+			line-height: @baseLineHeight;
 			padding: 0px;
 			[class ^= "icon-"] , [class *= " icon-"] { 
 				display: none;
-			 	width: 0px;
+				width: 0px;
 			}
 		}
 

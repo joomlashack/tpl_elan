@@ -28,13 +28,15 @@ $this->wrightLeadingItemElementsStructure = Array(
 	'image',
 	'title',
 	'content',
+	'div.info-container',
 	'article-info',
+	'/div',
 	'icons');
 
 $this->wrightIntroItemElementsStructure = Array(
 	'image',
-	'article-info',
 	'title',
+	'article-info',
 	'content',
 	'icons');
 
