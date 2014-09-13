@@ -27,7 +27,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
         <!-- toolbar end -->
         <!-- header -->
-        <div class="main-content <?php echo $containerClass ?>">
+        <div class="<?php echo $containerClass ?>">
             <header id="header">
                 <!-- logo -->
                 <div class="<?php echo $containerClass ?>">
