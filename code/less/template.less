@@ -991,6 +991,60 @@ dl {
 			float: left;
 		}
 	}
+
+	.items-more {
+		padding-top: 60px;
+		h3 {
+			padding-left: 0px;
+			padding-right: 0px;
+			font-family: @sansFontFamily;
+			font-size: @baseFontSize;
+			text-transform: uppercase;
+		}
+		
+		.nav-tabs {
+			a {
+				font-family: @altFontFamily;
+				font-size: @baseFontSize + 4;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			&.nav-stacked {
+				> li {
+					padding: 30px 0px;
+					border-bottom: 1px solid @grayLighter;
+					&:first-child {
+						> a {
+							border-top-left-radius: 0px;
+							border: 0px;
+						}
+					}
+					&:last-child {
+						border-bottom: 0px;
+						> a {
+							border-top-left-radius: 0px;
+							border: 0px;
+						}
+					}
+					> a {
+						border: 0px;
+					}
+				}
+			}
+		}
+		
+	}
+
+	.cat-children {
+		padding-top: 60px;
+		h3 {
+			padding-left: 0px;
+			padding-right: 0px;
+			font-family: @sansFontFamily;
+			font-size: @baseFontSize;
+			text-transform: uppercase;
+		}
+	}
 }
 
 dl {
