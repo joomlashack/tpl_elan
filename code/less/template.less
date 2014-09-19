@@ -30,6 +30,16 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0px
 }
 
+.container {
+	padding-left:  30px;
+	padding-right: 30px;
+	background-color: @white;
+}
+
+#header, #menu, #featured, #grid-top, #main-content, #breadcrumbs, #grid-bottom, #grid-bottom2, #grid-bottom3, #bottom-menu {
+	margin-bottom: 0px;
+}
+
 .btn {
 	background-image: none;
 	background-color: transparent;
@@ -543,10 +553,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #top-header {
+	.wrapper-menu {
+		margin-bottom: 10px;
+	}
 	.navbar-inner {	
 		background-color: transparent;
 	}
 	.navbar {
+		margin-bottom: 0px;
 		.nav {
 			display: table;
 			margin-left: auto;
@@ -635,14 +649,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #breadcrumbs {
-	border-bottom: 1px solid @grayLighter;
-	padding: 10px 0px;
+	.breadcrumbs {
+		margin-bottom: 30px;
+	}
 	font-size: @baseFontSize;
 	.breadcrumb {
+		border-bottom: 1px solid @grayLighter;
+		margin: 0px 30px;
 		.divider {
 			display: none;
 		}
-		margin: 0px 30px;
 		padding: 0px;
 		border-radius: 0px;
 		-webkit-border-radius: 0px;
@@ -701,11 +717,9 @@ dl {
 }
 
 #grid-bottom2, #content2 {
-	background-color: @color_one;
-	margin-left: -30px;
-	margin-right: -30px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	.container {
+		background-color: @color_one;
+	}
 	.module {
 		margin-bottom: 0px;
 		color: @white;
@@ -1090,15 +1104,20 @@ dl {
 	margin-top: 12px;
 }
 
-#featured, #grid-top, #grid-top2, #grid-bottom, #bottom-menu {
-	margin-bottom: 30px;
-}
-
 #grid-bottom2 {
 	margin-bottom: 0px;
 }
 
-.wrapper-footer, .footer-content, #footer {
+.footer-content {
+	color: @color_three;
+	font-family: @altFontFamily;
+	font-weight: 400;
+	line-height: 120%;
+	font-size: @baseFontSize - 4;
+	filter: none;
+}
+
+.wrapper-footer, #footer {
 	position: relative;
 	background-image: none;
 	background-color: transparent;
