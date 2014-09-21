@@ -27,7 +27,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0px
+	margin: 0px;
 }
 
 .moduletable {
@@ -565,7 +565,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #top-header {
 	.wrapper-menu {
-		margin-bottom: 10px;
 		.container {
 			background-color: transparent;
 		}
@@ -763,6 +762,11 @@ dl {
 	}
 }
 
+.page-header {
+	padding: 0px 0px 30px 0px;
+	border-bottom: 0px;
+}
+
 .module {
 	margin-bottom: 30px;
 	h3 {
@@ -935,7 +939,9 @@ dl {
 	}
 }
 
-.module_ms5 , .moduletable_ms5 , .moduletext_ms5 {	
+.module_ms5 , .moduletable_ms5 , .moduletext_ms5, .custom_ms5 {
+	margin-top: 30px;
+	margin-bottom: 10px;	
 	h3 {
 		text-align: center;
 		text-transform: uppercase;
@@ -962,7 +968,6 @@ dl {
 		background-color: @color_one;
 	}
 }
-
 
 .blog {
 	border-bottom: 1px solid @grayLighter;
@@ -1022,7 +1027,7 @@ dl {
 	.items-row {
 		border-bottom: 1px solid @grayLighter;
 		.item {
-		margin-bottom: 30px;
+			margin-bottom: 30px;
 		}
 		[class^="img-intro"] {
 			margin-bottom: 20px;
@@ -1115,6 +1120,10 @@ dl {
 	}
 }
 
+dd {
+	margin-left: 0px;
+}
+
 dl {
 	font-family: @sansFontFamily;
 	font-weight: normal;
@@ -1150,6 +1159,62 @@ dl {
 			> i {
 				font-size: 1.2em;
 			}
+		}
+	}
+
+	&.nav-tabs {
+		border-bottom: 1px solid @color_two;
+		.open {
+			h3 {
+				a {
+					background-color: transparent;
+					border-color: transparent;
+					border-bottom: 2px solid @color_one;
+				}
+			}
+		}
+		a {
+			padding: 0px 0px 9px 0px;
+			margin-right: 35px;
+		}
+	}
+
+	dt {
+		&.tabs {
+			h3 , span {
+				font-size: initial;
+				padding-bottom: 10px;
+				a {
+					border-radius: 0px;
+					text-transform: uppercase;
+					font-weight: normal;
+					font-size: @baseFontSize + 2;
+					&:hover {
+						text-decoration: none;
+						color: @color_one;
+					}
+				}
+			}
+			&:last-child {
+				h3 , span {
+					a {
+						margin-right: 0;
+					}
+				}
+			} 
+		}
+		&.open {
+			h3 {
+				a {
+					border: 0px;
+				}
+			}
+		}
+	}
+
+	&.dl-horizontal {
+		dd {
+			margin-bottom: 10px;
 		}
 	}
 }
