@@ -30,14 +30,25 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0px
 }
 
+.moduletable {
+	margin-bottom: 0px;
+}
+
 .container {
 	padding-left:  30px;
 	padding-right: 30px;
 	background-color: @white;
 }
 
-#header, #menu, #featured, #grid-top, #main-content, #breadcrumbs, #grid-bottom, #grid-bottom2, #grid-bottom3, #bottom-menu {
+#header, #menu, #grid-top, #main-content, #breadcrumbs, #grid-bottom, #grid-bottom2, #grid-bottom3, #bottom-menu {
 	margin-bottom: 0px;
+}
+
+#featured {
+	margin-bottom: 0px;
+	.moduletable, .module {
+		margin-bottom: 70px;
+	}
 }
 
 .btn {
@@ -721,7 +732,8 @@ dl {
 		background-color: @color_one;
 	}
 	.module {
-		margin-bottom: 0px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 		color: @white;
 		h3 {
 			margin-top: 0px;
@@ -749,7 +761,7 @@ dl {
 }
 
 .module {
-	margin-bottom: 0px;
+	margin-bottom: 30px;
 	h3 {
 		width: 100%;
 		color: @headingTabColor;
@@ -758,7 +770,6 @@ dl {
 		color: #8B99A5;
 		font-family: @sansFontFamily;
 		text-transform: uppercase;
-		margin-bottom: 30px;
 	}
 	.readmore {
 		text-transform: uppercase;
@@ -922,6 +933,8 @@ dl {
 }
 
 .blog {
+	border-bottom: 1px solid @grayLighter;
+	padding-bottom: 75px;
 	.page-header {
 		margin: 40px 0px 0px 0px;
 		border-bottom: 0px;
@@ -932,13 +945,17 @@ dl {
 
 	.items-leading {
 		margin-top: 30px;
-		margin-bottom: 0px;
+		margin-bottom: 30px;
 		padding: 0px;
-		padding-bottom: 30px;
 		border-top: 1px solid @grayLighter;
 		border-bottom: 1px solid @grayLighter;
 		[class^="leading-"] {
+			float: left;
+			.img-intro-left {
+				margin: 0px 25px 0px 0px;
+			}
 			&:first-child {
+				float: left;
 				margin-top: 30px;
 			}
 			h2 {
@@ -972,7 +989,9 @@ dl {
 	}
 	.items-row {
 		border-bottom: 1px solid @grayLighter;
-		padding: 30px 0px 0px 0px;
+		.item {
+		margin-bottom: 30px;
+		}
 		[class^="img-intro"] {
 			margin-bottom: 20px;
 			a {
@@ -1022,6 +1041,9 @@ dl {
 				font-size: @baseFontSize + 4;
 				padding-left: 0px;
 				padding-right: 0px;
+				&:hover {
+					background: transparent;
+				}
 			}
 			&.nav-stacked {
 				> li {
@@ -1102,10 +1124,6 @@ dl {
 
 #sidebar2 {
 	margin-top: 12px;
-}
-
-#grid-bottom2 {
-	margin-bottom: 0px;
 }
 
 .footer-content {
