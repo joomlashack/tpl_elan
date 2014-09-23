@@ -1072,6 +1072,8 @@ dl {
 		}
 		.item-separator {
 			padding: 30px 0px 0px 0px;
+			float: left;
+			width: 100%;
 		}
 		.readmore {
 			[class^="icon-"] {
@@ -1081,6 +1083,7 @@ dl {
 				border: none;
 				padding: 0px;
 				font-family: @sansFontFamily;
+				font-weight: 400;
 			}
 			margin-top: 15px;
 			clear: none;
@@ -1125,6 +1128,7 @@ dl {
 				border: none;
 				padding: 0px;
 				font-family: @sansFontFamily;
+				font-weight: 400;
 			}
 			margin-top: 15px;
 			clear: none;
@@ -1133,7 +1137,7 @@ dl {
 	}
 
 	.items-more {
-		padding-top: 60px;
+		padding-top: 50px;
 		h3 {
 			padding-left: 0px;
 			padding-right: 0px;
@@ -1154,7 +1158,7 @@ dl {
 			}
 			&.nav-stacked {
 				> li {
-					padding: 30px 0px;
+					padding: 22px 0px;
 					border-bottom: 1px solid @grayLighter;
 					&:first-child {
 						> a {
@@ -1179,13 +1183,47 @@ dl {
 	}
 
 	.cat-children {
+		h3 {
+			padding-top: 0px;
+		}
 		padding-top: 60px;
 		h3 {
+			width: 80%;
 			padding-left: 0px;
 			padding-right: 0px;
 			font-family: @sansFontFamily;
 			font-size: @baseFontSize;
 			text-transform: uppercase;
+		}
+		ul {
+			padding: 0px;
+			li {
+				border-bottom: 0px;
+				a {
+					font-family: @altFontFamily;
+					font-size: @baseFontSize + 2;
+					[class^="icon"] {
+						display: none;
+					}
+				}
+				position: relative;
+				.label {
+					top: 0px;
+					right: 0px;
+					position: absolute;
+					&.label-info {
+						background-color: transparent;
+						dt, dd {
+							text-shadow: none;
+							color: @color_one;
+							font-family: @sansFontFamily;
+							text-transform: uppercase;
+							font-size: @baseFontSize - 1;
+							font-weight: 400;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -1243,6 +1281,7 @@ dl {
 
 	&.nav-tabs {
 		border-bottom: 1px solid @color_two;
+		margin-top: 0px;
 		.open {
 			h3 {
 				a {
