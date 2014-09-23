@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .moduletable {
-	margin-bottom: 0px;
+	margin-bottom: 30px;
 }
 
 .container {
@@ -793,7 +793,7 @@ dl {
 	border-bottom: 0px;
 }
 
-.module {
+.module, .module-table {
 	margin-bottom: 30px;
 	h3 {
 		width: 100%;
@@ -1039,7 +1039,6 @@ dl {
 }
 
 .blog {
-	border-bottom: 1px solid @grayLighter;
 	padding-bottom: 75px;
 	.page-header {
 		margin: 0px;
@@ -1228,9 +1227,30 @@ dl {
 	}
 }
 
+.item-page {
+	padding-bottom: 30px;
+	border-bottom: 1px solid @grayLighter;
+	[class^="img-"] {
+		border-bottom: 2px solid @color_one;
+	}
+}
+
 .blog-featured {
+	padding-top: 30px;
+	border-top: 1px solid @grayLighter;
+	border-bottom: 1px solid @grayLighter;
+	margin-bottom: 30px;
+	[class^="img-intro"] {
+		margin-bottom: 0px;
+		border-bottom: 2px solid @color_one;
+	}
 	h2 {
 		margin-bottom: 40px;
+	}
+	.item-separator {
+		width: 100%;
+		float: left;
+		height: 30px;
 	}
 }
 

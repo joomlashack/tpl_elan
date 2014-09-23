@@ -26,10 +26,10 @@ $classFloat = 'float-' . getFulltextImageFloat($this->item);
 $this->wrightElementsStructure = Array(
     "image",
     "title",
+    "article-info",
     "icons",
     "legendtop",
     "content",
-    "article-info",
     "legendbottom"
 );
 
