@@ -549,8 +549,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-inner {
-	margin-top: 60px;
-	padding-bottom: 30px;
+	.container {
+		padding-top: 60px;
+		padding-bottom: 30px;
+	}
 	#logo {
 		text-align: center;
 	}
@@ -826,6 +828,10 @@ dl {
 	border-top: 3px solid @color_one;
 	.box-sizing (border-box);
 	margin-bottom: 30px;
+	color: @color_three;
+	font-weight: normal;
+	background: @grayLighter;
+	padding: 20px;
 	h3 {
 		font-family: @sansFontFamily;
 		color: @color_two;
@@ -834,30 +840,27 @@ dl {
 		text-transform: uppercase;
 		margin-bottom: 20px;
 	}
-
-	.module-inner {
-		color: @color_three;
-		font-weight: normal;
-		background: @grayLighter;
-		padding: 20px;
-		p {
-			line-height: 140%;
-			> small {
-				font-size: @baseFontSize - 2;
-			}
-		}
-
-		a {
-			margin-top: 15px;
-			text-transform: uppercase;
+	p {
+		line-height: 140%;
+		> small {
 			font-size: @baseFontSize - 2;
 		}
+	}
+
+	a {
+		margin-top: 15px;
+		text-transform: uppercase;
+		font-size: @baseFontSize - 2;
 	}
 }
 
 .module_ms2 , .moduletable_ms2 , .moduletext_ms2 {
 	.box-sizing (border-box);
 	margin-bottom: 30px;
+	color: @color_three;
+	font-size: @baseFontSize;
+	background: @grayLighter;
+	padding: 20px;
 	h3 {
 		font-family: @sansFontFamily;
 		color: @color_two;
@@ -871,31 +874,28 @@ dl {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
-
-	.module-inner {
-		color: @color_three;
-		font-size: @baseFontSize;
-		font-weight: 100;
-		background: @grayLighter;
-		padding: 20px;
-		p {
-			line-height: 140%;
-			> small {
-				font-size: @baseFontSize - 2;
-			}
-		}
-
-		a {
-			margin-top: 15px;
-			text-transform: uppercase;
+	p {
+		line-height: 140%;
+		> small {
 			font-size: @baseFontSize - 2;
 		}
 	}
+
+	a {
+		margin-top: 15px;
+		text-transform: uppercase;
+		font-size: @baseFontSize - 2;
+	}
+
 }
 
 .module_ms3 , .moduletable_ms3 , .moduletext_ms3 {
 	.box-sizing (border-box);
 	margin-bottom: 30px;
+	color: @white;
+	font-size: @baseFontSize;
+	background: @color_one;
+	padding: 20px;
 	h3 {
 		font-family: @sansFontFamily;
 		color: @white;
@@ -909,33 +909,29 @@ dl {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
-
-	.module-inner {
-		color: @white;
-		font-size: @baseFontSize;
-		font-weight: 100;
-		background: @color_one;
-		padding: 20px;
-		p {
-			line-height: 140%;
-			> small {
-				font-size: @baseFontSize - 2;
-			}
-		}
-
-		a {
-			margin-top: 15px;
-			color: @white;
-			text-transform: uppercase;
+	p {
+		line-height: 140%;
+		> small {
 			font-size: @baseFontSize - 2;
 		}
 	}
+
+	a {
+		margin-top: 15px;
+		color: @white;
+		text-transform: uppercase;
+		font-size: @baseFontSize - 2;
+	}
+
 }
 
 .module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
 	.box-sizing (border-box);
 	border: 1px solid @grayLighter;
 	margin-bottom: 30px;
+	font-size: @baseFontSize;
+	background: transparent;
+	padding: 20px;
 	h3 {
 		font-family: @sansFontFamily;
 		margin: 0px;
@@ -949,29 +945,28 @@ dl {
 		margin-bottom: 20px;
 		color: @color_two;
 	}
-
-	.module-inner {
-		font-size: @baseFontSize;
-		font-weight: 100;
-		background: transparent;
-		padding: 20px;
-		p {
-			line-height: 140%;
-			> small {
-				font-size: @baseFontSize - 2;
-			}
-		}
-
-		a {
-			margin-top: 15px;
-			text-transform: uppercase;
+	p {
+		line-height: 140%;
+		> small {
 			font-size: @baseFontSize - 2;
 		}
 	}
+
+	a {
+		margin-top: 15px;
+		text-transform: uppercase;
+		font-size: @baseFontSize - 2;
+	}
+
 }
 
 .module_ms5 , .moduletable_ms5 , .moduletext_ms5, .custom_ms5 {
 	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-left: -30px;
+	margin-right: -30px;
+	background-color: @color_one;
 	h3 {
 		text-transform: uppercase;
 		font-size: @baseFontSize + 16;
@@ -993,25 +988,18 @@ dl {
 			}
 		} 
 	}
-
-	.module-inner {
-		padding-top: 40px;
-		padding-bottom: 40px;
-		margin-left: -30px;
-		margin-right: -30px;
-		background-color: @color_one;
-		p {
-			color: white;
-			font-weight: 100;
-		}
-		.btn {
-			color: @white;
-			border-color: @white;
-			&:hover {
-				background-color: transparent;
-			}
+	p {
+		color: white;
+		font-weight: 100;
+	}
+	.btn {
+		color: @white;
+		border-color: @white;
+		&:hover {
+			background-color: transparent;
 		}
 	}
+
 }
 
 .blog {
@@ -1292,6 +1280,10 @@ dl {
 	line-height: 120%;
 	font-size: @baseFontSize - 4;
 	filter: none;
+}
+
+.jssocialicons {
+	.clearfix()
 }
 
 .wrapper-footer, #footer {

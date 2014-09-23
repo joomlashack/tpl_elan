@@ -15,11 +15,13 @@
             <!-- header -->
             <header id="header">
                 <!-- logo -->
-                <div class="<?php echo $containerClass ?>">
                     <div class="header-inner">
-                        <w:logo name="logo" />
-                        <div class="clear"></div>
+                    <div class="<?php echo $containerClass ?>">
+                        <div class="<?php echo $gridMode; ?>">
+                        <w:logo name="top" />
                     </div>
+                    </div>
+                   
                     <!-- logo end -->
                 </div>
             </header>
@@ -35,16 +37,15 @@
                 </div>
             <?php endif; ?>
             <!-- menu end -->
-            <!-- top -->
-            <?php if ($this->countModules('top')) : ?>
-                <div id="top">
-                   <div class="<?php echo $containerClass ?>">
-                        <w:module type="row-fluid" name="top" chrome="wrightflexgrid" extradivs="module" />
+             <!-- Featured -->
+            <?php if ($this->countModules('featured')) : ?>
+                <div id="featured">
+                    <div class="<?php echo $containerClass ?>">
+                        <w:module type="none" name="featured" chrome="xhtml" />
                     </div>
                 </div>
-            </div>
-             <?php endif; ?>
-            <!-- top end -->
+            <?php endif; ?>
+            <!-- Featured end -->
             <!-- breadcrumbs -->
             <?php if ($this->countModules('breadcrumbs')) : ?>
                 <div id="breadcrumbs">
@@ -57,15 +58,6 @@
             <?php endif; ?>
             <!-- breadcrumbs end -->
             <!-- Main container -->
-            <!-- Featured -->
-            <?php if ($this->countModules('featured')) : ?>
-                <div id="featured">
-                    <div class="<?php echo $containerClass ?>">
-                        <w:module type="none" name="featured" chrome="xhtml" />
-                    </div>
-                </div>
-            <?php endif; ?>
-            <!-- Featured end -->
             <!-- grid-top -->
             <?php if ($this->countModules('grid-top')) : ?>
                 <div id="grid-top">
@@ -152,7 +144,7 @@
                 <!-- bottom-menu end -->
                 <div class="<?php echo $containerClass ?> footer-content">
                     <?php if ($this->countModules('footer')) : ?>
-                        <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+                        <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="xhtml" />
                     <?php endif; ?>
                     <w:footer />
                 </div>
