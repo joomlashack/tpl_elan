@@ -848,24 +848,40 @@ dl {
 	}
 
 	a {
+		color: @color_three;
 		text-transform: uppercase;
 		font-size: @baseFontSize - 2;
 	}
-
+	
 	.nav {
+		margin-bottom: 0px;
 		a {
 			text-transform: none;
 			font-family: @altFontFamily;
 			font-size: @baseFontSize + 2;
 		}
 		li {
+			border-bottom: 1px solid @white;
+			&.active {
+				> a {
+					color: @color_one;
+				}
+			}
 			a {
 				padding: 20px 0px;
+				&:hover, &:focus {
+					color: @color_one;
+				}
 			}	
-			border-bottom: 1px solid @white;
-			.current {
-				> a {
-					color: @headingTabColor;
+			> a {
+				&:hover, &:focus {
+					background-color: transparent;
+				}
+			}
+			&:last-child {
+				border-bottom: none;
+				a {
+					padding: 20px 0px 0px;
 				}
 			}
 		}
@@ -1227,7 +1243,6 @@ dl {
 
 	&.nav-tabs {
 		border-bottom: 1px solid @color_two;
-		margin-top: 55px;
 		.open {
 			h3 {
 				a {
