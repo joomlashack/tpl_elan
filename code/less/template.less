@@ -40,8 +40,24 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: @white;
 }
 
-#header, #menu, #grid-top, #grid-bottom, #grid-bottom2, #grid-bottom3, #bottom-menu {
+#header, #menu, #grid-top, #grid-bottom2, #grid-bottom3, #bottom-menu {
 	margin-bottom: 0px;
+}
+
+#grid-bottom {
+	margin-bottom: 0px;
+	[class^="newsflash"] {
+		h4, h5 {
+			font-size: @baseFontSize - 1;
+			margin-bottom: 0px;
+		}
+		a {
+			font-size: @baseFontSize - 1;
+			img {
+				border-bottom: none;
+			}
+		}
+	}
 }
 
 #main-content {
@@ -68,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: @color_one;
 	box-shadow: none;
 	letter-spacing: 0px;
-	font-weight: normal;
+	font-weight: 100;
 	&:hover {
 		color: @textColor;
 		border: 1px solid @textColor;
@@ -794,12 +810,15 @@ dl {
 			text-decoration: none;
 		}
 	}
+	.custom {
+	}
+}
+
+[class^="newsflash"] {
 	a {
 		img {
 			border-bottom: 2px solid @color_one;
 		}
-	}
-	.custom {
 	}
 }
 
@@ -952,8 +971,8 @@ dl {
 }
 
 .module_ms5 , .moduletable_ms5 , .moduletext_ms5, .custom_ms5 {
+	text-align: center;
 	h3 {
-		text-align: center;
 		text-transform: uppercase;
 		font-size: @baseFontSize + 16;
 		font-weight: 100;
@@ -967,6 +986,11 @@ dl {
 			margin-top: 20px;
 			margin-left: auto;
 			margin-right: auto;
+		}
+		&.no-underline {
+			&:after {
+				display: none;
+			}
 		} 
 	}
 
@@ -976,6 +1000,17 @@ dl {
 		margin-left: -30px;
 		margin-right: -30px;
 		background-color: @color_one;
+		p {
+			color: white;
+			font-weight: 100;
+		}
+		.btn {
+			color: @white;
+			border-color: @white;
+			&:hover {
+				background-color: transparent;
+			}
+		}
 	}
 }
 
@@ -1128,6 +1163,12 @@ dl {
 			font-size: @baseFontSize;
 			text-transform: uppercase;
 		}
+	}
+}
+
+.blog-featured {
+	h2 {
+		margin-bottom: 40px;
 	}
 }
 
