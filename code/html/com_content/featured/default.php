@@ -12,18 +12,14 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
-$this->wrightLeadingItemElementsStructure = Array();
-$this->wrightIntroItemElementsStructure = Array(
-	'image',
-	'title',
-	'content',
-	'article-info',
-	'icons'
-);
-
-$this->wrightIntroHasImageClass = "";  // optional extra class when image is present
-
-$this->wrightExtraDivH1 = false;  // adds an extra div next to the h1 titles
+$this->wrightLeadingItemElementsStructure = Array("image",
+    "title",
+    "icons",
+    "legendtop",
+    "content",
+    "article-info",
+    "legendbottom"
+	);
 
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
 include(Overrider::getOverride('com_content.featured'));

@@ -40,7 +40,11 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: @white;
 }
 
-#header, #menu, #grid-top, #main-content, #grid-bottom, #grid-bottom2, #grid-bottom3, #bottom-menu {
+#header, #menu, #grid-top, #grid-bottom, #grid-bottom2, #grid-bottom3, #bottom-menu {
+	margin-bottom: 0px;
+}
+
+#main-content {
 	margin-bottom: 0px;
 }
 
@@ -1134,6 +1138,9 @@ dd {
 dl {
 	font-family: @sansFontFamily;
 	font-weight: normal;
+	&.nav {
+		margin-bottom: 0px;
+	}
 	&.article-info {
 		margin: 0px;
 		padding: 0px;
@@ -1171,6 +1178,7 @@ dl {
 
 	&.nav-tabs {
 		border-bottom: 1px solid @color_two;
+		margin-top: 55px;
 		.open {
 			h3 {
 				a {
@@ -1183,6 +1191,12 @@ dl {
 		a {
 			padding: 0px 0px 9px 0px;
 			margin-right: 35px;
+		}
+		+ .current {
+			margin-top: 70px;
+		}
+		.bs-docs-example {
+			display: none;
 		}
 	}
 
