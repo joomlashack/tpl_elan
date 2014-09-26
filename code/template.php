@@ -9,7 +9,9 @@
         <body class="<?php echo $responsive ?>">
             <!-- toolbar -->
             <?php if ($this->countModules('toolbar')) : ?>
+                <div class="<?php echo $containerClass ?>">
                 <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+                </div>
             <?php endif; ?>
             <!-- toolbar end -->
             <!-- header -->
