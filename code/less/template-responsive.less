@@ -21,6 +21,11 @@
 		}
 	}
 
+	.wrapper-toolbar {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+
 	.navbar-inverse { 
 		.navbar-inner {
 			padding: 0px;
@@ -185,12 +190,20 @@
 			padding-left: 0px;
 			padding-right: 0px;
 		}
+		.container-fluid {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
 	}
 
 	.navbar {
 		.container {
 			margin-left: 0px;
 			margin-right: 0px;
+		}
+		.container-fluid {
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 		&.navbar-fixed-top {
 			margin-right: -30px;
@@ -224,15 +237,33 @@
 		}
 	}
 
+	.container-fluid {
+		margin-left: -30px;
+		margin-right: -30px;
+		padding: 0px 30px;
+	}
+
 	.header-inner {
 		.container {
 			padding-top: 30px;
 		}
 	}
 
+	.wrapper-menu {
+			margin-left: 0px;
+			margin-right: 0px;
+	}
+
+	.wrapper-toolbar {
+		margin-right: -30px;
+		margin-left: -30px;
+	}
+
 	#top-header {
 		.wrapper-menu {
 			border-top: 1px solid @color_three;
+			margin-left: 0px;
+			margin-right: 0px;
 		}
 		.navbar-inner {	
 			background-color: transparent;
@@ -280,6 +311,10 @@
 				}
 			}
 		}
+	}
+
+	[class^="img-intro"] { 
+		margin-right: 0px;
 	}
 
 	#breadcrumbs { 
@@ -333,6 +368,18 @@
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+	
+	.wrapper-footer {
+		margin-right: -30px;
+		margin-left: -30px;
+		.container-fluid {
+			padding-left: 0px;
+			padding-right: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+
 	#footer {
 		margin-right: 0px;
 		margin-left: 0px;
