@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: @color_one;
 	box-shadow: none;
 	letter-spacing: 0px;
-	font-weight: 100;
+	font-weight: 400;
 	&:hover {
 		color: @white;
 		border: 1px solid @color_one;
@@ -249,6 +249,43 @@ h1, h2, h3, h4, h5, h6 {
 		color: inherit;
 	}
 }
+
+.label, .badge {
+	color: @white;
+	background-color: @color_one;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	text-shadow: none;
+	text-transform: uppercase;
+	font-size: @baseFontSize;
+	color: @label-color;
+	padding: 5px 10px 5px 10px;
+	font-weight: 400;
+}
+
+.table {
+	thead {
+		th {
+			background-color: @color_one;
+			color: @white;
+			font-size: @baseFontSize + 2;
+			text-shadow: none;
+			font-weight: 400;
+			text-align: center;
+			padding: 20px 0px;
+			a {
+				color: @white;
+			}
+		}
+	}
+	td {
+		padding: 20px 0px;
+		text-align: center;
+		font-size: @baseFontSize + 2;
+		font-family: @altFontFamily;
+	}
+}
+
 
 .pagenav {
 	&.pager {
