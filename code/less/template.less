@@ -86,27 +86,33 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 0px;
 	font-weight: 100;
 	&:hover {
-		color: @textColor;
-		border: 1px solid @textColor;
+		color: @white;
+		border: 1px solid @color_one;
 		background-color: @btnHoverBackground;
+		.caret {
+			border-top-color: @white;
+			border-bottom-color: @white;
+		}	
+	}
+	.caret {
+			border-top-color: @color_one;
+			border-bottom-color: @color_one;
 	}
 
 	&.btn-large {
-		font-size: @baseFontSize + 6;
+			font-size: @baseFontSize + 6;
+		.caret {
+			margin-top: 9px;
+		}
 	}
 
 	&.btn-small {
 		font-size: @baseFontSize;
-		.caret {
-			margin-top: 5px;
-		}
+			
 	}
 
 	&.btn-mini {
-		font-size: @baseFontSize - 2;
-		.caret {
-			margin-top: 4px;
-		}
+		font-size: @baseFontSize - 2;	
 	}
 
 	&.btn-inverse {
@@ -115,6 +121,12 @@ h1, h2, h3, h4, h5, h6 {
 		&:hover {
 			color: @white;
 			background-color: @btnInverseBackgroundHighlight;
+			.caret {
+				border-top-color: @white;
+			}
+		}
+		.caret {
+			border-top-color: @btnInverseBackgroundHighlight;
 		}
 	}
 
@@ -124,6 +136,12 @@ h1, h2, h3, h4, h5, h6 {
 		&:hover {
 			color: @white;
 			background-color: @btnInfoBackgroundHighlight;
+			.caret {
+				border-top-color: @white;
+			}
+		}
+		.caret {
+			border-top-color: @btnInfoBackgroundHighlight;
 		}
 	}
 
@@ -133,6 +151,23 @@ h1, h2, h3, h4, h5, h6 {
 		&:hover {
 			color: @white;
 			background-color: @btnSuccessBackgroundHighlight;
+			.caret {
+				border-top-color: @white;
+			}
+		}
+		.caret {
+			border-top-color: @btnSuccessBackgroundHighlight;
+		}
+	}
+
+	&.primary {
+		.caret {
+			border-bottom-color: @color_one;
+		}
+		&:hover {
+			.caret { 
+				border-bottom-color: @white;
+			}
 		}
 	}
 
@@ -142,6 +177,15 @@ h1, h2, h3, h4, h5, h6 {
 		&:hover {
 			color: @white;
 			background-color: @btnWarningBackgroundHighlight;
+			.caret {
+				border-top-color: @white;
+			}
+		}
+		.caret {
+			border-top-color: @btnWarningBackgroundHighlight;
+			&:hover {
+				color: @white;
+			}
 		}
 	}
 
@@ -151,6 +195,13 @@ h1, h2, h3, h4, h5, h6 {
 		&:hover {
 			color: @white;
 			background-color: @btnDangerBackgroundHighlight;
+			.caret {
+				border-top-color: @white;
+			}
+		}
+		.caret {
+			border-top-color: @btnDangerBackgroundHighlight;
+
 		}
 	}
 
@@ -163,10 +214,15 @@ h1, h2, h3, h4, h5, h6 {
 	+ .btn {
 		margin-left: 5px;
 	}
-
-	.caret {
-		display: none;
+	
+	&.dropdown-toggle {
+		-webkit-border-top-right-radius: 0px;
+		-webkit-border-bottom-right-radius: 0px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+		margin: 0px;
 	}
+
 }
 
 .btn-group {
@@ -182,6 +238,15 @@ h1, h2, h3, h4, h5, h6 {
 			border-top-right-radius: 0px;
 
 		}
+	}
+	> .btn {
+		+ .dropdown-toggle {
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+	}
+	.caret {
+		color: inherit;
 	}
 }
 
@@ -233,6 +298,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
+		.navbar-inner {
+			border-radius: 0px;
+			-webkit-boder-radius: 0px;
+		}
 	.nav {
 		li {
 			&.deeper {
