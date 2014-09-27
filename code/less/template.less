@@ -840,6 +840,24 @@ dl {
 	}
 }
 
+
+.module {
+	.moduletable_ms1 {
+			.nav-stacked {
+				&.nav {
+				li {
+					&.current {
+						> a {
+							color: @color_one;
+						}
+					}
+				}
+			}  
+
+		}
+	}
+}
+
 .module_ms1 , .moduletable_ms1 , .moduletext_ms1 {
 	border-top: 3px solid @color_one;
 	.box-sizing (border-box);
@@ -878,11 +896,6 @@ dl {
 		}
 		li {
 			border-bottom: 1px solid @white;
-			&.active {
-				> a {
-					color: @color_one;
-				}
-			}
 			a {
 				padding: 20px 0px;
 				&:hover, &:focus {
