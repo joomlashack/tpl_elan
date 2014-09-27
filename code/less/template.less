@@ -95,12 +95,12 @@ h1, h2, h3, h4, h5, h6 {
 		}	
 	}
 	.caret {
-			border-top-color: @color_one;
-			border-bottom-color: @color_one;
+		border-top-color: @color_one;
+		border-bottom-color: @color_one;
 	}
 
 	&.btn-large {
-			font-size: @baseFontSize + 6;
+		font-size: @baseFontSize + 6;
 		.caret {
 			margin-top: 9px;
 		}
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	&.btn-small {
 		font-size: @baseFontSize;
-			
+
 	}
 
 	&.btn-mini {
@@ -334,10 +334,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-		.navbar-inner {
-			border-radius: 0px;
-			-webkit-boder-radius: 0px;
+	.navbar-inner {
+		border-radius: 0px;
+		-webkit-border-radius: 0px;
+		.brand {
+			text-shadow: none;
 		}
+		.btn {
+			border-color: @linkTopColor;
+			color: @linkTopColor;
+			&:hover {
+				background-color: @dropdownBackground;
+				border-color: @dropdownBackground;
+			}
+		}
+	}
 	.nav {
 		li {
 			&.deeper {
@@ -354,6 +365,7 @@ h1, h2, h3, h4, h5, h6 {
 					}
 
 					&:hover , &:focus {
+						background-color: @dropdownBackground;
 						&:after {
 							font-family: FontAwesome;
 							margin-left: 10px;
@@ -450,26 +462,29 @@ h1, h2, h3, h4, h5, h6 {
 
 			&.dropdown {
 				.dropdown-menu {
+					padding-right: 0px;
+					padding-left: 0px;
 					border-radius: 0px;
+					padding-top: 5px;
 					box-shadow: none;
-					padding-left: 15px;
-					padding-right: 15px;
-					padding-top: 0px;
-					padding-bottom: 5px;
 					&:before , &:after {
 						content: none;
 					}
 
 					li {
-						border-top: 1px solid @white;
 						text-shadow: none;
+						padding-left: 5px;
+						padding-right: 5px;
+						border-bottom: 0px;
+						border-top: 0px;
 						&:first-child {
 							border-top: none;
 						}
 						a {
 							color: @linkTopColor;
 							text-transform: uppercase;
-							padding: 5px 0px;
+							padding: 5px 15px;
+							border-bottom: 1px solid #3B444E;
 							&:hover , &:focus {
 								.caret {
 									border-top-color: transparent;
@@ -483,12 +498,18 @@ h1, h2, h3, h4, h5, h6 {
 							}
 
 							&:hover , &:focus {
-								background: transparent;
 								.caret {
 									border-left-color: @dropdownLinkColorHover;
 								}
 							}
 						}
+
+						&:hover, &:focus {
+							background-color: @color_three;
+							a {
+								border-bottom: 1px solid @color_three;
+							}
+						} 
 
 						&.deeper {
 							> a {
@@ -505,6 +526,7 @@ h1, h2, h3, h4, h5, h6 {
 								border-bottom: 1px solid @color_three;
 								&:last-child {
 									border-bottom: none;
+									padding: 5px 15px 0px 15px;
 								}
 							}
 
@@ -527,6 +549,12 @@ h1, h2, h3, h4, h5, h6 {
 										border-left-color: @dropdownLinkColorActive;
 									}
 								}
+							}
+						}
+						&:last-child {
+							a {
+								border-bottom: none;
+
 							}
 						}
 					}
@@ -948,8 +976,8 @@ dl {
 
 .module {
 	.moduletable_ms1 {
-			.nav-stacked {
-				&.nav {
+		.nav-stacked {
+			&.nav {
 				li {
 					&.current {
 						> a {
