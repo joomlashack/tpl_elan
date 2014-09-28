@@ -333,6 +333,8 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+// Main navbar
+
 .navbar {
 	.navbar-inner {
 		border-radius: 0px;
@@ -370,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
 							font-family: FontAwesome;
 							margin-left: 10px;
 							font-size: @baseFontSize - 2;
-							content: '\f0d7';
+							content: '\f106';
 						}
 					}
 				}
@@ -437,8 +439,8 @@ h1, h2, h3, h4, h5, h6 {
 							font-family: FontAwesome;
 							margin-left: 10px;
 							font-size: @baseFontSize - 2;
-							content: '\f107';
-							color: #39424C;
+							content: '\f106';
+							color: @white;
 						}
 					}
 				}
@@ -523,6 +525,13 @@ h1, h2, h3, h4, h5, h6 {
 						.sub-menu {
 							margin-top: 0px;
 							li {
+								
+								a{
+									&:hover, &:focus {
+										background-color: transparent;
+									}
+								}
+
 								border-bottom: 1px solid @color_three;
 								&:last-child {
 									border-bottom: none;
@@ -748,6 +757,11 @@ h1, h2, h3, h4, h5, h6 {
 			margin-right: auto;
 			float: none;	
 			> li {
+				&:hover, &:focus {
+					> a {
+						background-color: transparent;
+					}
+				}
 				> a {
 					color: @color_three;
 				}
@@ -820,6 +834,15 @@ h1, h2, h3, h4, h5, h6 {
 						li {
 							a {
 								color: @color_three;
+								border-bottom: 1px solid @white;
+								&:hover, &:focus {
+									color: @color_one;
+								}
+							}
+							&:last-child {
+								a {
+									border-bottom: none;
+								}
 							}
 						}
 					}
