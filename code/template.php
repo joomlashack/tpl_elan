@@ -10,20 +10,20 @@
             <!-- toolbar -->
             <?php if ($this->countModules('toolbar')) : ?>
                 <div class="<?php echo $containerClass ?> toolbar-container">
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+                    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
                 </div>
             <?php endif; ?>
             <!-- toolbar end -->
             <!-- header -->
             <header id="header">
                 <!-- logo -->
-                    <div class="header-inner">
+                <div class="header-inner">
                     <div class="<?php echo $containerClass ?>">
                         <div class="<?php echo $gridMode; ?>">
-                        <w:logo name="top" />
+                            <w:logo name="top" />
+                        </div>
                     </div>
-                    </div>
-                   
+
                     <!-- logo end -->
                 </div>
             </header>
@@ -39,7 +39,7 @@
                 </div>
             <?php endif; ?>
             <!-- menu end -->
-             <!-- Featured -->
+            <!-- Featured -->
             <?php if ($this->countModules('featured')) : ?>
                 <div id="featured">
                     <div class="<?php echo $containerClass ?>">
@@ -146,13 +146,17 @@
                 <!-- bottom-menu end -->
                 <div class="<?php echo $containerClass ?> footer-content">
                     <?php if ($this->countModules('footer')) : ?>
+                       <div class="<?php echo $containerClass ?>">
                         <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="xhtml" />
-                    <?php endif; ?>
-                    <w:footer />
+                    </div>
+                <?php endif; ?>
+                 <div class="<?php echo $containerClass ?>">
+                <w:footer />
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
     </div>
-    </body>
-    </html>
-    </doctype>
+</div>
+</body>
+</html>
+</doctype>
