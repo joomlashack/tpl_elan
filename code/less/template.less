@@ -543,7 +543,11 @@ a {
 			}
 			&.active {
 				> a {
+					background-color: transparent;
 					color: @color_three;
+					&:hover, &:focus {
+						color: @color_three;
+					}
 				}
 			}
 		}
@@ -993,6 +997,8 @@ a {
 	.navbar {
 		margin-bottom: 0px;
 		.nav {
+
+			border-top: 1px solid @color_two;
 			display: table;
 			margin-left: auto;
 			margin-right: auto;
@@ -1017,7 +1023,6 @@ a {
 					}
 				}
 			}
-			border-top: 1px solid @color_two;
 			li {
 				&.deeper {
 					&:focus , &:hover {
@@ -1103,6 +1108,7 @@ a {
 	.breadcrumb {
 		border-bottom: 1px solid @grayLighter;
 		margin: 0px 30px;
+		margin-bottom: 30px;
 		.divider {
 			display: none;
 		}
@@ -1308,6 +1314,13 @@ dl {
 				border-bottom: none;
 				a {
 					padding: 20px 0px 0px;
+				}
+			}
+			&.current {
+				a {
+					&:hover, &:focus {
+					color: @color_three;
+				}
 				}
 			}
 		}
