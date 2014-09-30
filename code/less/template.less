@@ -7,6 +7,7 @@
 		font-size: @baseFontSize + 16;
 		text-transform: uppercase;
 		letter-spacing: 0px;
+		text-align: center;
 		&:after { 
 			content: '';
 			display: block;
@@ -22,7 +23,16 @@
 		font-family: @altFontFamily;
 		font-weight: bold;
 		font-size: @baseFontSize + 14;
-		margin: 0px 150px;
+		text-align: center;
+	}
+	
+	.btn {
+		color: @white;
+		border-color: @white;
+		&:hover, &:focus {
+			color: @white;
+			border-color: @white;
+		}
 	}
 }
 
@@ -160,6 +170,12 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 
+	&.btn-primary {
+		&:hover, &:focus {
+			color: @white;
+		}
+	}
+
 	&.btn-link {
 		border: none;
 		&:hover {
@@ -270,6 +286,30 @@ a {
 	.caret {
 		color: inherit;
 	}
+	&.open {
+		.btn-danger {
+				color: @white;
+				background-color: @btnDangerBackgroundHighlight;
+				.caret {
+					border-top-color: @white;
+				}
+			}
+		
+		.btn-inverse {
+				color: @white;
+				background-color: @btnInverseBackgroundHighlight;
+				.caret {
+					border-top-color: @white;
+				}
+			}
+		.btn-info {
+				color: @white;
+				background-color: @btnInfoBackgroundHighlight;
+				.caret {
+					border-top-color: @white;
+				}
+			}	
+		}
 }
 
 .label, .badge {
@@ -285,7 +325,7 @@ a {
 }
 
 .inputbox {
-		margin-right: 10px;
+	margin-right: 10px;
 }
 
 .table {
@@ -361,18 +401,150 @@ a {
 
 // Main navbar
 
+.open {
+	>.dropdown-menu {
+		padding-right: 0px;
+		padding-left: 0px;
+		border-radius: 0px;
+		padding-top: 5px;
+		box-shadow: none;
+		&:before , &:after {
+			content: none;
+		}
+
+		li {
+			text-shadow: none;
+			padding-left: 5px;
+			padding-right: 5px;
+			border-bottom: 0px;
+			border-top: 0px;
+			font-family: @altFontFamily;
+			&:first-child {
+				border-top: none;
+			}
+			a {
+				color: @linkTopColor;
+				text-transform: uppercase;
+				padding: 5px 15px;
+				border-bottom: 1px solid #3B444E;
+				&:hover , &:focus {
+					.caret {
+						border-top-color: transparent;
+						border-bottom-color: transparent;
+					}
+				}
+
+				.caret {
+					border-top-color: transparent;
+					border-left-color: @dropdownLinkColor;
+				}
+
+				&:hover , &:focus {
+					.caret {
+						border-left-color: @dropdownLinkColorHover;
+					}
+				}
+			}
+
+			&:hover, &:focus {
+				background-color: @color_three;
+				a {
+					border-bottom: 1px solid @color_three;
+				}
+			} 
+
+			&.deeper {
+				> a {
+					&:after {
+						content: '\f105';
+						position: absolute;
+						right: 12px;
+					}
+				}
+			}
+			.sub-menu {
+				margin-top: 0px;
+				li {
+
+					a{
+						&:hover, &:focus {
+							background-color: transparent;
+						}
+					}
+
+					border-bottom: 1px solid @color_three;
+					&:last-child {
+						border-bottom: none;
+						padding: 5px 15px 0px 15px;
+					}
+				}
+
+				&:before , &:after {
+					content: none;
+				}
+			}
+
+			&.active {
+				> a {
+					background-image: none;
+					filter: none;
+					background: transparent;
+					.caret {
+						border-left-color: @dropdownLinkColorActive;
+					}
+
+					&:hover , &:focus {
+						.caret {
+							border-left-color: @dropdownLinkColorActive;
+						}
+					}
+				}
+			}
+			&:last-child {
+				a {
+					border-bottom: none;
+
+				}
+			}
+			&.nav-header {
+				color: @linkTopColor;
+			}
+		}
+
+		&.active {
+			&.deeper {
+				li {
+					background-color: @color_four;
+				}
+			}
+		}
+		.divider {
+				margin: 15px 5px 5px;
+				background-color: @white;
+				&:hover, &:focus {
+					background-color: @white;
+				}
+			}
+	}
+}
+
+
 .module {
 	.nav {
-
 		li {
 			a {
 				&:hover, &:focus {
 					[class^="icon"] {
-					color: @color_three;
-					background-color: @grayLighter;
+						color: @color_three;
+						background-color: @grayLighter;
 					}
 					color: @color_three;
 					background-color: @grayLighter;	
+				}
+			}
+			&.active {
+				> a {
+					color: @color_three;
 				}
 			}
 		}
@@ -380,11 +552,25 @@ a {
 	}
 }
 
+.nav {
+	&.nav-tabs {
+		li {
+			&.active {
+				> a {
+					color: @color_three;
+				}
+			}
+		}
+	}
+}
 
 .navbar {
 	.navbar-inner {
 		border-radius: 0px;
 		-webkit-border-radius: 0px;
+		.container {
+			background-color: @color_three;
+		}
 		.brand {
 			text-shadow: none;
 		}
@@ -393,11 +579,11 @@ a {
 			color: @linkTopColor;
 			&:hover {
 				background-color: @dropdownBackground;
-				border-color: @dropdownBackground;
 			}
 		}
 	}
 	.nav {
+		padding-left: 5px;
 		.nav-list {
 			li {
 				a {
@@ -1635,12 +1821,6 @@ dl {
 	line-height: 120%;
 	font-size: @baseFontSize - 4;
 	filter: none;
-}
-
-.footer {
-	.container {
-		padding-top: 30px;
-	}
 }
 
 .jssocialicons {

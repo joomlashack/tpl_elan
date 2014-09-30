@@ -2,7 +2,6 @@ div , form {
 	&.bs-docs-example {
 		border-radius: 0px;
 		-webkit-border-radius: 0px;
-		padding-left: 40px;
 		&:after {
 			margin-left: 10px;
 			padding: 5px;
@@ -34,5 +33,9 @@ pre {
 		border-left: 4px solid @color_one;
 		border-top-left-radius: 0px;
 		border-top-right-radius: 0px;
+		&.linenums {
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
 	}
 }
