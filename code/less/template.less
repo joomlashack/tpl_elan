@@ -160,6 +160,13 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 
+	&.btn-link {
+		border: none;
+		&:hover {
+			color: @color_three;
+		}
+	}
+
 	&.primary {
 		.caret {
 			border-bottom-color: @color_one;
@@ -167,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 		&:hover {
 			.caret { 
 				border-bottom-color: @white;
+				text-decoration: none;
 			}
 		}
 	}
@@ -208,6 +216,14 @@ h1, h2, h3, h4, h5, h6 {
 	&.btn-link {
 		&:hover {
 			background-color: transparent;
+			text-decoration: none;
+		}
+	}
+
+	&.disabled {
+		border-color: @color_two;
+		&:hover {
+			background-color: @color_two;
 		}
 	}
 
@@ -219,6 +235,16 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0px;
 	}
 
+}
+
+a {
+	color: @color_one;
+	outline: 0;
+	&:hover, &:focus {
+		color: @color_three;
+		text-decoration: none;
+		outline: 0;
+	}
 }
 
 .btn-group {
@@ -256,6 +282,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: @label-color;
 	padding: 5px 10px 5px 10px;
 	font-weight: 400;
+}
+
+.inputbox {
+		margin-right: 10px;
 }
 
 .table {
@@ -331,6 +361,26 @@ h1, h2, h3, h4, h5, h6 {
 
 // Main navbar
 
+.module {
+	.nav {
+
+		li {
+			a {
+				&:hover, &:focus {
+					[class^="icon"] {
+					color: @color_three;
+					background-color: @grayLighter;
+					}
+					color: @color_three;
+					background-color: @grayLighter;	
+				}
+			}
+		}
+
+	}
+}
+
+
 .navbar {
 	.navbar-inner {
 		border-radius: 0px;
@@ -348,6 +398,16 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 	.nav {
+		.nav-list {
+			li {
+				a {
+					&:hover {
+						color: @color_three;
+						background-color: @grayLighter;
+					}
+				}
+			}
+		}
 		li {
 			&.deeper {
 				> a {
@@ -1575,6 +1635,12 @@ dl {
 	line-height: 120%;
 	font-size: @baseFontSize - 4;
 	filter: none;
+}
+
+.footer {
+	.container {
+		padding-top: 30px;
+	}
 }
 
 .jssocialicons {

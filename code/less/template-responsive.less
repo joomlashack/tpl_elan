@@ -166,6 +166,10 @@
 
 @media (max-width: 767px) {
 
+	body {
+		background-color: @white;
+	}
+
 	.hero-unit { 
 		p {
 			margin: 0px 0px;
@@ -215,7 +219,7 @@
 		margin-left: 0px;
 		margin-right: 0px;
 	}
- 
+
 	.navbar-inverse {
 		.navbar-inner {
 			padding: 0px;
@@ -230,8 +234,12 @@
 				text-shadow: none;
 				float: none;
 				padding-bottom: 12px; 
-				margin-left: 0px;
+				margin-left: 20px;
 				margin-right: 0px;
+				&:hover, &:focus {
+					background-color: transparent;
+
+				}
 				span  {
 					box-shadow: none;
 					height: 2px;
@@ -243,14 +251,17 @@
 	}
 
 	.container-fluid {
-		margin-left: -30px;
-		margin-right: -30px;
-		padding: 0px 30px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	.container {
-		margin-left: -30px;
-		margin-right: -30px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
 		&.toolbar-container {
 			margin-left: 0px;
 			margin-right: 0px;
@@ -264,8 +275,8 @@
 	}
 
 	.wrapper-menu {
-			margin-left: 0px;
-			margin-right: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 
 	#top-header {
@@ -305,7 +316,10 @@
 				> li {
 					&:first-child {
 						a {
-							padding: 5px 15px 5px 15px
+							padding: 5px 15px 5px 15px;
+							&:hover, &:focus {
+								background-color: transparent;
+							}
 						}
 					}
 					> a {
@@ -316,6 +330,11 @@
 					}
 				}
 				li {
+					a {
+						&:hover, &:focus {
+							background-color: transparent;
+						}
+					}
 
 				}
 			}
@@ -379,8 +398,8 @@
 	}
 	
 	.wrapper-footer {
-		margin-right: -30px;
-		margin-left: -30px;
+		margin-right: 0px;
+		margin-left: 0px;
 		.container-fluid {
 			padding-left: 0px;
 			padding-right: 0px;
