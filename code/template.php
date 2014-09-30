@@ -152,7 +152,6 @@
                  <div class="<?php echo $containerClass ?>">
                 <w:footer />
                 </div>
-               
             </div>
         </footer>
     </div>
