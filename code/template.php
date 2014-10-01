@@ -136,6 +136,7 @@
             <?php endif; ?>
             <!-- grid-bottom2 end -->
             <!-- footer -->
+            <div class="wrapper-footer">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"
             <?php endif; ?>
             <div class="<?php echo $containerClass ?> footer-content">
