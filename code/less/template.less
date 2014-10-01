@@ -876,6 +876,33 @@ a {
 	}
 }
 
+blockquote {
+	background: url(../images/blockquote-up.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding: 0px;
+	border: none;
+	&.pull-right {
+		padding: 0px;
+		border: none;
+	}
+	p {
+		background: url(../images/blockquote-down.png);
+		background-position: right bottom;
+		background-repeat: no-repeat;
+		font-size: @baseFontSize + 4;
+		font-weight: 400;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+	small {
+		font-family: @sansFontFamily;
+		font-size: @baseFontSize - 1;
+		color: @color_two;
+		margin-top: 30px;
+	}
+}
+
 .header-inner {
 	.container, container-fluid {
 		padding-top: 60px;
