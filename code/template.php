@@ -136,16 +136,14 @@
             <?php endif; ?>
             <!-- grid-bottom2 end -->
             <!-- footer -->
-            <div class="wrapper-footer">
+            <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"
+            <?php endif; ?>
+            <div class="<?php echo $containerClass ?> footer-content">
                 <!-- bottom-menu -->
                 <?php if ($this->countModules('bottom-menu')) : ?>
                     <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
                 <?php endif; ?>
                 <!-- bottom-menu end -->
-            </div>
-            <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"
-            <?php endif; ?>
-            <div class="<?php echo $containerClass ?> footer-content">
                 <?php if ($this->countModules('footer')) : ?>
                    <div class="<?php echo $containerClass ?>">
                     <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="xhtml" />

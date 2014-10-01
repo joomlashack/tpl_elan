@@ -185,10 +185,7 @@
 		margin-left: -20px;
 		margin-right: -20px;
 	}
-	#grid-bottom2 {
-		padding-left:  30px;
-		padding-right:  30px;
-	}
+
 	#toolbar {
 		.container {
 			padding-left: 0px;
@@ -281,12 +278,12 @@
 
 	#top-header {
 		.wrapper-menu {
-			border-top: 1px solid @color_three;
 			margin-left: 0px;
 			margin-right: 0px;
 		}
 		.navbar-inner {	
 			background-color: transparent;
+			border-top: 1px solid @color_three;
 			.btn-navbar {
 				background-color: transparent;
 				box-shadow: none;
@@ -393,8 +390,12 @@
 	}
 
 	#grid-bottom2 {
-		padding-left: 0px;
-		padding-right: 0px;
+		.container {
+			margin-left: -30px;
+			margin-right: -30px;
+			padding-right: 30px;
+			padding-left: 30px;
+		}
 	}
 	
 	.wrapper-footer {
@@ -406,11 +407,6 @@
 			margin-left: 0px;
 			margin-right: 0px;
 		}
-	}
-
-	#footer {
-		margin-right: 0px;
-		margin-left: 0px;
 	}
 
 	.blog { 
