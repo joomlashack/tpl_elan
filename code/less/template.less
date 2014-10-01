@@ -33,6 +33,14 @@
 			color: @white;
 			border-color: @white;
 		}
+		&.btn-primary { 
+		color: @white;
+		border-color: @white;
+		&:hover, &:focus {
+			color: @white;
+			border-color: @white;
+		}
+	}
 	}
 }
 
@@ -78,6 +86,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0px;
 	.moduletable, .module {
 		margin-bottom: 70px;
+	}
+	.container, .container-fluid {
+		padding-left: -30px;
+		padding-right: -30px;
 	}
 }
 
@@ -408,7 +420,7 @@ a {
 
 // Main navbar
 
-.module {
+.module, .moduletable {
 	.nav {
 		li {
 			a {
@@ -427,16 +439,23 @@ a {
 					color: @color_three;
 					&:hover, &:focus {
 						color: @color_three;
+						box-shadow: none;
 					}
 				}
 			}
+		> li {
+			&.dropdow {
+				
+			}
+		}
 		}
 
 	}
 }
 
+.menu {
 .nav {
-	&.nav-tabs {
+	&.nav-tabs, &.nav-list {
 		li {
 			&.active {
 				> a {
@@ -445,6 +464,7 @@ a {
 			}
 		}
 	}
+}
 }
 
 .navbar {
@@ -694,6 +714,7 @@ a {
 								}
 
 								&:hover , &:focus {
+									box-shadow: none;
 									.caret {
 										border-left-color: @dropdownLinkColorActive;
 									}
@@ -829,6 +850,7 @@ a {
 				}
 
 				&:hover , &:focus {
+					box-shadow: none;
 					.caret {
 						border-left-color: @dropdownLinkColorActive;
 					}
@@ -972,6 +994,9 @@ a {
 								font-size: @baseFontSize - 2;
 								content: '\f107';
 							}
+							&:hover, &:focus {
+								box-shadow: none;
+							}
 						}
 						&:hover, &:focus{
 							box-shadow: none;
@@ -990,6 +1015,9 @@ a {
 					> a {
 						background-color: transparent;
 						color: @color_one;
+						&:hover, &:focus {
+						box-shadow: none;
+						}
 					}
 				}
 				&.dropdown {
@@ -1021,6 +1049,11 @@ a {
 	.breadcrumbs {
 		margin-bottom: 30px;
 		margin-top: 10px;
+	}
+	.row-fluid {
+		.breadcrumb {
+			margin-left: 0px;
+		}
 	}
 	font-size: @baseFontSize;
 	.breadcrumb {
@@ -1356,8 +1389,6 @@ dl {
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 40px;
-	margin-left: -30px;
-	margin-right: -30px;
 	background-color: @color_one;
 	h3 {
 		text-transform: uppercase;
@@ -1769,6 +1800,7 @@ dl {
 	.navbar-inner {
 		box-shadow: none;
 	}
+
 	#bottom-menu {
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -1781,11 +1813,18 @@ dl {
 				li {
 					a {
 						color: @color_three;
+						&:hover, &:focus {
+							color: @color_one;
+						}
 					}
 					&.active {
 						background-color: transparent;
 						a {
 							color: @color_one;
+							background-color: transparent;
+							&:hover, &:focus {
+								box-shadow: none;
+							}
 						}
 					}
 					&:hover, &:focus {

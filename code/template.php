@@ -139,7 +139,8 @@
             <div class="wrapper-footer">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"
             <?php endif; ?>
-            <div class="<?php echo $containerClass ?> footer-content">
+            >
+            <div class="footer-content">
                 <!-- bottom-menu -->
                 <?php if ($this->countModules('bottom-menu')) : ?>
                     <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
