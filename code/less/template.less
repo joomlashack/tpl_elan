@@ -95,15 +95,36 @@ h1, h2, h3, h4, h5, h6 {
 	box-shadow: none;
 	letter-spacing: 0px;
 	font-weight: 400;
-	&:hover {
+	&:hover, &:focus {
 		color: @white;
 		border: 1px solid @color_one;
-		background-color: @btnHoverBackground;
+		background-color: @color_one;
+		color: @white;
+		background-image: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
 		.caret {
 			border-top-color: @white;
 			border-bottom-color: @white;
+		}
+		&.dropdown-toggle {
+			-webkit-border-top-right-radius: 0px;
+			-webkit-border-bottom-right-radius: 0px;
+			border-top-right-radius: 0px;
+			border-top-left-radius: 0px;
+			margin: 0px;
+			background-color: @color_one;
+			color: @white;
 		}	
 	}
+
+	&.dropdown-toggle { 
+		&:hover, &:focus {
+			color: @white;
+			background-color: @color_one;
+		}
+	}
+
 	.caret {
 		border-top-color: @color_one;
 		border-bottom-color: @color_one;
@@ -128,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 	&.btn-inverse {
 		border: 1px solid @btnInverseBackgroundHighlight;
 		color: @btnInverseBackgroundHighlight;
-		&:hover {
+		&:hover, &:focus {
 			color: @white;
 			background-color: @btnInverseBackgroundHighlight;
 			.caret {
@@ -143,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 	&.btn-info {
 		border: 1px solid @btnInfoBackgroundHighlight;
 		color: @btnInfoBackgroundHighlight;
-		&:hover {
+		&:hover, &:focus {
 			color: @white;
 			background-color: @btnInfoBackgroundHighlight;
 			.caret {
@@ -158,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 	&.btn-success {
 		border: 1px solid @btnSuccessBackgroundHighlight;
 		color: @btnSuccessBackgroundHighlight;
-		&:hover {
+		&:hover, &:focus {
 			color: @white;
 			background-color: @btnSuccessBackgroundHighlight;
 			.caret {
@@ -171,14 +192,25 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	&.btn-primary {
+		color: @color_one;
 		&:hover, &:focus {
 			color: @white;
+			background-color: @color_one;
+			&.dropdown-toggle {
+				-webkit-border-top-right-radius: 0px;
+				-webkit-border-bottom-right-radius: 0px;
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+				margin: 0px;
+				background-color: @color_one;
+				color: @white;
+			}
 		}
 	}
 
 	&.btn-link {
 		border: none;
-		&:hover {
+		&:hover, &:focus {
 			color: @color_three;
 		}
 	}
@@ -187,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 		.caret {
 			border-bottom-color: @color_one;
 		}
-		&:hover {
+		&:hover, &:focus {
 			.caret { 
 				border-bottom-color: @white;
 				text-decoration: none;
@@ -198,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 	&.btn-warning {
 		border: 1px solid @btnWarningBackgroundHighlight;
 		color: @btnWarningBackgroundHighlight;
-		&:hover {
+		&:hover, &:focus {
 			color: @white;
 			background-color: @btnWarningBackgroundHighlight;
 			.caret {
@@ -207,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		.caret {
 			border-top-color: @btnWarningBackgroundHighlight;
-			&:hover {
+			&:hover, &:focus {
 				color: @white;
 			}
 		}
@@ -216,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
 	&.btn-danger {
 		border: 1px solid @btnDangerBackgroundHighlight;
 		color: @btnDangerBackgroundHighlight;
-		&:hover {
+		&:hover, &:focus {
 			color: @white;
 			background-color: @btnDangerBackgroundHighlight;
 			.caret {
@@ -230,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	&.btn-link {
-		&:hover {
+		&:hover, &:focus {
 			background-color: transparent;
 			text-decoration: none;
 		}
@@ -238,17 +270,9 @@ h1, h2, h3, h4, h5, h6 {
 
 	&.disabled {
 		border-color: @color_two;
-		&:hover {
+		&:hover, &:focus {
 			background-color: @color_two;
 		}
-	}
-
-	&.dropdown-toggle {
-		-webkit-border-top-right-radius: 0px;
-		-webkit-border-bottom-right-radius: 0px;
-		border-top-right-radius: 0px;
-		border-top-left-radius: 0px;
-		margin: 0px;
 	}
 
 }
@@ -274,7 +298,6 @@ a {
 			border-bottom-right-radius: 0px;
 			border-top-left-radius: 0px;
 			border-top-right-radius: 0px;
-
 		}
 	}
 	> .btn {
@@ -287,28 +310,13 @@ a {
 		color: inherit;
 	}
 	&.open {
-		.btn-danger {
-				color: @white;
-				background-color: @btnDangerBackgroundHighlight;
-				.caret {
-					border-top-color: @white;
-				}
-			}
-		.btn-inverse {
-				color: @white;
-				background-color: @btnInverseBackgroundHighlight;
-				.caret {
-					border-top-color: @white;
-				}
-			}
-		.btn-info {
-				color: @white;
-				background-color: @btnInfoBackgroundHighlight;
-				.caret {
-					border-top-color: @white;
-				}
-			}	
+
+		.dropdown-toggle {
+			background-image: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
 		}
+	}
 }
 
 .label, .badge {
@@ -369,7 +377,7 @@ a {
 				box-shadow: none;
 				letter-spacing: 0px;
 				font-weight: normal;
-				&:hover {
+				&:hover, &:focus{
 					color: @textColor;
 					border: 1px solid @textColor;
 					background-color: @btnHoverBackground;
@@ -399,134 +407,6 @@ a {
 }
 
 // Main navbar
-
-.open {
-	>.dropdown-menu {
-		padding-right: 0px;
-		padding-left: 0px;
-		border-radius: 0px;
-		padding-top: 5px;
-		box-shadow: none;
-		&:before , &:after {
-			content: none;
-		}
-
-		li {
-			text-shadow: none;
-			padding-left: 5px;
-			padding-right: 5px;
-			border-bottom: 0px;
-			border-top: 0px;
-			font-family: @altFontFamily;
-			&:first-child {
-				border-top: none;
-			}
-			a {
-				color: @linkTopColor;
-				text-transform: uppercase;
-				padding: 5px 15px;
-				border-bottom: 1px solid #3B444E;
-				&:hover , &:focus {
-					.caret {
-						border-top-color: transparent;
-						border-bottom-color: transparent;
-					}
-				}
-
-				.caret {
-					border-top-color: transparent;
-					border-left-color: @dropdownLinkColor;
-				}
-
-				&:hover , &:focus {
-					.caret {
-						border-left-color: @dropdownLinkColorHover;
-					}
-				}
-			}
-
-			&:hover, &:focus {
-				background-color: @color_three;
-				a {
-					border-bottom: 1px solid @color_three;
-				}
-			} 
-
-			&.deeper {
-				> a {
-					&:after {
-						content: '\f105';
-						position: absolute;
-						right: 12px;
-					}
-				}
-			}
-			.sub-menu {
-				margin-top: 0px;
-				li {
-
-					a{
-						&:hover, &:focus {
-							background-color: transparent;
-						}
-					}
-
-					border-bottom: 1px solid @color_three;
-					&:last-child {
-						border-bottom: none;
-						padding: 5px 15px 0px 15px;
-					}
-				}
-
-				&:before , &:after {
-					content: none;
-				}
-			}
-
-			&.active {
-				> a {
-					background-image: none;
-					filter: none;
-					background: transparent;
-					.caret {
-						border-left-color: @dropdownLinkColorActive;
-					}
-
-					&:hover , &:focus {
-						.caret {
-							border-left-color: @dropdownLinkColorActive;
-						}
-					}
-				}
-			}
-			&:last-child {
-				a {
-					border-bottom: none;
-
-				}
-			}
-			&.nav-header {
-				color: @linkTopColor;
-			}
-		}
-
-		&.active {
-			&.deeper {
-				li {
-					background-color: @color_four;
-				}
-			}
-		}
-		.divider {
-				margin: 15px 5px 5px;
-				background-color: @white;
-				&:hover, &:focus {
-					background-color: @white;
-				}
-			}
-	}
-}
-
 
 .module {
 	.nav {
@@ -580,7 +460,7 @@ a {
 		.btn {
 			border-color: @linkTopColor;
 			color: @linkTopColor;
-			&:hover {
+			&:hover, &:focus {
 				background-color: @dropdownBackground;
 			}
 		}
@@ -590,7 +470,7 @@ a {
 		.nav-list {
 			li {
 				a {
-					&:hover {
+					&:hover, &:focus {
 						color: @color_three;
 						background-color: @grayLighter;
 					}
@@ -641,11 +521,14 @@ a {
 			}
 			> a {
 				[class^="icon-"] {
-					color: @color_three;
-					&:hover {
-						color: @color_three;
+					color: @linkTopColor;
+					&:hover &:focus {
+						color: @linkTopColor;
 					}
 				}
+			}
+			&:hover, &:focus {
+				background-color: @dropdownBackground;
 			}
 		}
 
@@ -685,24 +568,29 @@ a {
 							margin-left: 10px;
 							font-size: @baseFontSize - 2;
 							content: '\f106';
-							color: @white;
+							color: #39424C;
 						}
 					}
 				}
+
 			}
 
 			&.active {
-				background-color: @color_three;
 				> a {
 					box-shadow: none;
-					&:hover {
+					background-color: @dropdownBackground;
+					&:hover &:focus {
 						box-shadow: none;
+						background-color: @dropdownBackground;
 					}
 					[class^="icon-"] {
-						color: @color_three;
-						&:hover {
-							color: @color_three;
+						color: @linkTopColor;
+						&:hover, &:focus {
+							color: @linkTopColor;
 						}
+					}
+					&:after {
+						color: @linkTopColor;
 					}
 				}
 			}
@@ -732,6 +620,8 @@ a {
 							text-transform: uppercase;
 							padding: 5px 15px;
 							border-bottom: 1px solid #3B444E;
+							margin-bottom: 0px;
+							margin-top: 0px;
 							&:hover , &:focus {
 								.caret {
 									border-top-color: transparent;
@@ -760,6 +650,7 @@ a {
 
 						&.deeper {
 							> a {
+								background-color: transparent;
 								&:after {
 									content: '\f105';
 									position: absolute;
@@ -767,25 +658,29 @@ a {
 								}
 							}
 						}
-						.sub-menu {
-							margin-top: 0px;
-							li {
-								
-								a{
-									&:hover, &:focus {
-										background-color: transparent;
+						.dropdown-menu {
+							padding-top: 0px;
+							padding-bottom: 0px;
+							&.sub-menu {
+								li {
+									padding-top: 0px;
+									a{
+										padding-top: 1px;
+										&:hover, &:focus {
+											background-color: transparent;
+										}
+									}
+
+									border-bottom: 1px solid @color_three;
+									&:last-child {
+										border-bottom: none;
+										padding: 5px 15px 0px 15px;
 									}
 								}
 
-								border-bottom: 1px solid @color_three;
-								&:last-child {
-									border-bottom: none;
-									padding: 5px 15px 0px 15px;
+								&:before , &:after {
+									content: none;
 								}
-							}
-
-							&:before , &:after {
-								content: none;
 							}
 						}
 
@@ -831,8 +726,8 @@ a {
 				}
 			}
 
-			&:focus , &:hover {
-				background: @color_three;
+			&:hover, &:focus {
+				background-color: @dropdownBackground;
 			}
 
 			&.divider-vertical {
@@ -847,23 +742,32 @@ a {
 .dropdown-menu {
 	border-radius: 0px;
 	box-shadow: none;
-	padding-left: 15px;
-	padding-right: 15px;
 	padding-top: 0px;
 	padding-bottom: 5px;
 	&:before , &:after {
 		content: none;
 	}
 
+	.divider {
+		margin: 10px 0px 0px 0px;
+		&:hover, &:focus {
+			border-bottom: 1px solid @white;
+		}
+	}
+
 	li {
-		border-top: 1px solid @white;
 		text-shadow: none;
+		font-size: @baseFontSize - 2;
+		text-shadow: none;
+		font-family: @altFontFamily;
 		&:first-child {
 			border-top: none;
 		}
 		a {
 			color: @linkTopColor;
 			text-transform: uppercase;
+			margin: 5px 5px;
+			border-bottom: 1px solid #3B444E;
 			&:hover , &:focus {
 				.caret {
 					border-top-color: transparent;
@@ -908,6 +812,13 @@ a {
 			}
 		}
 
+		&:hover,  &:focus {
+			background-color: @color_three;
+			a {
+				border-bottom: 1px solid @color_three;
+			}
+		}
+
 		&.active {
 			> a {
 				background-image: none;
@@ -922,6 +833,12 @@ a {
 						border-left-color: @dropdownLinkColorActive;
 					}
 				}
+			}
+		}
+		&:last-child { 
+			a {
+				margin: 5px 5px 0px 5px;
+				border-bottom: none;
 			}
 		}
 	}
@@ -1025,7 +942,7 @@ a {
 			}
 			li {
 				&.deeper {
-					&:focus , &:hover {
+					&:hover, &:focus {
 						> a {
 							&:after {
 								color: @color_one;
@@ -1038,7 +955,7 @@ a {
 					}
 				}
 
-				&:focus , &:hover {
+				&:hover, &:focus {
 					background-color: transparent;
 					a {
 						color: @color_one;
@@ -1056,7 +973,9 @@ a {
 								content: '\f107';
 							}
 						}
-						&:focus , &:hover {
+						&:hover, &:focus{
+							box-shadow: none;
+							outline: none;
 							> a {
 								&:after {
 									color: @color_one;
@@ -1067,7 +986,6 @@ a {
 								}
 							}
 						}
-
 					}
 					> a {
 						background-color: transparent;
@@ -1200,7 +1118,7 @@ dl {
 	}
 	.readmore {
 		color: @white;
-		&:hover {
+		&:hover, &:focus {
 			text-decoration: underline;
 		}
 	}
@@ -1227,7 +1145,7 @@ dl {
 		text-transform: uppercase;
 		font-size: @baseFontSize - 1;
 		float: left;
-		&:hover {
+		&:hover, &:focus {
 			text-decoration: none;
 		}
 	}
@@ -1319,8 +1237,8 @@ dl {
 			&.current {
 				a {
 					&:hover, &:focus {
-					color: @color_three;
-				}
+						color: @color_three;
+					}
 				}
 			}
 		}
@@ -1470,7 +1388,7 @@ dl {
 	.btn {
 		color: @white;
 		border-color: @white;
-		&:hover {
+		&:hover, &:focus {
 			background-color: transparent;
 		}
 	}
@@ -1610,7 +1528,7 @@ dl {
 				font-size: @baseFontSize + 4;
 				padding-left: 0px;
 				padding-right: 0px;
-				&:hover {
+				&:hover, &:focus {
 					background: transparent;
 				}
 			}
@@ -1792,7 +1710,7 @@ dl {
 					text-transform: uppercase;
 					font-weight: normal;
 					font-size: @baseFontSize + 2;
-					&:hover {
+					&:hover, &:focus {
 						text-decoration: none;
 						color: @color_one;
 					}
@@ -1870,7 +1788,7 @@ dl {
 							color: @color_one;
 						}
 					}
-					&:hover {
+					&:hover, &:focus {
 						background-color: transparent;
 					}
 				}
