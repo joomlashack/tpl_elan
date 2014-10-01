@@ -33,13 +33,13 @@
 			border-color: @white;
 		}
 		&.btn-primary { 
-		color: @white;
-		border-color: @white;
-		&:hover, &:focus {
 			color: @white;
 			border-color: @white;
+			&:hover, &:focus {
+				color: @white;
+				border-color: @white;
+			}
 		}
-	}
 	}
 }
 
@@ -340,6 +340,9 @@ a {
 	color: @label-color;
 	padding: 5px 10px 5px 10px;
 	font-weight: 400;
+	&.label-info {
+		background-color: @color_one;
+	}
 }
 
 .inputbox {
@@ -442,28 +445,28 @@ a {
 					}
 				}
 			}
-		> li {
-			&.dropdow {
-				
+			> li {
+				&.dropdow {
+
+				}
 			}
-		}
 		}
 
 	}
 }
 
 .menu {
-.nav {
-	&.nav-tabs, &.nav-list {
-		li {
-			&.active {
-				> a {
-					color: @color_three;
+	.nav {
+		&.nav-tabs, &.nav-list {
+			li {
+				&.active {
+					> a {
+						color: @color_three;
+					}
 				}
 			}
 		}
 	}
-}
 }
 
 .navbar {
@@ -874,18 +877,21 @@ a {
 }
 
 .header-inner {
-	.container {
+	.container, container-fluid {
 		padding-top: 60px;
 		padding-bottom: 30px;
 		#logo {
 			text-align: center;
 		}
-		[class ^="span"] {
-			float: none;
-			margin-right: auto;
-			margin-left: auto;
+		.row {
+			[class ^="span"] {
+				float: none;
+				margin-right: auto;
+				margin-left: auto;
+			}
 		}
 	}
+
 	.container-fluid   {
 		padding-top: 60px;
 		padding-bottom: 30px;
@@ -1015,7 +1021,7 @@ a {
 						background-color: transparent;
 						color: @color_one;
 						&:hover, &:focus {
-						box-shadow: none;
+							box-shadow: none;
 						}
 					}
 				}
