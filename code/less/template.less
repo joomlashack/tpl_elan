@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 		margin-top:  2px;
 		margin-bottom: 2px;
 		&:hover, &:focus {
-			box-shadow: none;
+
 		}
 	}
 }
@@ -931,17 +931,20 @@ blockquote {
 }
 
 .header-inner {
-	.container, container-fluid {
+	.container, .container-fluid {
 		padding-top: 60px;
 		padding-bottom: 30px;
 		#logo {
 			text-align: center;
+			margin: 0px 0px;
 		}
-		.row {
+		.row, .row-fluid {
 			[class ^="span"] {
 				float: none;
 				margin-right: auto;
 				margin-left: auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
 			}
 		}
 	}
