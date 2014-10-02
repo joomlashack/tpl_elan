@@ -44,17 +44,13 @@ if ($classFloat == 'float-right') {
                 "article-info",
                 "legendbottom",
             "/div",
-            "div.span6",
-                "image",
-            "/div",
+                "image.span6",
         "/div"
     );
 } elseif ($classFloat == 'float-left') {
     $this->wrightElementsStructure = Array(
         "div.row-fluid",
-            "div.span6",
-                "image",
-            "/div",
+            "image.span6",
             "div.span6",
                 "title",
                 "icons",
