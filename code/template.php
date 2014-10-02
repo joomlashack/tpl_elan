@@ -64,7 +64,7 @@
             <?php if ($this->countModules('grid-top')) : ?>
                 <div id="grid-top">
                     <div class="<?php echo $containerClass ?>">
-                        <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" extradivs="module" />
+                        <w:module name="grid-top" chrome="wrightflexgrid" extradivs="module" />
                     </div>
                 </div>
             <?php endif; ?>
