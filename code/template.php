@@ -154,8 +154,8 @@
             <div class="<?php echo $containerClass ?>">
             <w:footer />
             </div>
+            </footer>
             </div>
-        </footer>
 </body>
 </html>
 </doctype>
