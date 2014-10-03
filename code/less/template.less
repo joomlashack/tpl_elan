@@ -1150,6 +1150,41 @@ blockquote {
 									border-bottom: none;
 								}
 							}
+							&:only-child {
+								a {
+									border-bottom-width: 0px;
+								}
+							}
+							&.deeper { 
+								&:hover, &:focus {
+									> a {
+										color: @color_one;
+										&:after {
+											content:'\f105';
+										}
+									}
+							}
+						}
+						}
+						&.sub-menu {
+							li {
+								a{
+									padding: 5px 15px;
+									border-bottom: 1px solid @white;
+									&:hover, &:focus {
+										background-color: transparent;
+									}
+								}
+
+								&:last-child {
+									border-bottom: none;
+									padding: 0px 5px;
+								}
+							}
+
+							&:before , &:after {
+								content: none;
+							}
 						}
 					}
 				}
