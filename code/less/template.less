@@ -25,7 +25,7 @@
 		font-size: @baseFontSize + 14;
 		text-align: center;
 	}
-	
+
 	.btn {
 		color: @white;
 		border-color: @white;
@@ -762,21 +762,20 @@ a {
 						}
 						.dropdown-menu {
 							padding-top: 0px;
-							padding-bottom: 0px;
+							padding-bottom: 5px;
 							&.sub-menu {
 								li {
-									padding-top: 0px;
 									a{
-										padding-top: 1px;
+										padding: 5px 15px;
+										border-bottom: 1px solid @color_three;
 										&:hover, &:focus {
 											background-color: transparent;
 										}
 									}
 
-									border-bottom: 1px solid @color_three;
 									&:last-child {
 										border-bottom: none;
-										padding: 5px 15px 0px 15px;
+										padding: 0px 5px;
 									}
 								}
 
@@ -1011,9 +1010,9 @@ blockquote {
 			margin-left: auto;
 			float: none;
 		}
-		
+
 	}
-	
+
 }
 
 #below-content {
@@ -1417,7 +1416,7 @@ dl {
 		text-transform: uppercase;
 		font-size: @baseFontSize - 2;
 	}
-	
+
 	.nav {
 		margin-bottom: 0px;
 		a {
@@ -1728,7 +1727,7 @@ dl {
 			font-size: @baseFontSize;
 			text-transform: uppercase;
 		}
-		
+
 		.nav-tabs {
 			a {
 				font-family: @altFontFamily;
@@ -1762,7 +1761,7 @@ dl {
 				}
 			}
 		}
-		
+
 	}
 
 	.cat-children {
