@@ -186,8 +186,12 @@ input {
 
 	&.dropdown-toggle { 
 		&:hover, &:focus {
-			color: @white;
-			background-color: @color_one;
+			color: @color_one;
+			background-color: @white;
+			.caret {
+				border-top-color: @color_one;
+				border-bottom-color: @color_one;
+			}
 		}
 	}
 
@@ -337,6 +341,11 @@ input {
 		.caret {
 			border-top-color: @btnDangerBackgroundHighlight;
 
+		}
+		&.dropdown-toggle {
+			&:hover, &:focus {
+				background-color: @btnDangerBackgroundHighlight;
+			}
 		}
 	}
 
