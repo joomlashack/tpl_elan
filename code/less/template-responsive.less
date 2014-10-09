@@ -1,16 +1,28 @@
 @media (min-width: 1200px) {
-		.module_ms5, .moduletable_ms5, .moduletext_ms5 {
-			margin-right: 0px;
-			margin-left: 0px;
-		}
+	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
 
-	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
-			margin-right: 0px;
-			margin-left: 0px;
+	.nav {
+		&.nav-tabs, &.nav-list {
+			> li {
+				&:last-child {
+					> a {
+						border-bottom-color: @tableBorder;
+					}
+				}
+			}
 		}
+	}
+
+	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
 
 	.hero-unit { 
 		p {
@@ -174,10 +186,23 @@
 
 @media (max-width: 767px) {
 
-	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
-			margin-right: -20px;
-			margin-left: -20px;
+	.nav {
+		&.nav-tabs, &.nav-list {
+
+			> li {
+				&:last-child {
+					> a {
+						border-bottom-color: @tableBorder;
+					}
+				}
+			}
 		}
+	}
+
+	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
+		margin-right: -20px;
+		margin-left: -20px;
+	}
 
 	body {
 		background-color: @white;
