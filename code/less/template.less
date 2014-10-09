@@ -416,16 +416,16 @@ a {
 }
 .btn-group {
 	> .btn + .dropdown-toggle {
-			-webkit-border-top-left-radius: 0px;
-			-webkit-border-top-right-radius: 0px;
-			-webkit-border-bottom-left-radius: 0px;
-			-webkit-border-bottom-right-radius: 0px;
-			border-bottom-left-radius: 0px;
-			border-bottom-right-radius: 0px;
-			border-top-left-radius: 0px;
-			border-top-right-radius: 0px;
-			margin-right: 0px;
-			margin-left: -1px;
+		-webkit-border-top-left-radius: 0px;
+		-webkit-border-top-right-radius: 0px;
+		-webkit-border-bottom-left-radius: 0px;
+		-webkit-border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		margin-right: 0px;
+		margin-left: -1px;
 	}
 	.btn {
 		&:first-child {
@@ -580,24 +580,164 @@ a {
 					}
 				}
 			}
-			> li {
-				&.dropdow {
-
+		}
+		&.nav-tabs, &.nav-list {
+			li {
+				&.active {
+					> a {
+						color: @color_three;
+					}
 				}
 			}
 		}
 
+		&.nav-pills {
+			li {
+				&.active {
+					> a {
+						background-color: @grayLighter;
+					}
+				}
+			}
+		}
+	}
+
+	&.navbar {
+		.navbar-inner {
+			background-color: transparent;
+			li {
+				a {
+					font-family: @altFontFamily;
+					text-shadow: none;
+					font-size: @baseFontSize - 2;
+					text-transform: uppercase;
+					color: @color_three;
+					&:hover, &:focus {
+						[class^="icon"] {
+							color: @color_one;
+							background-color: transparent;
+						}
+						color: @color_one;
+						background-color: transparent;	
+					}
+					[class^="icon"] {
+						color: @color_three;
+					}
+				}
+				&.current {
+					&.active {
+						> a {
+							background-color: transparent;
+							color: @color_one;
+							box-shadow: none;
+							&:hover, &:focus {
+								background-color: transparent;
+								color: @color_one;
+							}
+						}
+					}
+				}
+				&.active {
+					> a {
+						background-color: transparent;
+						color: @color_one;
+						box-shadow: none;
+						&:hover, &:focus {
+							background-color: transparent;
+							color: @color_one;
+						}
+					}
+				}
+			}
+			> li {
+				> a {
+					font-family: @altFontFamily;
+					text-shadow: none;
+					font-size: @baseFontSize - 2;
+					text-transform: uppercase;
+				}
+			}
+		} 
+	} 
+
+
+	&.navbar-inverse {
+		.nav {
+			&.navbar-inner {
+				background-color: @color_three;
+				li {
+					a {
+						font-family: @altFontFamily;
+						text-shadow: none;
+						font-size: @baseFontSize - 2;
+						text-transform: uppercase;
+						color: @linkTopColor;
+						&:hover, &:focus {
+							[class^="icon"] {
+								color: @linkTopColor;
+								background-color: @dropdownBackground;
+							}
+							color: @linkTopColor;
+							background-color: @dropdownBackground;	
+						}
+						[class^="icon"] {
+							color: @linkTopColor;
+						}
+					}
+					&.current {
+						&.active {
+							> a {
+								background-color: @dropdownBackground;
+								color: @linkTopColor;
+								box-shadow: none;
+								&:hover, &:focus {
+									background-color: @dropdownBackground;
+									color: @linkTopColor;
+								}
+							}
+						}
+					}
+					&.active {
+						> a {
+							background-color: @dropdownBackground;
+							color: @linkTopColor;
+							box-shadow: none;
+							&:hover, &:focus {
+								background-color: @dropdownBackground;
+								color: @linkTopColor;
+							}
+						}
+					}
+				}
+				> li {
+					> a {
+						font-family: @altFontFamily;
+						text-shadow: none;
+						font-size: @baseFontSize - 2;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
 	}
 }
 
-.nav {
-	&.nav-tabs, &.nav-list {
-		li {
-			&.active {
-				> a {
-					color: @color_three;
-				}
-			}
+
+.navbar {
+	&.navbar-inverse, &.navbar-transparent, &.navbar-fixed-top, &.navbar-fixed-bottom, &.navbar-static-top {
+		.divider-vertical {
+			border-right-color: @color_three;
+		}
+		.navbar-inner {
+			background-image: none;
+			background-color: transparent;
+			filter: none;
+			border-radius: 0px;
+			-webkit-border-radius: 0px;
+			border: 0;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
 		}
 	}
 }
@@ -607,7 +747,7 @@ a {
 	.brand {
 		text-shadow: none;
 	} 
-	.navbar-inner, &.navbar-inner {
+	.navbar-inner {
 		background-image: none;
 		background-color: @color_three;
 		filter: none;
@@ -946,26 +1086,6 @@ a {
 					padding-bottom: 0px;
 				}
 			}
-		}
-	}
-}
-
-
-.navbar {
-	&.navbar-inverse, &.navbar-transparent, &.navbar-fixed-top, &.navbar-fixed-bottom, &.navbar-static-top {
-		.divider-vertical {
-			border-right-color: @color_three;
-		}
-		.navbar-inner {
-			background-image: none;
-			background-color: transparent;
-			filter: none;
-			border-radius: 0px;
-			-webkit-border-radius: 0px;
-			border: 0;
-			box-shadow: none;
-			-webkit-box-shadow: none;
-			box-shadow: none;
 		}
 	}
 }
@@ -1537,6 +1657,7 @@ dl {
 					content: '\f107';
 					font-family: FontAwesome;
 					float: right;
+					margin-left: 10px;
 				}
 			}
 			.dropdown-menu {
