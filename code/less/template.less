@@ -586,7 +586,7 @@ a {
 		box-shadow: none;
 		-webkit-box-shadow: none;
 		box-shadow: none;
-		.container {
+		.container, .container-fluid {
 			background-color: @color_three;
 		}
 		.navbar-search {
@@ -2120,7 +2120,17 @@ dl {
 }
 
 .jssocialicons {
-	.clearfix()
+	.clearfix();
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+}
+
+.slidermanDescriptionText {
+	z-index: 1;
+	.slideTitle {
+	text-align: center;
+	}
 }
 
 .wrapper-footer, #footer {
