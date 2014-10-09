@@ -221,13 +221,23 @@ input {
 
 
 	&.primary {
-		.caret {
-			border-bottom-color: @color_one;
-		}
+		color: @color_one;
 		&:hover, &:focus {
-			.caret { 
-				border-bottom-color: @white;
-				text-decoration: none;
+			color: @white;
+			background-color: @color_one;
+			&.dropdown-toggle {
+				-webkit-border-top-right-radius: 0px;
+				-webkit-border-bottom-right-radius: 0px;
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+				margin-right: 0px;
+				background-color: @color_one;
+				color: @white;
+				.caret {
+					border-top-color: @white;
+					border-bottom-color: @white;
+
+				}
 			}
 		}
 	}
@@ -287,9 +297,14 @@ input {
 				-webkit-border-bottom-right-radius: 0px;
 				border-top-right-radius: 0px;
 				border-top-left-radius: 0px;
-				margin: 0px;
+				margin-right: 0px;
 				background-color: @color_one;
 				color: @white;
+				.caret {
+					border-top-color: @white;
+					border-bottom-color: @white;
+
+				}
 			}
 		}
 	}
@@ -400,6 +415,18 @@ a {
 
 }
 .btn-group {
+	> .btn + .dropdown-toggle {
+			-webkit-border-top-left-radius: 0px;
+			-webkit-border-top-right-radius: 0px;
+			-webkit-border-bottom-left-radius: 0px;
+			-webkit-border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			margin-right: 0px;
+			margin-left: -1px;
+	}
 	.btn {
 		&:first-child {
 			-webkit-border-top-left-radius: 0px;
@@ -411,6 +438,7 @@ a {
 			border-top-left-radius: 0px;
 			border-top-right-radius: 0px;
 			margin-right: 0px;
+			margin-left: -1px;
 		}
 		&:last-child {
 			-webkit-border-top-left-radius: 0px;
@@ -422,6 +450,7 @@ a {
 			border-top-left-radius: 0px;
 			border-top-right-radius: 0px;
 			margin-right: 0px;
+			margin-left: -1px;
 			> .dropdown-toggle {
 				border-radius: 0px;
 				-webkit-border-radius: 0px;
