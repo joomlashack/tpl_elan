@@ -15,6 +15,7 @@
             <?php endif; ?>
             <!-- toolbar end -->
             <!-- header -->
+            <div class="main-wrapper <?php echo $containerClass ?> <?php if ($this->params->get('stickyFooter',1)) : ?>wrapper-absolute<?php endif; ?>">
             <header id="header">
                 <!-- logo -->
                 <div class="header-inner">
@@ -155,6 +156,7 @@
             <w:footer />
             </div>
             </footer>
+            </div>
             </div>
 </body>
 </html>

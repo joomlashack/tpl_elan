@@ -60,7 +60,6 @@
 				text-shadow: none;
 				float: left;
 				padding-bottom: 12px; 
-				margin-left: 19px;
 				span  {
 					box-shadow: none;
 					height: 2px;
@@ -188,6 +187,15 @@
 
 @media (max-width: 767px) {
 
+	.main-wrapper { 
+		padding-left: 0px;
+		padding-right: 0px;
+		&.wrapper-absolute { 
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+
 	.nav {
 		&.nav-tabs, &.nav-list {
 
@@ -240,7 +248,6 @@
 				text-shadow: none;
 				float: none;
 				padding-bottom: 12px; 
-				margin-left: 20px;
 				margin-right: 0px;
 				&:hover, &:focus {
 					background-color: transparent;
@@ -253,24 +260,6 @@
 					margin-top: 5px;
 				}
 			}
-		}
-	}
-
-	.container-fluid {
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.container {
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-		&.toolbar-container {
-			margin-left: 0px;
-			margin-right: 0px;
 		}
 	}
 
@@ -431,4 +420,11 @@
 			}
 		}
 	}
+
+	#footer {
+		margin-left: 0px;
+		margin-right: 0px;
+		left: 0;
+	}
+
 }

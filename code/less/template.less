@@ -109,10 +109,20 @@ input {
 	margin-bottom: 30px;
 }
 
-.container, .container-fluid {
-	padding-left:  30px;
-	padding-right: 30px;
+.main-wrapper {
 	background-color: @white;
+	position: relative;
+	min-height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	padding-left: 30px;
+	padding-right: 30px;
+	&.wrapper-absolute {
+		position: absolute;
+	}
+
 }
 
 #header, #menu, #grid-top, #grid-bottom2, #grid-bottom3, #bottom-menu {
@@ -552,6 +562,8 @@ a {
 #toolbar {
 	.container, .container-fluid {
 		background-color: @color_three;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
