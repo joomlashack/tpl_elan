@@ -23,4 +23,14 @@ if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
 
+$top2Modules = intval($this->countModules( 'top2' ));
+$topModules = intval($this->countModules( 'top2' ));
+
+$topModuleClass = 'center-logo';
+
+$topModulesCountInlinePosition = (($topModules + $top2Modules) > 1);
+
+if ($topModulesCountInlinePosition) {
+	$topModuleClass = 'top-inline';
+}
 
