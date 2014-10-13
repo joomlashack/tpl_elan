@@ -21,6 +21,11 @@
                 <div class="header-inner">
                     <div class="<?php echo $containerClass ?>">
                         <div class="<?php echo $gridMode; ?>">
+                            
+                                <div style="position:absolute;top:90;width:300px; height=90px;"><?php $this->countModules( 'top' )->value ?></div>
+                           
+
+
                             <w:logo name="top" />
                         </div>
                     </div>
