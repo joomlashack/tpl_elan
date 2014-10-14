@@ -1344,7 +1344,7 @@ blockquote {
 						color: @color_three;
 						border: 1px solid @color_three;
 						color: @color_three;
-						
+
 					}
 				}
 
@@ -1810,13 +1810,6 @@ dl {
 			text-decoration: underline;
 		}
 	}
-	.module_ms5 , .moduletable_ms5 , .moduletext_ms5 {
-		h3 {
-			&:after {
-				content: '';
-			}
-		}
-	}
 }
 
 .page-header {
@@ -2108,6 +2101,10 @@ dl {
 }
 
 .module_ms5 , .moduletable_ms5 , .moduletext_ms5 {
+	.module-inner {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -2120,6 +2117,7 @@ dl {
 		font-weight: 100;
 		color: @white;
 		margin: 0px;
+		margin-bottom: 20px;
 		&:after {
 			content: '';
 			display: block;
@@ -2150,6 +2148,57 @@ dl {
 		}
 	}
 
+}
+
+.module_ms5_white , .moduletable_ms5 , .moduletext_ms5 {
+	.module-inner {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: @color_one;
+	margin-left: -30px;
+	margin-right: -30px;
+	h3 {
+		text-transform: uppercase;
+		font-size: @baseFontSize + 16;
+		font-weight: 100;
+		color: @white;
+		margin: 0px;
+		margin-bottom: 20px;
+		&:after {
+			content: '';
+			display: block;
+			height: 2px;
+			width: 127px;
+			background: @white;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	p {
+		color: white;
+		font-weight: 100;
+	}
+	.btn {
+		color: @white;
+		border-color: @white;
+		&:hover, &:focus {
+			color: @color_three;
+			border-color: @color_three;
+
+		}
+	}
+	&.no-underline {
+		h3 {
+			&:after {
+				display: none;
+			}
+		}
+	} 
 }
 
 .module_ms6 , .moduletable_ms6 , .moduletext_ms6 {
