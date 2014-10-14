@@ -27,18 +27,18 @@ $this->wrightComplementInnerClass = ''; // Class added to each complement (links
 $this->wrightLeadingItemElementsStructure = Array(
 	'image',
 	'title',
+	'icons',
 	'content',
 	'div.info-container',
 	'article-info',
-	'/div',
-	'icons');
+	'/div');
 
 $this->wrightIntroItemElementsStructure = Array(
 	'image',
 	'title',
+	'icons',
 	'article-info',
-	'content',
-	'icons');
+	'content');
 
 $this->wrightIntroHasImageClass = "";  // optional extra class when image is present
 
