@@ -4,6 +4,11 @@
 
 @media (max-width: 979px) and (min-width: 768px) {
 
+	#toolbar {
+		position: relative;
+		z-index: 1;
+	}
+	
 	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
 		margin-right: 0px;
 		margin-left: 0px;
@@ -74,9 +79,6 @@
 	}
 
 	#top-header {
-		.wrapper-menu {
-			border-top: 1px solid @color_three;
-		}
 		.navbar-inner {	
 			background-color: transparent;
 			.btn-navbar {
@@ -104,7 +106,6 @@
 		}
 		.navbar {
 			.nav {
-				border-top: 0px;
 				> li {
 					&:first-child {
 						a {
@@ -190,6 +191,11 @@
 }
 
 @media (max-width: 767px) {
+
+	#toolbar {
+		position: relative;
+		z-index: 1;
+	}
 
 	.main-wrapper { 
 		padding-left: 0px;
@@ -280,7 +286,6 @@
 		}
 		.navbar-inner {	
 			background-color: transparent;
-			border-top: 1px solid @color_three;
 			.btn-navbar {
 				background-color: transparent;
 				box-shadow: none;
@@ -306,7 +311,6 @@
 		}
 		.navbar {
 			.nav {
-				border-top: 0px;
 				> li {
 					&:first-child {
 						a {
