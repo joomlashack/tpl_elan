@@ -1248,34 +1248,216 @@ blockquote {
 
 .header-inner {
 	.center-logo {
-			padding-top: 60px;
-			padding-bottom: 30px;
-			#logo {
-				text-align: center;
-			}
-				[class ^="span"] {
-					float: none;
-					margin-right: auto;
-					margin-left: auto;
-					margin-top: 15px;
-					margin-bottom: 15px;
-				}
+		padding-top: 60px;
+		padding-bottom: 30px;
+		#logo {
+			text-align: center;
+		}
+		[class ^="span"] {
+			float: none;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
 
 
 	}
 
 	.top-inline {
-			padding-top: 60px;
-			padding-bottom: 30px;
-			#logo {
-				text-align: center;
-			}
-				[class ^="span"] {
-					margin-top: 15px;
-					margin-bottom: 15px;
-				}
-			
+		padding-top: 60px;
+		padding-bottom: 30px;
+		#logo {
+			text-align: center;
 		}
+		[class ^="span"] {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+
+	}
+}
+
+
+.slidermanDescriptionCont {
+	.slidermanDescriptionText {
+		position: relative;
+		height: auto;
+		color: @white;
+		margin-top: 32px;
+		z-index: 1;
+		.slideTitle {
+			height: auto;
+			top: 25%;
+			position: relative;
+			h3 {
+				font-size: @baseFontSize + 16;
+				text-transform: uppercase;
+				letter-spacing: 0px;
+				text-align: center;
+				&:after { 
+					content: '';
+					display: block;
+					height: 2px;
+					width: 125px;
+					background: @white;
+					margin-top: 20px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			p {
+				text-align: center;
+				font-family: @altFontFamily;
+				font-size: @baseFontSize + 16;
+				line-height: 30px;
+
+				a {
+					background-image: none;
+					background-color: transparent;
+					filter: none;
+					text-transform: uppercase;
+					font-family: @altFontFamily;
+					border: 1px solid @white;
+					font-size: @baseFontSize + 4;
+					color: @white;
+					letter-spacing: 0px;
+					font-weight: 400;
+					padding: 15px 25px;
+					&:hover, &:focus {
+						color: @color_three;
+						border: 1px solid @color_three;
+						color: @color_three;
+					
+					}
+				}
+
+
+			}
+		}
+	}
+}
+
+#sliderContainer {
+	.slidermanButtonsCont {
+		z-index: 5;
+		top: 93.3%;
+		height: auto;
+		width: auto;
+		right: 0;
+		a.sliderPrev{
+			top:0;
+			width: 39px;
+			height: 38px;
+			right: 40px;
+			left: auto;
+			background-image: none;
+			background-color: @color_one;
+			font-size: 38px;
+			font-weight: lighter;
+			line-height: 30px;
+			&:after {
+				content: '\f104';
+				font-family: FontAwesome;
+				font-weight: lighter;
+				color: @white;
+				position: absolute;
+				top: 4px;
+				left: 12px;
+			}
+			&:hover, &:focus {
+				background-color: @color_three;
+			}
+		}
+		a.sliderNext {
+			width: 39px;
+			height: 38px;
+			top: 0;
+			right: 0;
+			background-image: none;
+			background-color: @color_one;
+			font-size: 38px;
+			font-weight: lighter; 	
+			line-height: 30px;
+			&:after {
+				content: '\f105';
+				font-family: FontAwesome;
+				font-weight: lighter;
+				color: @white;
+				position: absolute;
+				top: 4px;
+				left: 16px;
+			}
+			&:hover, &:focus {
+				background-color: @color_three;
+			}
+		}
+
+	}
+}
+
+.shackSliderslider {
+		#sliderNav {
+			ul {
+				li {
+					&.active {
+						a {
+							background-color: @color_three;
+						}
+					}
+					a {
+						border-radius: 0px;
+						-webkit-border-radius: 0px;
+						background-color: @color_one;
+						color: @white;
+						&:hover, &:focus {
+							background-color: @color_three;
+						}
+					}
+				}
+			}
+		a.sliderPrev {
+			padding-right: 5px;
+			color: transparent;
+			background-color: transparent;
+			background-image: none;
+			&:hover, &:focus {
+							background-color: transparent;
+							&:after { 
+								color: @color_three;
+							}
+			}
+			&:after {
+				content: '\f104';
+				font-family: FontAwesome;
+				font-weight: lighter;
+				color: @color_one;
+				font-size: @baseFontSize + 2;
+			}
+		}
+		a.sliderNext {
+			padding-left: 0px;
+			color: transparent;
+			background-color: transparent;
+			background-image: none;
+			margin: 0;
+			padding: 0;
+			&:hover, &:focus {
+							background-color: transparent;
+							&:after { 
+								color: @color_three;
+							}
+			}
+			&:after {
+				content: '\f105';
+				font-family: FontAwesome;
+				font-weight: lighter;
+				color: @color_one;
+				font-size: @baseFontSize + 2;
+			}
+		}
+	}
+
 }
 
 #below-content {
