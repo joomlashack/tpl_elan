@@ -2683,6 +2683,17 @@ dl {
 	margin-right: auto;
 	display: table;
 	margin-bottom: 30px;
+	a {
+		opacity: 1;
+		-moz-opacity: 1;
+		filter:alpha(opacity=1);
+		transition: all  0.3s ease-in;
+		&:hover, &:focus {
+			opacity: 0.5;
+			-moz-opacity: 0.5;
+			filter:alpha(opacity=5);
+		}
+	}
 }
 
 .wrapper-footer, #footer {
