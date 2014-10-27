@@ -757,6 +757,55 @@ a {
 }
 
 
+.nav-pills, .nav-tabs {
+	li {
+		&.dropdown {
+			&.open {
+				a {
+					&:hover, &:focus {
+						.caret {
+							border-top-color: @color_three;
+							border-bottom-color: @color_three;
+						}
+					}
+					background-color: @grayLighter;
+					color: @color_three;
+				}
+			}
+			&:hover, &:focus {
+			a  {
+					color: @color_three;
+					background-color: @grayLighter;
+					.caret {
+						border-top-color: @color_three;
+						border-bottom-color: @color_three;
+					}
+				}
+			}
+		}
+	}
+	> li {
+		&.dropdown {
+			&.open {
+				> a {
+					border-top-color: transparent;
+					border-right-color: transparent;
+					border-bottom-color: transparent;
+					border-left-color: transparent;
+				}
+			}
+			> a {
+				&:hover, &:focus {
+					.caret {
+						border-top-color: @color_three;
+						border-bottom-color: @color_three;
+					}
+				}
+			}
+		}
+	}
+}
+
 .navbar {
 	&.navbar-inverse, &.navbar-transparent, &.navbar-fixed-top, &.navbar-fixed-bottom, &.navbar-static-top {
 		.divider-vertical {
