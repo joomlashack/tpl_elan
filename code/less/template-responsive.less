@@ -269,6 +269,42 @@
 	#toolbar {
 		position: relative;
 		z-index: 1;
+		.navbar {
+			&.navbar-inverse {
+				.navbar-inner { 
+					.nav {
+						.dropdown {
+							background-color: @dropdownBackground; 
+							.dropdown-menu {
+								padding-bottom: 5px;
+								margin-bottom: 5px;
+								a {
+									border-bottom-left-radius: 0px;
+									border-bottom-right-radius: 0px;
+									border-top-left-radius: 0px;
+									border-top-right-radius: 0px;
+								}
+							}
+						}
+						li {
+							&.current {
+								&.active {
+									background-color:  @dropdownBackground;
+								}
+							}
+						}
+						> li {
+							&:hover, &:focus {
+								> a {
+									background-color: @dropdownBackground;
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.main-wrapper { 
