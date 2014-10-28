@@ -58,9 +58,9 @@ switch ($classFloat) {
 	    "image",
 	    "div.full-title",
 	    "title",
-	    "article-info",
-	    "/div",
 	    "icons",
+	   	"/div",
+	    "article-info",
 	    "legendtop",
 	    "content",
 	    "legendbottom"
