@@ -12,7 +12,8 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
-$this->wrightLeadingItemElementsStructure = Array("image",
+$this->wrightElementsStructure = Array(
+	"image",
     "title",
     "icons",
     "legendtop",

@@ -2317,6 +2317,38 @@ dl {
 	}
 }
 
+.item-page {
+	padding-top: 30px;
+	border-top: 1px solid @grayLighter;
+	.page-header {
+		h1 {
+		text-align: center;
+		font-family: @sansFontFamily;
+		font-size: @baseFontSize;
+		text-transform: uppercase;
+		color: @color_two;
+		}
+	}
+	.no-pull-image {
+		[class^="pull"] {
+			margin: 0px;
+			border-bottom: 2px solid @color_one;
+		}
+	}
+	.pull-none {
+		border-bottom: 2px solid @color_one;
+	}
+	.full-title {
+		margin-top: 60px;
+		h2 {
+			font-size: @baseFontSize + 26;
+		}
+	}
+	h2 {
+		margin-top: 30px;
+	}
+}
+
 .blog {
 	padding-bottom: 75px;
 	.page-header {
