@@ -780,7 +780,7 @@ a {
 				}
 			}
 			&:hover, &:focus {
-			a  {
+				a  {
 					color: @color_three;
 					background-color: @grayLighter;
 					.caret {
@@ -2326,11 +2326,11 @@ dl {
 	border-top: 1px solid @grayLighter;
 	.page-header {
 		h1 {
-		text-align: center;
-		font-family: @sansFontFamily;
-		font-size: @baseFontSize;
-		text-transform: uppercase;
-		color: @color_two;
+			text-align: center;
+			font-family: @sansFontFamily;
+			font-size: @baseFontSize;
+			text-transform: uppercase;
+			color: @color_two;
 		}
 	}
 	.no-pull-image {
@@ -2359,6 +2359,10 @@ dl {
 	}
 }
 
+legend {
+	color: @color_three;
+}
+
 .blog {
 	padding-bottom: 75px;
 	.page-header {
@@ -2372,7 +2376,11 @@ dl {
 
 	.items-leading {
 		.item-image {
-			border-bottom: 2px solid @color_one;
+			a {
+				img {
+					border-bottom: 2px solid @color_one;
+				}
+			}
 		}
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -2412,8 +2420,9 @@ dl {
 				}
 			}
 			margin-top: 15px;
+			margin-bottom: 15px;
 			clear: none;
-			float: right;
+			width: 100%;
 		}
 		.info-container {
 			display: block;
@@ -2425,7 +2434,11 @@ dl {
 	}
 	.items-row {
 		.item-image {
-			border-bottom: 2px solid @color_one;
+			a {
+				img {
+					border-bottom: 2px solid @color_one;
+				}
+			}
 		}
 		h2 {
 			margin-top: 10px;
@@ -2475,7 +2488,7 @@ dl {
 	}
 
 	.items-more {
-		padding-top: 50px;
+		padding-top: 40px;
 		.items-more {
 			padding-top: 0px;
 		}

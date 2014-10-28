@@ -45,7 +45,7 @@ switch ($classFloat) {
 	            'title',
 	            'content',
 	            'article-info',
-	        "/div",
+	        "/div",	
 	        "div.span6" ,
 		        "div.no-pull-image",
 		            'image',
