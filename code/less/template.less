@@ -2200,6 +2200,13 @@ dl {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	&.no-underline {
+		h3 {
+			&:after {
+				display: none;
+			}
+		}
+	} 
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -2223,11 +2230,6 @@ dl {
 			margin-left: auto;
 			margin-right: auto;
 		}
-		&.no-underline {
-			&:after {
-				display: none;
-			}
-		} 
 	}
 	p {
 		color: white;
@@ -2330,7 +2332,7 @@ dl {
 		}
 	}
 	.no-pull-image {
-		[class^="pull"] {
+		[class^="pull"], [class^="img-fulltext"] {
 			margin: 0px;
 			border-bottom: 2px solid @color_one;
 		}
@@ -2346,6 +2348,14 @@ dl {
 	}
 	h2 {
 		margin-top: 30px;
+	}
+	dl {
+		&.article-info {
+			&.muted {
+				margin-top: 22px;
+				margin-bottom: 22px;
+			}
+		}
 	}
 }
 
