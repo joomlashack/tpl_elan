@@ -52,7 +52,8 @@ switch ($classFloat) {
 		        "/div",
 	        "/div",
 	    "/div");
-
+	
+	break;
 	default:
 	$this->wrightElementsStructure = Array(
 	    "image",
