@@ -1310,6 +1310,7 @@ blockquote {
 		font-weight: 400;
 		position: relative;
 		width: 100%;
+		line-height: @baseLineHeight;
 		&:after {
 			content: '';
 			background: url(../images/blockquote-down.png);
@@ -2330,8 +2331,6 @@ dl {
 
 .item-page {
 	padding-bottom: 30px;
-	padding-top: 30px;
-	border-top: 1px solid @grayLighter;
 	.page-header {
 		h1 {
 			text-align: center;
@@ -2394,6 +2393,8 @@ legend {
 		margin-bottom: 30px;
 		padding: 0px;
 		border-top: 1px solid @grayLighter;
+		border-bottom: 1px solid @grayLighter;
+		float: left;
 		[class^="leading-"] {
 			float: left;
 			.img-intro-left {
@@ -2407,6 +2408,7 @@ legend {
 				font-size: @baseFontSize + 12;
 				margin-bottom: 30px;
 			}
+			padding-bottom: 30px;
 		}
 		.item-separator {
 			padding: 30px 0px 0px 0px;
@@ -2589,6 +2591,62 @@ legend {
 							font-weight: 400;
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+.pagination {
+	.counter {
+		color: @color_three;
+		float: none;
+	}
+	ul {
+		li {
+			&.active {
+				> a, > span {
+					color: @white;
+				}
+			}
+			a {
+				
+				border: 1px solid @color_one;
+				border-left-width: 0px;
+				font-family: @altFontFamily;
+				&:hover, &:focus {
+					color: @white;
+				}
+			}
+			span {
+				&.pagenav {
+					&:hover, &:focus {
+						color: @color_three;
+					}
+				}
+				border: 1px solid @color_one;
+				border-left-width: 0px;
+				font-family: @altFontFamily;
+				&:hover, &:focus {
+					color: @white;
+				}
+			}
+		}
+		> li {
+			&:last-child {
+				> a, > span {
+					-webkit-border-top-right-radius: 0px;
+					border-top-right-radius: 0px;
+					-webkit-border-botom-right-radius: 0px;
+					border-bottom-right-radius: 0px;
+				}
+			}
+			&:first-child {
+				> a, > span {
+				-webkit-border-top-left-radius: 0px;
+				border-top-left-radius: 0px;
+				-webkit-border-bottom-left-radius: 0px;
+				border-bottom-left-radius: 0px;
 				}
 			}
 		}

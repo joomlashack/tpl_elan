@@ -37,6 +37,7 @@ switch ($classFloat) {
 	    "/div");
 	 
 	break;
+	
 	case "float-right":
 	$this->wrightElementsStructure = Array(
 		    "div.row-fluid",
@@ -52,6 +53,21 @@ switch ($classFloat) {
 		        "/div",
 	        "/div",
 	    "/div");
+
+	case "no-pull-image":
+	$this->wrightElementsStructure = Array(
+	    "image",
+	    "div.full-title",
+	    "title",
+	    "icons",
+	   	"/div",
+	    "article-info",
+	    "legendtop",
+	    "content",
+	    "legendbottom"
+	);
+ 
+	break;
 
 	default:
 	$this->wrightElementsStructure = Array(
