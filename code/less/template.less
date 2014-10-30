@@ -884,6 +884,7 @@ a {
 						&:hover, &:focus {
 							color: @grayLighter;
 							background-color: @dropdownBackground;
+							filter:none;
 						}
 					}
 				}
@@ -898,6 +899,7 @@ a {
 						&:hover, &:focus {
 							color: @color_three;
 							background-color: @grayLighter;
+							filter:none;
 						}
 					}
 				}
@@ -918,6 +920,7 @@ a {
 
 						&:hover , &:focus {
 							background-color: @dropdownBackground;
+							filter:none;
 							&:after {
 								font-family: FontAwesome;
 								margin-left: 10px;
@@ -943,6 +946,9 @@ a {
 				}
 				a {
 					font-weight: normal;
+					&:hover, &:focus {
+						filter:none;
+					}
 				}
 				> a {
 					[class^="icon-"] {
@@ -1019,6 +1025,7 @@ a {
 					> a {
 						box-shadow: none;
 						background-color: @dropdownBackground;
+						filter:none;
 						&:hover &:focus {
 							box-shadow: none;
 							background-color: @dropdownBackground;
@@ -1060,6 +1067,7 @@ a {
 								margin-bottom: 0px;
 								margin-top: 0px;
 								&:hover , &:focus {
+									filter:none;
 									.caret {
 										border-top-color: transparent;
 										border-bottom-color: transparent;
@@ -1105,6 +1113,7 @@ a {
 											border-bottom: 1px solid @color_three;
 											&:hover, &:focus {
 												background-color: transparent;
+												filter:none;
 											}
 										}
 
@@ -1131,6 +1140,7 @@ a {
 
 									&:hover , &:focus {
 										box-shadow: none;
+										filter:none;
 										.caret {
 											border-left-color: @dropdownLinkColorActive;
 										}
@@ -1210,6 +1220,7 @@ a {
 			margin: 5px 5px;
 			border-bottom: 1px solid #3B444E;
 			&:hover , &:focus {
+				filter:none;
 				.caret {
 					border-top-color: transparent;
 					border-bottom-color: transparent;
@@ -1231,6 +1242,7 @@ a {
 
 		&.deeper {
 			> a {
+				filter:none;
 				&:after {
 					content: '\f105';
 					position: absolute;
