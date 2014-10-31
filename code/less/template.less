@@ -1921,11 +1921,11 @@ dl {
 }
 
 .row-fluid {
-.controls-row {
-	[class*="span"]+[class*="span"] {
-		margin-left: 0px;
+	.controls-row {
+		[class*="span"]+[class*="span"] {
+			margin-left: 0px;
+		}
 	}
-}
 }
 
 .page-header {
@@ -2603,10 +2603,10 @@ legend {
 			}
 			&:first-child {
 				> a, > span {
-				-webkit-border-top-left-radius: 0px;
-				border-top-left-radius: 0px;
-				-webkit-border-bottom-left-radius: 0px;
-				border-bottom-left-radius: 0px;
+					-webkit-border-top-left-radius: 0px;
+					border-top-left-radius: 0px;
+					-webkit-border-bottom-left-radius: 0px;
+					border-bottom-left-radius: 0px;
 				}
 			}
 		}
@@ -2646,7 +2646,7 @@ dd {
 }
 
 dl {
-	font-family: @sansFontFamily;
+	font-family: @altFontFamily;
 	font-weight: normal;
 	&.nav {
 		margin-bottom: 0px;
@@ -2698,11 +2698,20 @@ dl {
 
 				}
 			}
+			p {
+				a {
+					border-color: transparent;
+					border-bottom: 2px solid @color_one;
+				}
+			}
 		}
 		span {
 			p {
 				a {
-					padding: 0px;
+					display: block;
+					border-bottom: 2px solid @color_one;
+					border: 0px;
+					padding: 0px 0px 9px 0px;
 				}
 			}
 		}
@@ -2784,12 +2793,10 @@ dl {
 	a {
 		opacity: 1;
 		-moz-opacity: 1;
-		filter:alpha(opacity=1);
 		transition: all  0.3s ease-in;
 		&:hover, &:focus {
 			opacity: 0.5;
 			-moz-opacity: 0.5;
-			filter:alpha(opacity=5);
 		}
 	}
 }
