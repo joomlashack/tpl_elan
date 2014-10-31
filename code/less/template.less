@@ -1501,6 +1501,8 @@ blockquote {
 }
 
 .shackSliderslider {
+	border-bottom: 1px solid @grayLighter;
+	margin-bottom: 30px;
 	#sliderNav {
 		ul {
 			li {
@@ -1561,7 +1563,6 @@ blockquote {
 			}
 		}
 	}
-
 }
 
 #below-content {
@@ -2791,12 +2792,8 @@ dl {
 	display: table;
 	margin-bottom: 30px;
 	a {
-		opacity: 1;
-		-moz-opacity: 1;
-		transition: all  0.3s ease-in;
 		&:hover, &:focus {
-			opacity: 0.5;
-			-moz-opacity: 0.5;
+			transform: scale(.75, .75);
 		}
 	}
 }
