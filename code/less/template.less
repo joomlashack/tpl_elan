@@ -726,8 +726,6 @@ a {
 					}
 
 					&:hover , &:focus {
-							background-color: @dropdownBackground;
-							filter:none;
 						&:after {
 							font-family: FontAwesome;
 							margin-left: 10px;
@@ -750,36 +748,16 @@ a {
 						color: @linkTopColor;
 					}
 				}
-				}
-				a {
-					font-weight: normal;
-					&:hover, &:focus {
-						filter:none;
-					}
-				}
-				> a {
-					[class^="icon-"] {
-						color: @linkTopColor;
-						&:hover &:focus {
-							color: @linkTopColor;
-						}
-					}
-				}
-				&:hover, &:focus {
-					background-color: @dropdownBackground;
 			}
 		}
 
-			> li {
+		> li {
+			> a {
 				font-family: @altFontFamily;
 				font-size: @baseFontSize - 2;
-				> a {
-					color: @linkTopColor;
-					text-transform: uppercase;
-					text-shadow: none;
-					.caret {
-						border-bottom-color: @linkTopColor;
-						border-top-color: @linkTopColor;
+				text-shadow: none;
+				text-transform: uppercase;
+				.caret {
 					margin-top: 8px;
 					margin-left: 10px;
 					position: relative;
