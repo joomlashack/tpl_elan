@@ -2476,75 +2476,60 @@ dl {
 	}
 
 	&.nav-tabs {
-		border-bottom: 1px solid @color_two;
-		margin-top: 0px;
-		.open {
-			h3 {
-				a {
-					background-color: transparent;
-					border-color: transparent;
-					border-bottom: 2px solid @color_one;
-
-				}
-			}
-			p {
-				a {
-					border-color: transparent;
-					border-bottom: 2px solid @color_one;
-				}
-			}
-		}
-		span {
-			p {
-				a {
-					display: block;
-					border-bottom: 2px solid @color_one;
-					border: 0px;
-					padding: 0px 0px 9px 0px;
-				}
-			}
-		}
-		a {
-			padding: 0px 0px 9px 0px;
-			margin-right: 35px;
-		}
 		+ .current {
 			margin-top: 70px;
 		}
 		.bs-docs-example {
 			display: none;
 		}
-	}
 
-	dt {
-		&.tabs {
+		.tabs {
 			margin-top: 20px;
-			h3 , span {
+			> span {
+				display: block;
+			}
+			h3 , p {
 				font-size: initial;
-				padding-bottom: 10px;
+				margin-right: 35px;
+
 				a {
-					border-radius: 0px;
-					text-transform: uppercase;
-					font-weight: normal;
+					border-radius: 0;
+					border: 0;
+					border-bottom: 3px solid transparent;
+					display: block;
 					font-size: @baseFontSize + 2;
+					font-weight: normal;
+					padding: 0 0 8px 0;
+					text-transform: uppercase;
+
 					&:hover, &:focus {
-						text-decoration: none;
 						color: @color_three;
+						text-decoration: none;
+					}
+				}
+			}
+			&.open {
+				h3 {
+					a {
+						border: 0;
+						border-bottom: 3px solid @color_one;
+						color: @textColor !important;
+
+					}
+				}
+				p {
+					a {
+						border: 0;
+						border-bottom: 3px solid @color_one;
+						color: @textColor !important;
 					}
 				}
 			}
 			&:last-child {
-				h3 , span {
+				h3 , p {
 					a {
 						margin-right: 0;
 					}
-				}
-			}
-		}
-		&.open {
-			h3 {
-				a {
-					border: 0px;
 				}
 			}
 		}
@@ -2553,6 +2538,42 @@ dl {
 	&.dl-horizontal {
 		dd {
 			margin-bottom: 10px;
+		}
+	}
+}
+
+.nav.nav-tabs {
+	border-bottom: 1px solid @color_two;
+	margin-top: 0;
+	> li {
+		> a{
+			border: 0;
+			border-bottom: 3px solid transparent;
+			border-radius: 0;
+			font-family: @headingsFontFamily;
+			font-size: @baseFontSize + 2;
+			font-weight: normal;
+			text-transform: uppercase;
+
+			&:hover, &:focus {
+				background-color: transparent;
+				border: 0;
+				color: @color_three;
+				text-decoration: none;
+			}
+		}
+
+		&.active {
+			> a{
+				background-color: transparent;
+				border: 0;
+				border-bottom: 3px solid @color_one;
+				color: @textColor;
+				&:hover, &:focus {
+					border: 0;
+					border-bottom: 3px solid @color_one;
+				}
+			}
 		}
 	}
 }
