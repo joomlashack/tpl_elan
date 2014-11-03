@@ -595,8 +595,6 @@ a {
 	}
 }
 
-// Main navbar
-
 .module{
 	.nav {
 		li {
@@ -696,9 +694,6 @@ a {
 	.divider-vertical {
 		border-right-color: @color_three;
 	}
-}
-
-.navbar {
 	.brand {
 		text-shadow: none;
 	}
@@ -986,6 +981,56 @@ a {
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			margin-left: 22px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			> a {
+				padding-left: 0;
+				padding-right: 0;
+				&:before {
+					bottom: 0;
+					content: '';
+					height: 0;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					.transition(all 0.3s);
+				}
+				&:hover,
+				&:focus {
+					position: relative;
+					&:before {
+						border-bottom: 3px solid @color_one;
+					}
+				}
+			}
+			&.active {
+				> a {
+					position: relative;
+
+					&:before {
+						border-bottom: 3px solid @color_one;
+						bottom: 0;
+						content: '';
+						height: 0;
+						left: 0;
+						position: absolute;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------
 
 .dropdown-menu {
 	border-radius: 0px;
