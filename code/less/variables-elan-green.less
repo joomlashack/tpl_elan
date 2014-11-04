@@ -26,6 +26,14 @@
 
 @ms1Color:  #777777;
 
+@dropdownInverseBackground: #45505C;
+@dropdownInverseLinkColor: @white;
+@dropdownInverseLinkColorHover: @white;
+@dropdownInverseLinkBackgroundActive:  @color_three;
+@dropdownInverseLinkBackgroundHover:   @dropdownInverseLinkBackgroundActive;
+@dropdownInverseLinkBorderColor: #3B444E;
+
+
 // Tabs und backgrounds
 // --------------------------------------------------
 @tabBackground: @color_two;
@@ -88,7 +96,6 @@
 
 // Links
 // -------------------------
-@linkTopColor: 			#ebebeb;
 @linkColor:            	#80B788;
 @linkColorHover:        darken(@linkColor, 15%);
 
@@ -174,16 +181,16 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            #45505C;
-@dropdownBorder:                rgba(0,0,0,.2);
+@dropdownBackground:            @grayLighter;
+@dropdownBorder:                @grayLighter;
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             @linkTopColor;
-@dropdownLinkColorHover:        @linkTopColor;
-@dropdownLinkColorActive:       @linkTopColor;
+@dropdownLinkColor:             @color_three;
+@dropdownLinkColorHover:        @color_one;
+@dropdownLinkColorActive:       @color_one;
 
-@dropdownLinkBackgroundActive:  @color_three;
+@dropdownLinkBackgroundActive:  transparent;
 @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
 
 
