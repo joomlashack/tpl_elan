@@ -9,10 +9,10 @@
 		z-index: 1;
 		.navbar {
 			&.navbar-inverse {
-				.navbar-inner { 
+				.navbar-inner {
 					.nav {
 						.dropdown {
-							background-color: @dropdownBackground; 
+							background-color: @dropdownBackground;
 							.dropdown-menu {
 								padding-bottom: 5px;
 								margin-bottom: 5px;
@@ -46,8 +46,10 @@
 	}
 
 	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
-		margin-right: -30px;
-		margin-left: -30px;
+		&.span12 {
+			margin-left: 0;
+			margin-right: -30px;
+		}
 	}
 
 	.nav {
@@ -62,7 +64,7 @@
 		}
 	}
 
-	.hero-unit { 
+	.hero-unit {
 		p {
 			margin: 0px 0px;
 		}
@@ -84,7 +86,7 @@
 		margin-right: -30px;
 	}
 
-	.navbar-inverse { 
+	.navbar-inverse {
 		.navbar-inner {
 			padding: 0px;
 			.btn-navbar {
@@ -97,7 +99,7 @@
 				border: 0px;
 				text-shadow: none;
 				float: left;
-				padding-bottom: 12px; 
+				padding-bottom: 12px;
 				span  {
 					box-shadow: none;
 					height: 2px;
@@ -116,7 +118,7 @@
 
 	#top-header {
 		border-top: 1px solid @color_three;
-		.navbar-inner {	
+		.navbar-inner {
 			background-color: transparent;
 			.btn-navbar {
 				background-color: transparent;
@@ -177,7 +179,7 @@
 		}
 	}
 
-	#breadcrumbs { 
+	#breadcrumbs {
 		.breadcrumb {
 			margin-bottom: 30px;
 			margin-left: 0px;
@@ -225,8 +227,8 @@
 		}
 	}
 
-	.blog { 
-		.items-row { 
+	.blog {
+		.items-row {
 			.item {
 				float: left;
 			}
@@ -271,10 +273,10 @@
 		z-index: 1;
 		.navbar {
 			&.navbar-inverse {
-				.navbar-inner { 
+				.navbar-inner {
 					.nav {
 						.dropdown {
-							background-color: @dropdownBackground; 
+							background-color: @dropdownBackground;
 							.dropdown-menu {
 								padding-bottom: 5px;
 								margin-bottom: 5px;
@@ -307,6 +309,19 @@
 		}
 	}
 
+	#grid-bottom2 , #content2 {
+		.container {
+			margin-left: -10px;
+			margin-right: -10px;
+
+			.module_ms5, .moduletable_ms5, .moduletext_ms5 {
+				&.span12 {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
 	.item-page {
 		.row-fluid {
 			[class^="span"]{
@@ -315,12 +330,12 @@
 		}
 	}
 
-	.main-wrapper { 
+	.main-wrapper {
 		padding-left: 0px;
 		padding-right: 0px;
-		&.wrapper-absolute { 
-			padding-left: 30px;
-			padding-right: 30px;
+		&.wrapper-absolute {
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 	}
 
@@ -341,7 +356,7 @@
 		background-color: @white;
 	}
 
-	.hero-unit { 
+	.hero-unit {
 		p {
 			margin: 0px 0px;
 		}
@@ -350,7 +365,7 @@
 	.module_ms1, .module_ms2, .module_ms3, .module_ms4 {
 		margin-bottom: 30px;
 	}
-	
+
 	.main-content {
 		background-color: @white;
 		margin-left: -20px;
@@ -370,7 +385,7 @@
 				border: 0px;
 				text-shadow: none;
 				float: none;
-				padding-bottom: 12px; 
+				padding-bottom: 12px;
 				margin-right: 0px;
 				&:hover, &:focus {
 					background-color: transparent;
@@ -403,7 +418,7 @@
 			margin-left: 0px;
 			margin-right: 0px;
 		}
-		.navbar-inner {	
+		.navbar-inner {
 			background-color: transparent;
 			.btn-navbar {
 				background-color: transparent;
@@ -461,18 +476,18 @@
 		}
 	}
 
-	[class^="img-intro"] { 
+	[class^="img-intro"] {
 		margin-right: 0px;
 	}
 
-	#breadcrumbs { 
+	#breadcrumbs {
 		.breadcrumb {
 			margin-bottom: 30px;
 			margin-left: 0px;
 			margin-right: 0px;
 		}
 	}
-	
+
 	#bottom-menu {
 		.navbar-inner {
 			.btn-navbar {
@@ -496,7 +511,7 @@
 			}
 		}
 	}
-	
+
 	[class^="newsflash"] {
 		.row-fluid, .row {
 			[class^="span"] {
@@ -514,26 +529,25 @@
 		}
 	}
 
-	#grid-bottom2 {
-		.module_ms5, .moduletable_ms5, .moduletext_ms5 {
-			margin-left: 0px;
-			margin-right: 0px;
-		}
+	.module_ms5, .moduletable_ms5, .moduletext_ms5 {
+		margin-left: -10px;
+		margin-right: -10px;
+		width: auto;
 	}
-	
+
 	.wrapper-footer {
-		margin-right: 0px;
-		margin-left: 0px;
+		margin-right: 0;
+		margin-left: 0;
 		.container-fluid {
-			padding-left: 0px;
-			padding-right: 0px;
-			margin-left: 0px;
-			margin-right: 0px;
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 
-	.blog { 
-		.items-row { 
+	.blog {
+		.items-row {
 			.item {
 				float: left;
 			}
@@ -553,10 +567,6 @@
 			a.sliderPrev{
 				left: 0;
 			}
-			a.sliderNext {
-
-			}
-
 		}
 	}
 
