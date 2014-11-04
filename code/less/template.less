@@ -413,7 +413,19 @@ input {
 			background-color: @color_two;
 		}
 	}
+}
 
+.btn-buy {
+	background-color: @color_one;
+	color: @white;
+	.box-sizing(border-box);
+	.transition(all .2s ease-in);
+	&:hover,
+	&:focus {
+		.transition(all .2s ease-in);
+		background-color: @navbarInverseBackground;
+		border-color: @navbarInverseBackground;
+	}
 }
 
 a {
@@ -977,6 +989,17 @@ a {
 				&.span2 {
 					width: 100%;
 				}
+			}
+		}
+	}
+	.absolute {
+		.btn-buy {
+			padding-top: 40px;
+
+			&:hover, &:focus {
+				background-color: @color_one;
+				border-color: @color_one;
+				padding-top: 50px;
 			}
 		}
 	}
@@ -2689,4 +2712,15 @@ dl {
 			}
 		}
 	}
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+.absolute-right {
+	right: 0;
 }
