@@ -1946,7 +1946,17 @@ dl {
 	}
 
 }
-
+.row-fluid {
+	.module_ms5, .moduletable_ms2, .moduletext_ms2 {
+		&.span12 {
+			float: none;
+			width: auto;
+			&:first-child {
+				margin-left: -20px;
+			}
+		}
+	}
+}
 .module_ms6 , .moduletable_ms6 , .moduletext_ms6 {
 	[class^="span"] {
 		margin-bottom: 30px;
