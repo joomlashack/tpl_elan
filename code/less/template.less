@@ -619,7 +619,7 @@ a {
 				}
 			}
 		}
-		&.nav-tabs, &.nav-list {
+		&.nav-list {
 			li {
 				&.active {
 					> a {
@@ -641,7 +641,7 @@ a {
 	}
 }
 
-.nav-pills, .nav-tabs {
+.nav-pills {
 	li {
 		&.dropdown {
 			&.open {
@@ -2566,8 +2566,17 @@ dl {
 			&:hover, &:focus {
 				background-color: transparent;
 				border: 0;
+				border-bottom: 3px solid transparent;
 				color: @color_three;
 				text-decoration: none;
+
+				.caret {
+					border-top-color: @color_three;
+				}
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @color_three
+				}
 			}
 		}
 
