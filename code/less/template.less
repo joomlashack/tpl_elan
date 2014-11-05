@@ -1589,7 +1589,7 @@ dl {
 	.readmore {
 		color: @white;
 		&:hover, &:focus {
-			text-decoration: underline;
+			color: @color_three;
 		}
 	}
 }
@@ -1620,8 +1620,6 @@ dl {
 		text-transform: uppercase;
 	}
 	.readmore {
-		text-transform: uppercase;
-		font-size: @baseFontSize - 1;
 		float: left;
 		&:hover, &:focus {
 			text-decoration: none;
@@ -1704,6 +1702,9 @@ dl {
 }
 [class^="newsflash-horiz"] {
 	font-family: @altFontFamily;
+	p {
+		font-size: @baseFontSize + 4;
+	}
 }
 
 .module {
@@ -1979,7 +1980,6 @@ dl {
 	}
 	.readmore {
 		float: left;
-		text-transform: uppercase;
 	}
 }
 
@@ -2602,4 +2602,11 @@ dl {
 }
 .absolute-right {
 	right: 0;
+}
+
+.readmore {
+	a {
+		text-transform: uppercase;
+		font-size: @baseFontSize - 1;
+	}
 }
