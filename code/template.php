@@ -10,7 +10,6 @@
         <?php if ($this->countModules('toolbar')) : ?>
             <!-- toolbar -->
             <w:nav containerClass="<?php echo $containerClass ?> relative" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
-            </div>
             <!-- toolbar end -->
         <?php endif; ?>
         <?php if ($this->params->get('stickyFooter',1)) : ?>
@@ -20,7 +19,7 @@
             <!-- header -->
             <header id="header">
                 <div class="header-inner">
-                    <div class="<?php echo $gridMode; ?>">
+                    <div class="row-fluid">
                         <div class="<?php echo $topModuleClass ?>">
                             <w:logo name="top" />
                         </div>
@@ -31,7 +30,7 @@
             <?php if ($this->countModules('menu')) : ?>
             <!-- menu -->
             <div id="top-header">
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" type="menu" name="menu" />
+                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="row-fluid" type="menu" name="menu" />
             </div>
             <!-- menu end -->
             <?php endif; ?>
@@ -45,7 +44,7 @@
             <?php if ($this->countModules('breadcrumbs')) : ?>
             <!-- breadcrumbs -->
             <div id="breadcrumbs">
-                <div class="<?php echo $gridMode; ?>">
+                <div class="row-fluid">
                     <w:module type="single" name="breadcrumbs" chrome="none" />
                 </div>
             </div>
@@ -117,25 +116,25 @@
             <!-- grid-bottom2 end -->
             <?php endif; ?>
             <!-- footer -->
-            <div class="wrapper-footer">
-                <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif; ?>>
-                    <div class="footer-content">
-                        <?php if ($this->countModules('bottom-menu')) : ?>
-                        <!-- bottom-menu -->
-                        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
-                        <!-- bottom-menu end -->
-                        <?php endif; ?>
-                        <?php if ($this->countModules('footer')) : ?>
-                        <div class="<?php echo $containerClass ?>">
-                            <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="xhtml" />
-                        </div>
-                        <?php endif; ?>
-                        <div class="<?php echo $containerClass ?>">
-                            <w:footer />
-                        </div>
+        </div>
+        <div class="wrapper-footer">
+            <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif; ?>>
+                <div class="footer-content">
+                    <?php if ($this->countModules('bottom-menu')) : ?>
+                    <!-- bottom-menu -->
+                    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
+                    <!-- bottom-menu end -->
+                    <?php endif; ?>
+                    <?php if ($this->countModules('footer')) : ?>
+                    <div class="<?php echo $containerClass ?>">
+                        <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="xhtml" />
                     </div>
-                </footer>
-            </div>
+                    <?php endif; ?>
+                    <div class="<?php echo $containerClass ?>">
+                        <w:footer />
+                    </div>
+                </div>
+            </footer>
         </div>
         <?php 
         echo $paramOption . $paramView;
