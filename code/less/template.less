@@ -123,12 +123,21 @@ input {
 }
 
 .main-wrapper {
-	background-color: @white;
+	.relative;
 	padding-left: 20px;
 	padding-right: 20px;
-	position: relative;
 	z-index: 2;
 	.box-sizing(border-box);
+}
+
+.wrapper-absolute {
+	background-color: @white;
+	height: 100%;
+	z-index: 1;
+	.absolute;
+	.absolute-left;
+	.absolute-right;
+	.center-block();	
 }
 
 #header, #menu, #grid-bottom3, #bottom-menu {

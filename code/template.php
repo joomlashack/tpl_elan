@@ -14,7 +14,7 @@
             <!-- toolbar end -->
         <?php endif; ?>
         <?php if ($this->params->get('stickyFooter',1)) : ?>
-        <div class="<?php echo $containerClass . 'wrapper-absolute' ?>"></div>
+        <div class="<?php echo $containerClass . ' wrapper-absolute' ?>"></div>
         <?php endif; ?>
         <div class="main-wrapper <?php echo $containerClass ?>">
             <!-- header -->
