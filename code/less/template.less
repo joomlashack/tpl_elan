@@ -1075,9 +1075,11 @@ blockquote {
 			position: relative;
 			h3 {
 				font-size: @baseFontSize + 16;
-				text-transform: uppercase;
-				letter-spacing: 0px;
+				font-weight: 100;
+				letter-spacing: 0;
 				text-align: center;
+				text-transform: uppercase;
+
 				&:after {
 					content: '';
 					display: block;
@@ -1090,32 +1092,11 @@ blockquote {
 				}
 			}
 			p {
-				text-align: center;
 				font-family: @altFontFamily;
 				font-size: @baseFontSize + 16;
+				font-weight: bold;
 				line-height: 30px;
-
-				a {
-					background-image: none;
-					background-color: transparent;
-					filter: none;
-					text-transform: uppercase;
-					font-family: @altFontFamily;
-					border: 1px solid @white;
-					font-size: @baseFontSize + 4;
-					color: @white;
-					letter-spacing: 0px;
-					font-weight: 400;
-					padding: 15px 25px;
-					&:hover, &:focus {
-						color: @color_three;
-						border: 1px solid @color_three;
-						color: @color_three;
-
-					}
-				}
-
-
+				text-align: center;
 			}
 		}
 	}
