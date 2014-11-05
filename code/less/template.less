@@ -1098,7 +1098,207 @@ blockquote {
 				line-height: 30px;
 				text-align: center;
 			}
+
+			.btn-large {
+				padding: 8px 30px;
+			}
+
+			.btn {
+				border: 1px solid @white;
+				color: @white;
 				&:hover, &:focus {
+					color: @white;
+					border: 1px solid @color_one;
+					background-color: @color_one;
+					color: @white;
+					.caret {
+						border-top-color: @white;
+						border-bottom-color: @white;
+					}
+					&.dropdown-toggle {
+						background-color: @color_one;
+						color: @white;
+					}
+				}
+
+				&.dropdown-toggle {
+					&:hover, &:focus {
+						color: @color_one;
+						background-color: @white;
+						.caret {
+							border-top-color: @color_one;
+							border-bottom-color: @color_one;
+						}
+					}
+				}
+
+				.caret {
+					border-top-color: @color_one;
+					border-bottom-color: @color_one;
+				}
+
+				&.btn-large {
+					font-size: @baseFontSize + 6;
+					.caret {
+						margin-top: 9px;
+					}
+				}
+
+				&.btn-small {
+					font-size: @baseFontSize;
+
+				}
+
+				&.btn-mini {
+					font-size: @baseFontSize - 2;
+				}
+
+
+				&.primary {
+					color: @color_one;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @color_one;
+						&.dropdown-toggle {
+							background-color: @color_one;
+							color: @white;
+							.caret {
+								border-top-color: @white;
+								border-bottom-color: @white;
+							}
+						}
+					}
+				}
+
+				&.btn-inverse {
+					border: 1px solid @btnInverseBackgroundHighlight;
+					color: @btnInverseBackgroundHighlight;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @btnInverseBackgroundHighlight;
+						.caret {
+							border-top-color: @white;
+						}
+					}
+					.caret {
+						border-top-color: @btnInverseBackgroundHighlight;
+					}
+				}
+
+				&.btn-info {
+					border: 1px solid @btnInfoBackgroundHighlight;
+					color: @btnInfoBackgroundHighlight;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @btnInfoBackgroundHighlight;
+						.caret {
+							border-top-color: @white;
+						}
+					}
+					.caret {
+						border-top-color: @btnInfoBackgroundHighlight;
+					}
+				}
+
+				&.btn-success {
+					border: 1px solid @btnSuccessBackgroundHighlight;
+					color: @btnSuccessBackgroundHighlight;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @btnSuccessBackgroundHighlight;
+						.caret {
+							border-top-color: @white;
+						}
+					}
+					.caret {
+						border-top-color: @btnSuccessBackgroundHighlight;
+					}
+				}
+
+				&.btn-primary {
+					color: @color_one;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @color_one;
+						&.dropdown-toggle {
+							background-color: @color_one;
+							color: @white;
+							.caret {
+								border-top-color: @white;
+								border-bottom-color: @white;
+							}
+						}
+					}
+				}
+
+				&.disabled {
+					color: @white;
+					background-color: @color_two;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @color_two;
+					}
+				}
+
+				&.btn-link {
+					border: none;
+					&:hover, &:focus {
+						color: @color_three;
+					}
+				}
+
+				&.btn-warning {
+					border: 1px solid @btnWarningBackgroundHighlight;
+					color: @btnWarningBackgroundHighlight;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @btnWarningBackgroundHighlight;
+						.caret {
+							border-top-color: @white;
+						}
+					}
+					.caret {
+						border-top-color: @btnWarningBackgroundHighlight;
+						&:hover, &:focus {
+							color: @white;
+						}
+					}
+				}
+
+				&.btn-danger {
+					border: 1px solid @btnDangerBackgroundHighlight;
+					color: @btnDangerBackgroundHighlight;
+					&:hover, &:focus {
+						color: @white;
+						background-color: @btnDangerBackgroundHighlight;
+						.caret {
+							border-top-color: @white;
+						}
+					}
+					.caret {
+						border-top-color: @btnDangerBackgroundHighlight;
+					}
+					&.dropdown-toggle {
+						&:hover, &:focus {
+							background-color: @btnDangerBackgroundHighlight;
+						}
+					}
+				}
+
+				&.btn-link {
+					&:hover, &:focus {
+						background-color: transparent;
+						text-decoration: none;
+					}
+				}
+
+				&.disabled {
+					border-color: @color_two;
+					&:hover, &:focus {
+						background-color: @color_two;
+					}
+				}
+			}
 		}
 	}
 }
