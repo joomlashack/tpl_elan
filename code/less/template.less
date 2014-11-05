@@ -1984,6 +1984,7 @@ dl {
 }
 
 .item-page {
+	.relative;
 	padding-bottom: 30px;
 	.page-header {
 		h1 {
@@ -2017,6 +2018,13 @@ dl {
 			margin-top: 22px;
 			margin-bottom: 22px;
 		}
+	}
+}
+
+.wrapp-article-info {
+	.article-info-inner {
+		.absolute;
+		.absolute-bottom;
 	}
 }
 
@@ -2600,8 +2608,17 @@ dl {
 .absolute {
 	position: absolute;
 }
+.absolute-left {
+	left: 0;
+}
 .absolute-right {
 	right: 0;
+}
+.absolute-top {
+	top: 0;
+}
+.absolute-bottom {
+	bottom: 0;
 }
 
 .readmore {

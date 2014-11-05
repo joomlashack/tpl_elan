@@ -137,5 +137,14 @@
                 </footer>
             </div>
         </div>
+        <?php 
+        echo $paramOption . $paramView;
+        if ($paramOption == 'com_content' && $paramView == 'article') :
+         ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_elan/js/elan.js'></script>  
+        <?php 
+            endif;
+         ?>
+
     </body>
 </html>

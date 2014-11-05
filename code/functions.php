@@ -10,6 +10,9 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
+$app = JFactory::getApplication();
+$input = $app->input;
+
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';
@@ -34,3 +37,6 @@ if ($topModulesCountInlinePosition) {
 	$topModuleClass = 'top-inline';
 }
 
+$paramOption = $input->getVar('option', '');
+$paramView = $input->getVar('view', '');
+$paramLayout = $input->getVar('layout', 'default');

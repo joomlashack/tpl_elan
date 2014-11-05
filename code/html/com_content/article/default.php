@@ -25,7 +25,7 @@ if ($imageExist) {
 	switch ($classFloat) {
 		case "float-left":
 		$this->wrightElementsStructure = Array(
-			    "div.row-fluid",
+			"div.row-fluid",
 		        "div.span6" ,
 			        "div.no-pull-image",
 			            'image',
@@ -35,19 +35,27 @@ if ($imageExist) {
 		            'icons',
 		            'title',
 		            'content',
-		            'article-info',
+		            'div.wrapp-article-info',
+			            'div.article-info-inner',
+			            	'article-info',
+			            '/div',
+		            '/div',
 		        "/div",
 		    "/div");
 
 		break;
 		case "float-right":
 		$this->wrightElementsStructure = Array(
-			    "div.row-fluid",
+			"div.row-fluid",
 		        "div.span6",
 		        	 'icons',
 		            'title',
 		            'content',
-		            'article-info',
+		            'div.wrapp-article-info',
+			            'div.article-info-inner',
+			            	'article-info',
+			            '/div',
+		            '/div',
 		        "/div",
 		        "div.span6" ,
 			        "div.no-pull-image",
