@@ -2185,11 +2185,12 @@ legend {
 		}
 
 		.nav-tabs {
+			border: 0;
 			a {
 				font-family: @altFontFamily;
 				font-size: @baseFontSize + 4;
-				padding-left: 0px;
-				padding-right: 0px;
+				padding-left: 0;
+				padding-right: 0;
 				&:hover, &:focus {
 					background: transparent;
 				}
@@ -2467,10 +2468,11 @@ dl {
 	}
 }
 
-.nav.nav-tabs {
+.nav-tabs {
 	border-bottom: 1px solid @color_two;
 	margin-top: 0;
 	> li {
+		margin-bottom: -1px;
 		> a{
 			border: 0;
 			border-bottom: 3px solid transparent;
@@ -2502,16 +2504,123 @@ dl {
 				background-color: transparent;
 				border: 0;
 				border-bottom: 3px solid @color_one;
-				color: @textColor;
+				color: @textColor !important;
 				&:hover, &:focus {
+					background-color: transparent;
 					border: 0;
 					border-bottom: 3px solid @color_one;
 				}
 			}
 		}
 	}
+	&.nav-stacked {
+		> li {
+			> a{
+				border: 1px solid @tableBorder;
+				&:hover, &:focus {
+					border: 1px solid @tableBorder;
+				}
+			}
+
+			&.active {
+				> a {
+					border-bottom: 2px solid @color_one;
+					&:hover, &:focus{
+						border-bottom: 2px solid @color_one;
+					}
+				}
+			}
+		}
+	}
 }
 
+.tabs-left,
+.tabs-right {
+	.nav-tabs {
+		border-bottom: 0;
+		> li {
+			> a {
+				border-bottom: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				&:hover, &:focus {
+					border-bottom: 0;
+				}
+			}
+
+			&.active {
+				> a {
+					border-bottom: 0;
+					&:hover, &:focus {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.tabs-left {
+	> .nav-tabs {
+		border-right: 1px solid @color_two;
+		> li {
+			&.active {
+				> a {
+					border-right: 3px solid @color_one;
+					&:hover, &:focus {
+						border-right: 3px solid @color_one;
+					}
+				}
+			}
+		}
+	}
+
+}
+.tabs-right {
+	> .nav-tabs {
+		border-left: 1px solid @color_two;
+		> li {
+			> a {
+				border-left: 3px solid transparent;
+				&:hover , &:focus {
+					border-left: 3px solid transparent;
+				}
+			}
+			&.active {
+				> a {
+					border-left: 3px solid @color_one;
+					&:hover, &:focus {
+						border-left: 3px solid @color_one;
+					}
+				}
+			}
+		}
+	}
+}
+.tabs-below {
+	> .nav-tabs {
+		> li {
+			margin-top: -1px;
+			margin-bottom: 0;
+			> a {
+				border-bottom: 0;
+				border-top: 3px solid transparent;
+				&:hover, &:focus {
+					border-top: 3px solid transparent;
+				}
+			}
+			&.active {
+				> a {
+					border-bottom: 0;
+					border-top: 3px solid @color_one;
+					&:hover, &:focus {
+						border-top: 3px solid @color_one;
+					}
+				}
+			}
+		}
+	}
+}
+// ----------------------------------------------------------------------------------
 #sidebar2 {
 	margin-top: 12px;
 	input {
