@@ -30,7 +30,7 @@
             <?php if ($this->countModules('menu')) : ?>
             <!-- menu -->
             <div id="top-header">
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="row-fluid" type="menu" name="menu" />
+                <w:nav rowClass="row-fluid" type="menu" name="menu" />
             </div>
             <!-- menu end -->
             <?php endif; ?>
@@ -136,11 +136,11 @@
                 </div>
             </footer>
         </div>
-        <?php 
+        <?php
         if ($paramOption == 'com_content' && $paramView == 'article') :
          ?>
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_elan/js/elan.js'></script>  
-        <?php 
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_elan/js/elan.js'></script>
+        <?php
             endif;
          ?>
 
