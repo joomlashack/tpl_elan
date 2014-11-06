@@ -1928,6 +1928,10 @@ dl {
 		margin-right: -20px;
 		width: auto;
 	}
+	&:only-child {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 
 	.module-inner {
 		padding-left: 20px;
@@ -1968,7 +1972,7 @@ dl {
 }
 .row-fluid {
 	.module_ms5, .moduletable_ms2, .moduletext_ms2 {
-		&.span12 {
+		&.span12 , &:only-child {
 			float: none;
 			width: auto;
 			&:first-child {
