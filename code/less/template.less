@@ -904,13 +904,15 @@ a {
 							}
 						}
 						&.active {
-							color: @dropdownInverseLinkColorActive;
-							.caret {
-								border-top-color: @dropdownInverseLinkColorActive;
-							}
-							[class^="icon-"],
-							[class*=" icon-"] {
+							> a {
 								color: @dropdownInverseLinkColorActive;
+								.caret {
+									border-top-color: @dropdownInverseLinkColorActive;
+								}
+								[class^="icon-"],
+								[class*=" icon-"] {
+									color: @dropdownInverseLinkColorActive;
+								}
 							}
 						}
 					}
