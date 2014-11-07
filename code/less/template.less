@@ -2695,41 +2695,6 @@ dl {
 				margin-left: auto;
 				margin-right: auto;
 				float: none;
-				li {
-					a {
-						[class^="icon-"] {
-							color: @color_three;
-							&:hover, &:focus {
-								color: @color_one;
-								background-color: transparent;
-							}
-						}
-						color: @color_three;
-						&:hover, &:focus {
-							color: @color_one;
-							background-color: transparent;
-						}
-					&.active {
-						background-color: transparent;
-						a {
-							color: @color_one;
-							background-color: transparent;
-							&:hover, &:focus {
-								box-shadow: none;
-							}
-						}
-						&:focus, &:hover {
-							> a {
-								&:after {
-									content: '';
-								}
-							}
-						}
-					}
-					&:hover, &:focus {
-						background-color: transparent;
-					}
-				}
 			}
 		}
 	}
