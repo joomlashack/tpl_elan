@@ -32,3 +32,69 @@
 	border-bottom-color: @tableBorder;
 	border-top-color: @tableBorder;
 }
+
+.nav.nav-tabs {
+	border-color: @tableBorder;
+}
+
+p.img_caption {
+	background-color: @bodyBackground;
+}
+
+.list-striped, .row-striped {
+	border-top-color: darken(@bodyBackground, 10%);
+}
+.list-striped li:nth-child(odd), .list-striped dd:nth-child(odd), .row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd) {
+	background-color: @bodyBackground;
+
+	a {
+		color: @textColor;
+	}
+}
+.list-striped li:hover, .list-striped dd:hover, .row-striped .row:hover, .row-striped .row-fluid:hover {
+	background-color: darken(@bodyBackground, 5%);
+
+	a {
+		color: @textColor;
+	}
+}
+.list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+	border-bottom-color: darken(@bodyBackground, 10%);
+
+	h1,h2,h3,h4,h5,h6 {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.module .nav li a:hover, .module .nav li a:focus {
+	background-color: darken(@bodyBackground, 5%);
+}
+
+.dropdown-menu li a {
+	border-bottom-color: @color_three;
+}
+.form-actions {
+	border-top-color: @color_three;
+}
+
+legend {
+	border-bottom-color: @tableBorder;
+}
+
+.panel {
+	border-left-color: @tableBorder;
+	border-right-color: @tableBorder;
+	border-top-color: @tableBorder;
+
+	&:last-child {
+		border-bottom-color: @tableBorder;
+	}
+}
+
+div.cat-children li, div.categories-list li {
+	border-bottom-color: @tableBorder;
+}
+
+
