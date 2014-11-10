@@ -96,7 +96,6 @@ input[type="text"], input[type="password"], textarea, select, .search-query {
 	}
 }
 
-
 .navbar-form {
 	width: 100%;
 	margin-top: 2px;
@@ -131,7 +130,7 @@ input {
 }
 
 .wrapper-absolute {
-	background-color: @white;
+	background-color: @wrapperBackground;
 	height: 100%;
 	z-index: 1;
 	.absolute;
@@ -232,7 +231,7 @@ input {
 	&.dropdown-toggle {
 		&:hover, &:focus {
 			color: @color_one;
-			background-color: @white;
+			background-color: @wrapperBackground;
 			.caret {
 				border-top-color: @color_one;
 				border-bottom-color: @color_one;
@@ -2454,6 +2453,7 @@ dl {
 			&.open {
 				h3 {
 					a {
+						background-color: @wrapperBackground;
 						border: 0;
 						border-bottom: 3px solid @color_one;
 						color: @textColor !important;
@@ -2462,6 +2462,7 @@ dl {
 				}
 				p {
 					a {
+						background-color: @wrapperBackground;
 						border: 0;
 						border-bottom: 3px solid @color_one;
 						color: @textColor !important;
