@@ -77,10 +77,6 @@ p.img_caption {
 	border-bottom-color: darken(@bodyBackground, 10%);
 }
 
-.module .nav li a:hover, .module .nav li a:focus {
-	background-color: darken(@bodyBackground, 5%);
-}
-
 .dropdown-menu {
 	.divider {
 		background-color: @color_three;
@@ -237,4 +233,28 @@ input[type="color"],
 
 .thumbnail {
 	border-color: @tableBorder;
+}
+#sidebar1, #sidebar2 {
+	.module{
+		.nav {
+			> li {
+				> a {
+					&:hover, &:focus {
+						background-color: @tableBorder;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-pills >li>a:hover, .nav-pills >li>a:focus{
+	background-color: @tableBorder;
+}
+
+#below-content h3 {
+	color: #ddd;
+}
+#above-content h3
+	color: #ddd;
 }
