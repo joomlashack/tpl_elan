@@ -17,6 +17,9 @@
 	border-bottom-color: @tableBorder;
 	> li {
 		border-right-color: @tableBorder;
+		span {
+			color: #ddd;
+		}
 	}
 }
 
@@ -24,7 +27,8 @@
 	background-color: @bodyBackground;
 }
 
-.pagination ul>.disabled>span, .pagination ul>.disabled>a, .pagination ul>.disabled>a:hover, .pagination ul>.disabled>a:focus{
+.pagination ul>.disabled>span, .pagination ul>.disabled>a,
+.pagination ul>.disabled>a:hover, .pagination ul>.disabled>a:focus{
 	color: @bodyBackground;
 }
 
@@ -40,18 +44,29 @@
 p.img_caption {
 	background-color: @bodyBackground;
 }
-
+.img-intro-left,
+.img-intro-right,
+.img-intro-none {
+	a {
+		color: @color_three;
+		&:hover, &:focus {
+			color: @white;
+		}
+	}
+}
 .list-striped, .row-striped {
 	border-top-color: darken(@bodyBackground, 10%);
 }
-.list-striped li:nth-child(odd), .list-striped dd:nth-child(odd), .row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd) {
+.list-striped li:nth-child(odd), .list-striped dd:nth-child(odd),
+.row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd) {
 	background-color: @bodyBackground;
 
 	a {
 		color: @textColor;
 	}
 }
-.list-striped li:hover, .list-striped dd:hover, .row-striped .row:hover, .row-striped .row-fluid:hover {
+.list-striped li:hover, .list-striped dd:hover, .row-striped .row:hover,
+.row-striped .row-fluid:hover {
 	background-color: darken(@bodyBackground, 5%);
 
 	a {
@@ -67,10 +82,10 @@ p.img_caption {
 }
 
 .dropdown-menu li a {
-	border-bottom-color: @color_three;
+	border-bottom-color: @wrapperBackground;
 }
 .form-actions {
-	border-top-color: @color_three;
+	border-top-color: transparent;
 }
 
 legend {
@@ -91,4 +106,101 @@ div.cat-children li, div.categories-list li {
 	border-bottom-color: @tableBorder;
 }
 
+div {
+	.bs-docs-example {
+		border-color: @tableBorder;
+		&:after {
+			background-color: @tableBorder;
+			border-color: @tableBorder;
+			color: @textColor;
+		}
+	}
+	code {
+		background-color: @tableBorder;
+		border-color: @tableBorder;
+		color: @white;
+	}
+}
 
+.module, .moduletable {
+	h3 {
+		color: #ddd;
+	}
+}
+
+blockquote {
+	small {
+		color: @grayLight;
+	}
+}
+
+.text-info {
+	color: lighten(@blue, 13%);
+}
+.text-error {
+	color: #D14;
+}
+.text-success {
+	color: lighten(@green, 16%);
+}
+
+.control-group.info .control-label,
+.control-group.info .help-block,
+.control-group.info .help-inline {
+	color: lighten(@blue, 13%);
+}
+.control-group.error .control-label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
+	color: #D14;
+}
+.control-group.success .control-label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
+	color: lighten(@green, 16%);
+}
+
+
+.table tbody tr.success>td,
+.table tbody tr.info>td,
+.table tbody tr.error>td,
+.table tbody tr.warning>td {
+	color: @color_three;
+}
+
+hr {
+	border-bottom: 0;
+}
+
+.input-append .add-on, .input-prepend .add-on {
+	background-color: @color_three;
+	border-color: @color_three;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input{
+	border-color: @color_one;
+	color: #546170;
+}
+
+.uneditable-input, .uneditable-textarea {
+	color: #999;
+}
+
+.img-polaroid {
+	background-color: @bodyBackground;
+}
