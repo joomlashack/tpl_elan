@@ -950,7 +950,7 @@ a {
 
 	.divider {
 		border: 0;
-		margin: 10px 0px 0px 0px;
+		margin: -1px 0 0;
 	}
 
 	li {
@@ -1638,10 +1638,9 @@ dl {
 	border-bottom: 0px;
 }
 
-.module, .module-table {
+.module, .moduletable {
 	margin-bottom: 30px;
 	h3 {
-		width: 100%;
 		text-shadow: none;
 		font-size: @baseFontSize;
 		color: @color_two;
@@ -2020,8 +2019,10 @@ dl {
 }
 
 .item-page {
+	overflow: visible;
 	.relative;
-	.page-header {
+
+ 	> .page-header {
 		h1 {
 			text-align: center;
 			font-family: @sansFontFamily;
@@ -2045,7 +2046,7 @@ dl {
 			font-size: @baseFontSize + 26;
 		}
 	}
-	h2 {
+	> h2 {
 		margin-top: 30px;
 	}
 }
@@ -2738,4 +2739,8 @@ dl {
 	.badge {
 		padding-left: 8px;
 	}
+}
+
+div .bs-docs-example {
+	background-color: @wrapperBackground;
 }

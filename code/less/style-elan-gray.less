@@ -81,8 +81,13 @@ p.img_caption {
 	background-color: darken(@bodyBackground, 5%);
 }
 
-.dropdown-menu li a {
-	border-bottom-color: @wrapperBackground;
+.dropdown-menu {
+	.divider {
+		background-color: @color_three;
+	}
+	li a {
+		border-bottom-color: @wrapperBackground;
+	}
 }
 .form-actions {
 	border-top-color: transparent;
@@ -203,4 +208,33 @@ input[type="color"],
 
 .img-polaroid {
 	background-color: @bodyBackground;
+}
+
+.label, .badge {
+	color: #546170;
+}
+.label-info, .badge-info {
+	color: @textColor;
+}
+.label-important, .badge-important {
+	color: @textColor;
+}
+.label-warning, .badge-warning {
+	color: @textColor;
+}
+.label-success, .badge-success {
+	color: @textColor;
+}
+.label-inverse, .badge-inverse {
+	color: @textColor;
+}
+.navbar .divider-vertical {
+	border-right: 0;
+}
+.nav-header {
+	text-shadow: none;
+}
+
+.thumbnail {
+	border-color: @tableBorder;
 }
