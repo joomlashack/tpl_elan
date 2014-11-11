@@ -1716,10 +1716,21 @@ dl {
 			font-family: @altFontFamily;
 			font-size: @baseFontSize + 2;
 		}
+		> li {
+			&.active {
+				> a {
+					background-color: transparent;
+					padding: 0;
+					color: @linkColor;
+                    [class^="icon-"], [class*=" icon-"] {
+                        color: @linkColor;
+                    }
+				}
+			}
+		}
 		li {
 			border-bottom: 1px solid @white;
 			a {
-				padding: 15px 0px;
 				&:hover, &:focus {
 					color: @color_one;
 				}
@@ -1735,7 +1746,7 @@ dl {
 					padding: 15px 0px 0px;
 				}
 			}
-			&.current {
+			&.active {
 				a {
 					&:hover, &:focus {
 						color: @color_three;
