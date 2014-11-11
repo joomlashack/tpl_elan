@@ -72,9 +72,11 @@
 	}
 
 	#footer {
-		margin-left: 0px;
-		margin-right: 0px;
 		left: 0;
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-left: 0;
+		margin-right: 0;
 		margin-top: 30px;
 	}
 
@@ -84,16 +86,11 @@
 			a.sliderPrev{
 				left: 0;
 			}
-			a.sliderNext {
-
-			}
-
 		}
 	}
 
 	.slidermanDescriptionCont {
 		.slidermanDescriptionText {
-
 			.slideTitle {
 				top: 15%;
 			}
@@ -554,10 +551,15 @@
 	}
 
 	#footer {
-		margin-left: 0px;
-		margin-right: 0px;
-		left: 0;
+		margin-left: 0;
+		margin-right: 0;
 		margin-top: 30px;
+		&.sticky {
+			left: 0;
+			padding-left: 9%;
+			padding-right: 9%;
+			width: 82%;
+		}
 	}
 
 	#sliderContainer {
