@@ -130,6 +130,13 @@ div {
 }
 
 blockquote {
+	background-image: url(../images/blockquote-up-gray.png);
+
+	p {
+		&:after {
+			background-image: url(../images/blockquote-down-gray.png);
+		}
+	}
 	small {
 		color: @grayLight;
 	}
@@ -255,6 +262,6 @@ input[type="color"],
 #below-content h3 {
 	color: #ddd;
 }
-#above-content h3
+#above-content h3 {
 	color: #ddd;
 }
