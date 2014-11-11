@@ -690,6 +690,22 @@ a {
 			}
 		}
 	}
+	.module_ms1 , .moduletable_ms1 , .moduletext_ms1 {
+		.nav {
+			> li {
+				&.active {
+					> a {
+						background-color: transparent;
+						padding: 0;
+						color: @linkColor;
+	                    [class^="icon-"], [class*=" icon-"] {
+	                        color: @linkColor;
+	                    }
+					}
+				}
+			}
+		}
+	}
 }
 
 .navbar {
