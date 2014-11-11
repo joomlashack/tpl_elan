@@ -540,10 +540,22 @@
 		}
 	}
 
-	.blog {
+	.blog , .blog-featured{
 		.items-row {
 			.item {
 				float: left;
+			}
+		}
+
+		.items-leading {
+			[class^="leading-"] {
+				> .row-fluid {
+					> .span6 {
+						> h2 {
+							font-size: 23px;
+						}
+					}
+				}
 			}
 		}
 	}
