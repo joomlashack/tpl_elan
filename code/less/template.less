@@ -854,6 +854,37 @@ a {
 .nav-list>li>a, .nav-list .nav-header {
 	text-shadow: none;
 }
+.nav.nav-list {
+	> li {
+		> a {
+			[class^="icon-"],
+			[class*=" icon-"] {
+				color: @linkColor;
+			}
+			&:hover, &:focus {
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @linkColorHover;
+				}
+			}
+		}
+		&.active {
+			> a {
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @white;
+				}
+				&:hover, &:focus {
+					color: @white;
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: @white;
+					}
+				}
+			}
+		}
+	}
+}
 .navbar-inverse {
 	.nav {
 		> li {
