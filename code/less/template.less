@@ -693,13 +693,23 @@ a {
 	.module_ms1 , .moduletable_ms1 , .moduletext_ms1 {
 		.nav {
 			> li {
-				&.active {
-					> a {
-						background-color: transparent;
-						padding: 0;
+				> a {
+					&:hover, &:focus {
 						color: @linkColor;
 	                    [class^="icon-"], [class*=" icon-"] {
 	                        color: @linkColor;
+	                    }
+					}
+				}
+				&.active {
+					> a {
+						background-color: transparent;
+						color: @linkColor;
+	                    [class^="icon-"], [class*=" icon-"] {
+	                        color: @linkColor;
+	                    }
+	                    &:hover, &:focus {
+							background-color: transparent;
 	                    }
 					}
 				}
@@ -1771,19 +1781,28 @@ dl {
 
 	.nav {
 		margin-bottom: 0px;
-		a {
-			text-transform: none;
-			font-family: @altFontFamily;
-			font-size: @baseFontSize + 2;
-		}
 		> li {
-			&.active {
-				> a {
-					background-color: transparent;
-					padding: 0;
+			> a {
+				padding-bottom: 10px;
+				padding-top: 10px;
+				&:hover, &:focus {
 					color: @linkColor;
                     [class^="icon-"], [class*=" icon-"] {
                         color: @linkColor;
+                    }
+				}
+			}
+			&.active {
+				> a {
+					background-color: transparent;
+					color: @linkColor;
+					padding-left: 0;
+					padding-right: 0;
+                    [class^="icon-"], [class*=" icon-"] {
+                        color: @linkColor;
+                    }
+                    &:hover , &:focus {
+						background-color: transparent;
                     }
 				}
 			}
@@ -1791,9 +1810,13 @@ dl {
 		li {
 			border-bottom: 1px solid @white;
 			a {
+				font-family: @altFontFamily;
+				font-size: @baseFontSize + 2;
 				padding-left: 0;
 				padding-right: 0;
+				text-transform: none;
 				&:hover, &:focus {
+					background-color: transparent;
 					color: @color_one;
 				}
 			}
@@ -1804,9 +1827,6 @@ dl {
 			}
 			&:last-child {
 				border-bottom: 0;
-				a {
-					padding: 15px 0px 0px;
-				}
 			}
 			&.active {
 				a {
