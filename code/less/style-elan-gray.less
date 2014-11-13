@@ -32,9 +32,16 @@
 	color: @bodyBackground;
 }
 
-.blog .items-leading {
-	border-bottom-color: @tableBorder;
-	border-top-color: @tableBorder;
+.blog {
+	.items-leading {
+		border-bottom-color: @tableBorder;
+		border-top-color: @tableBorder;
+	}
+	.items-more {
+		.nav-tabs.nav-stacked > li {
+			border-bottom-color: @tableBorder;
+		}
+	}
 }
 
 .nav.nav-tabs {
