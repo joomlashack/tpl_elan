@@ -115,12 +115,27 @@
 				border: 0px;
 				text-shadow: none;
 				float: left;
+				margin-top: 0;
 				padding-bottom: 12px;
 				span  {
 					box-shadow: none;
 					height: 2px;
 					width: 30px;
 					margin-top: 5px;
+				}
+			}
+			&.navbar-inverse {
+				.navbar-inner {
+					.nav {
+						.dropdown {
+							background-color: @dropdownInverseBackground;
+							.dropdown-menu {
+								a {
+									border-radius: 0;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -141,24 +156,6 @@
 							&:hover {
 								background-color: transparent;
 								color: @color_one;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	#toolbar {
-		.navbar {
-			&.navbar-inverse {
-				.navbar-inner {
-					.nav {
-						.dropdown {
-							background-color: @dropdownInverseBackground;
-							.dropdown-menu {
-								a {
-									border-radius: 0;
-								}
 							}
 						}
 					}
@@ -243,6 +240,12 @@
 					}
 				}
 			}
+		}
+		.btn-navbar {
+			margin-top: 6px;
+		}
+		.brand {
+			line-height: 32px;
 		}
 	}
 
