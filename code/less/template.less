@@ -1526,6 +1526,20 @@ blockquote {
 	margin-bottom: 30px;
 }
 
+// ----------------------------------------------------------------------------------
+#toolbar {
+	.navbar-inverse {
+		.navbar-inner {
+			background-color: transparent;
+			.container , .container-fluid {
+				background-color: @navbarInverseBackground;
+				padding-left: 15px;
+				padding-right: 15px;
+				.box-sizing(border-box);
+			}
+		}
+	}
+}
 #top-header {
 	.wrapper-menu {
 		margin-bottom: 30px;
@@ -1544,6 +1558,7 @@ blockquote {
 		}
 	}
 }
+// ----------------------------------------------------------------------------------
 
 #breadcrumbs {
 	margin-bottom: 0;

@@ -94,6 +94,15 @@
 			}
 		}
 	}
+
+	#toolbar {
+		.navbar-inner {
+			#grid > .core(@gridColumnWidth768, @gridGutterWidth768);
+			.container {
+				.center-block();
+			}
+		}
+	}
 }
 
 @media (max-width: 979px) {
@@ -138,6 +147,9 @@
 					}
 				}
 			}
+		}
+		.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+			padding: 0;
 		}
 	}
 	#bottom-menu {
