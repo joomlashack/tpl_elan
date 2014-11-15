@@ -103,8 +103,8 @@
 	.nav-collapse .nav>li>a {
 		font-size: @baseFontSize + 1;
 	}
-	.navbar-inverse {
-		.navbar-inner {
+	#toolbar {
+		.navbar {
 			.btn-navbar {
 				float: left;
 				background-color: transparent;
@@ -274,6 +274,9 @@
 					padding-bottom: 5px;
 				}
 			}
+			.nav-header {
+				color: #999;
+			}
 		}
 	}
 	.hero-unit {
@@ -398,21 +401,19 @@
 		margin-left: -20px;
 		margin-right: -20px;
 	}
-
-	.navbar-inverse {
-		.navbar-inner {
+	#toolbar {
+		.navbar {
 			.btn-navbar {
-				float: left;
 				background-color: transparent;
-				box-shadow: none;
 				background-image: none;
-				font-family: @altFontFamily;
 				border-radius: 0px;
 				border: 0px;
-				text-shadow: none;
+				box-shadow: none;
 				float: none;
-				padding-bottom: 12px;
+				font-family: @altFontFamily;
 				margin-right: 0px;
+				padding-bottom: 12px;
+				text-shadow: none;
 				&:hover, &:focus {
 					background-color: transparent;
 
