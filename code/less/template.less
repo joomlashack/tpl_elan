@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0px 0px 20px 0px;
 }
 
-input[type="text"], input[type="password"], textarea, select, .search-query {
+input[type="text"], input[type="password"], input[type="email"], textarea, select, .search-query {
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
 	border-top-right-radius: 0px;
@@ -76,6 +76,28 @@ input[type="text"], input[type="password"], textarea, select, .search-query {
 .input-append {
 	.add-on {
 		margin-left: -1px;
+	}
+}
+
+.form-actions {
+	padding: 0px 0px 22px;
+	border: none;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.reset {
+	.form-horizontal {
+		.form-actions {
+			padding-left: 0px;
+		}
+	}
+}
+
+fieldset {
+	&.well {
+		padding: 0px;
 	}
 }
 
