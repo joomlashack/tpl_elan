@@ -1769,9 +1769,12 @@ dl {
 }
 [class^="newsflash-horiz"] {
 	margin-top: 30px;
-	font-family: @altFontFamily;
+	.page-header {
+		font-family: @sansFontFamily;
+		font-size: @baseFontSize + 2;
+	}
 	p {
-		font-size: @baseFontSize + 4;
+		font-size: @baseFontSize;
 	}
 }
 
