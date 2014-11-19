@@ -2569,6 +2569,18 @@ ul {
 		&.nav-tabs {
 			&.nav-stacked {
 				border-bottom: none;
+				> li {
+					> a {
+						font-size: @baseFontSize;
+						border: 0px;
+						padding-right: 0px;
+						padding-left: 0px;
+						&:hover, &:focus {
+							border: 0px;
+							background: transparent;
+						}
+					}
+				}
 			}
 		}
 	}
