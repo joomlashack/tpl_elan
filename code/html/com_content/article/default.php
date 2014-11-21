@@ -45,7 +45,6 @@ if ($imageExist) {
 		break;
 		default:
 		$this->wrightElementsStructure = Array(
-		    "image",
 		    "div.full-title",
 		    "title",
 		    "icons",

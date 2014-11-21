@@ -2105,12 +2105,15 @@ dl {
 	
 	.img-fulltext-none {
 		border-bottom: 2px solid @color_one;
+		img {
+			min-width: 100%;
+		}
 	}
 	.pull-none {
 		border-bottom: 2px solid @color_one;
 	}
 	.full-title {
-		margin-top: 60px;
+		margin-top: 30px;
 		h2 {
 			font-size: @baseFontSize + 26;
 		}
@@ -2125,6 +2128,13 @@ dl {
 
 legend {
 	color: @color_three;
+}
+
+.full-image {
+	border-bottom: 2px solid @color_one;
+	img {
+		min-width: 100%;
+	}
 }
 
 .blog , .blog-featured{

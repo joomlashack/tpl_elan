@@ -40,3 +40,30 @@ if ($topModulesCountInlinePosition) {
 $paramOption = $input->getVar('option', '');
 $paramView = $input->getVar('view', '');
 $paramLayout = $input->getVar('layout', 'default');
+$paramId = $input->getVar('id', '');
+
+// Single article image (full image)
+$wrightSingleArticleImage = '';
+
+if ($paramOption == 'com_content' && $paramView == 'article') {
+	$db = JFactory::getDbo();
+	$query = $db->getQuery(true);
+	$query->select($db->qn('images'))
+		->from($db->qn('#__content'))
+		->where($db->qn('id') . ' = ' . (int) $paramId);
+	$db->setQuery($query);
+
+	$images = $db->loadResult();
+
+	if ($images != '')
+	{
+		$imagesArray = json_decode($images);
+
+		if ($imagesArray->image_fulltext != '')
+		{
+			$wrightSingleArticleImage = $imagesArray->image_fulltext;
+			$wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
+		}
+	}
+
+}
