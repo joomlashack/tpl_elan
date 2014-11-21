@@ -40,9 +40,12 @@ if ($imageExist) {
 			            	'article-info',
 			            '/div',
 		            '/div',
-		            'pagination',
 		        "/div",
-		    "/div");
+		    "/div",
+		    'div.wrapper-pagination', 
+		    'pagination',
+		    '/div'
+		    );
 
 		break;
 		case "float-right":
@@ -57,14 +60,16 @@ if ($imageExist) {
 			            	'article-info',
 			            '/div',
 		            '/div',
-		            'pagination',
 		        "/div",
 		        "div.span6" ,
 			        "div.no-pull-image",
 			            'image',
 			        "/div",
 		        "/div",
-		    "/div");
+		    "/div",
+		    'div.wrapper-pagination', 
+		    'pagination',
+		    '/div');
 
 		break;
 		default:
