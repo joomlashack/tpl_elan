@@ -59,7 +59,7 @@ if ($paramOption == 'com_content' && $paramView == 'article') {
 	{
 		$imagesArray = json_decode($images);
 
-		if ($imagesArray->float_fulltext == 'none')
+		if ($imagesArray->float_fulltext == 'none' || $imagesArray->float_fulltext == '')
 		{
 			$wrightSingleArticleImage = $imagesArray->image_fulltext;
 			$wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
