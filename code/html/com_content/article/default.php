@@ -25,51 +25,22 @@ if ($imageExist) {
 	switch ($classFloat) {
 		case "float-left":
 		$this->wrightElementsStructure = Array(
-			"div.row-fluid",
-		        "div.span6" ,
-			        "div.no-pull-image",
-			            'image',
-			        "/div",
-		        "/div",
-		        "div.span6" ,
-		            'icons',
-		            'title',
-		            'content',
-		            'div.wrapp-article-info',
-			            'div.article-info-inner',
-			            	'article-info',
-			            '/div',
-		            '/div',
-		        "/div",
-		    "/div",
-		    'div.wrapper-pagination', 
-		    'pagination',
-		    '/div'
-		    );
+			'image',      
+		    'icons',
+		    'title',
+		    'content',
+		    'article-info',
+			);
 
 		break;
 		case "float-right":
 		$this->wrightElementsStructure = Array(
-			"div.row-fluid",
-		        "div.span6",
-		        	 'icons',
-		            'title',
-		            'content',
-		            'div.wrapp-article-info',
-			            'div.article-info-inner',
-			            	'article-info',
-			            '/div',
-		            '/div',
-		        "/div",
-		        "div.span6" ,
-			        "div.no-pull-image",
-			            'image',
-			        "/div",
-		        "/div",
-		    "/div",
-		    'div.wrapper-pagination', 
-		    'pagination',
-		    '/div');
+		    'image',
+		    'icons',
+		    'title',
+		    'content',
+		    'article-info',
+		    );
 
 		break;
 		default:
@@ -82,7 +53,6 @@ if ($imageExist) {
 		    "article-info",
 		    "legendtop",
 		    "content",
-		    "pagination",
 		    "legendbottom"
 		);
 
@@ -99,7 +69,6 @@ else {
 	    "article-info",
 	    "legendtop",
 	    "content",
-	    "pagination",
 	    "legendbottom");
 }
 
