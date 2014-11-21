@@ -40,6 +40,7 @@ if ($imageExist) {
 			            	'article-info',
 			            '/div',
 		            '/div',
+		            'pagination',
 		        "/div",
 		    "/div");
 
@@ -56,6 +57,7 @@ if ($imageExist) {
 			            	'article-info',
 			            '/div',
 		            '/div',
+		            'pagination',
 		        "/div",
 		        "div.span6" ,
 			        "div.no-pull-image",
@@ -75,6 +77,7 @@ if ($imageExist) {
 		    "article-info",
 		    "legendtop",
 		    "content",
+		    "pagination",
 		    "legendbottom"
 		);
 
@@ -91,6 +94,7 @@ else {
 	    "article-info",
 	    "legendtop",
 	    "content",
+	    "pagination",
 	    "legendbottom");
 }
 
