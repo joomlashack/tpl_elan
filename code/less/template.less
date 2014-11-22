@@ -1166,17 +1166,13 @@ blockquote {
 }
 
 
-.slidermanDescriptionCont {
+
+div.slidermanDescriptionCont[style] {
+	position: absolute !important;
 	.slidermanDescriptionText {
-		position: relative;
-		height: auto;
 		color: @white;
-		margin-top: 32px;
 		z-index: 1;
 		.slideTitle {
-			height: auto;
-			top: 25%;
-			position: relative;
 			h3 {
 				font-size: @baseFontSize + 16;
 				font-weight: 100;
@@ -1406,8 +1402,9 @@ blockquote {
 #sliderContainer {
 	.slidermanButtonsCont {
 		z-index: 5;
-		top: 93.3%;
-		height: auto;
+		top: auto;
+		bottom: 0;
+		height: 37px;
 		width: auto;
 		right: 0;
 		a.sliderPrev{
