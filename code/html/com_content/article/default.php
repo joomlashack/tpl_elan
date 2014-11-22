@@ -28,8 +28,8 @@ if ($imageExist) {
 			'image',      
 		    'icons',
 		    'title',
-		    'content',
 		    'article-info',
+		    'content',
 			);
 
 		break;
@@ -38,8 +38,8 @@ if ($imageExist) {
 		    'image',
 		    'icons',
 		    'title',
-		    'content',
 		    'article-info',
+		    'content'
 		    );
 
 		break;
