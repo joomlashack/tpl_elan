@@ -28,9 +28,7 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
             <!-- toolbar -->
-            <w:nav containerClass="<?php echo $wrightContainerClass ?> relative"
-            	rowClass="<?php echo $wrightGridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse"
-            	type="toolbar" name="toolbar" />
+            <w:nav containerClass="<?php echo $wrightContainerClass ?> relative" rowClass="<?php echo $wrightGridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             <!-- toolbar end -->
         <?php
 			endif;
@@ -216,8 +214,7 @@ defined('_JEXEC') or die('Restricted access');
 						:
 				?>
                 <!-- bottom-menu -->
-                <w:nav containerClass="<?php echo $wrightContainerClass ?>"
-                	rowClass="<?php echo $wrightGridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
+                <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
                 <!-- bottom-menu end -->
                 <?php
 					endif;
