@@ -121,7 +121,7 @@ defined('_JEXEC') or die('Restricted access');
             <div id="main-content">
                     <!-- single image -->
                     <?php
-						if ($wrightSingleArticleImage != '')
+						if ($wrightSingleArticleDisplay)
 							:
 					?>
                     <div class="row-fluid">

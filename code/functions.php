@@ -31,6 +31,7 @@ $paramLayout = $input->getVar('layout', 'default');
 $paramId = $input->getVar('id', '');
 
 // Single article image (full image)
+$wrightSingleArticleDisplay = false;
 $wrightSingleArticleImage = '';
 
 if ($paramOption == 'com_content' && $paramView == 'article')
@@ -41,14 +42,34 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 		->from($db->qn('#__content'))
 		->where($db->qn('id') . ' = ' . (int) $paramId);
 	$db->setQuery($query);
-
 	$images = $db->loadResult();
 
 	if ($images != '')
 	{
 		$imagesArray = json_decode($images);
 
-		if ($imagesArray->float_fulltext == 'none' || $imagesArray->float_fulltext == '')
+		// If there is an image and the float is not set, it checks the global config
+		if ($imagesArray->image_fulltext != '' && $imagesArray->float_fulltext == 'none')
+		{
+			$wrightSingleArticleDisplay = true;
+		}
+		elseif ($imagesArray->image_fulltext != '' && $imagesArray->float_fulltext == '')
+		{
+			$query->clear()
+				->select($db->qn('params'))
+				->from($db->qn('#__extensions'))
+				->where($db->qn('name') . ' = ' . $db->q('com_content'));
+			$db->setQuery($query);
+			$config = $db->loadResult();
+			$configArray = json_decode($config);
+
+			if ($configArray->float_fulltext == 'none')
+			{
+				$wrightSingleArticleDisplay = true;
+			}
+		}
+
+		if ($wrightSingleArticleDisplay)
 		{
 			$wrightSingleArticleImage = $imagesArray->image_fulltext;
 			$wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
