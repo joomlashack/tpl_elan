@@ -718,21 +718,21 @@ a {
 				> a {
 					&:hover, &:focus {
 						color: @linkColor;
-	                    [class^="icon-"], [class*=" icon-"] {
-	                        color: @linkColor;
-	                    }
+						[class^="icon-"], [class*=" icon-"] {
+							color: @linkColor;
+						}
 					}
 				}
 				&.active {
 					> a {
 						background-color: transparent;
 						color: @linkColor;
-	                    [class^="icon-"], [class*=" icon-"] {
-	                        color: @linkColor;
-	                    }
-	                    &:hover, &:focus {
+						[class^="icon-"], [class*=" icon-"] {
+							color: @linkColor;
+						}
+						&:hover, &:focus {
 							background-color: transparent;
-	                    }
+						}
 					}
 				}
 			}
@@ -1166,231 +1166,234 @@ blockquote {
 }
 
 
+#sliderContainer {
+	div.slidermanDescriptionCont {
+		div.slidermanDescriptionText {
+			color: @white;
+			z-index: 1;
+			div.slideTitle {
+				font-size: 30px;
+				padding: 15px;
+				h3 {
+					font-size: @baseFontSize + 16;
+					font-weight: 100;
+					letter-spacing: 0;
+					text-align: center;
+					text-transform: uppercase;
 
-.slidermanDescriptionCont {
-	.slidermanDescriptionText {
-		color: @white;
-		z-index: 1;
-		.slideTitle {
-			h3 {
-				font-size: @baseFontSize + 16;
-				font-weight: 100;
-				letter-spacing: 0;
-				text-align: center;
-				text-transform: uppercase;
-
-				&:after {
-					content: '';
-					display: block;
-					height: 2px;
-					width: 125px;
-					background: @white;
-					margin-top: 20px;
-					margin-left: auto;
-					margin-right: auto;
-				}
-			}
-			p {
-				font-family: @altFontFamily;
-				font-size: @baseFontSize + 16;
-				font-weight: bold;
-				line-height: 30px;
-				text-align: center;
-			}
-
-			.btn {
-				border: 1px solid @white;
-				color: @white;
-				&:hover, &:focus {
-					color: @white;
-					border: 1px solid @color_one;
-					background-color: @color_one;
-					color: @white;
-					.caret {
-						border-top-color: @white;
-						border-bottom-color: @white;
+					&:after {
+						content: '';
+						display: block;
+						height: 2px;
+						width: 125px;
+						background: @white;
+						margin-top: 20px;
+						margin-left: auto;
+						margin-right: auto;
 					}
-					&.dropdown-toggle {
+				}
+				p {
+					font-family: @altFontFamily;
+					font-size: @baseFontSize + 16;
+					font-weight: bold;
+					line-height: @baseLineHeight + 8;
+					text-align: center;
+				}
+
+				.btn {
+					border: 1px solid @white;
+					color: @white;
+					&:hover, &:focus {
+						color: @white;
+						border: 1px solid @color_one;
 						background-color: @color_one;
 						color: @white;
+						.caret {
+							border-top-color: @white;
+							border-bottom-color: @white;
+						}
+						&.dropdown-toggle {
+							background-color: @color_one;
+							color: @white;
+						}
 					}
-				}
 
-				&.dropdown-toggle {
-					&:hover, &:focus {
+					&.dropdown-toggle {
+						&:hover, &:focus {
+							color: @color_one;
+							background-color: @white;
+							.caret {
+								border-top-color: @color_one;
+								border-bottom-color: @color_one;
+							}
+						}
+					}
+
+					.caret {
+						border-top-color: @color_one;
+						border-bottom-color: @color_one;
+					}
+
+					&.btn-large {
+						font-size: @baseFontSize + 6;
+						.caret {
+							margin-top: 9px;
+						}
+					}
+
+					&.btn-small {
+						font-size: @baseFontSize;
+
+					}
+
+					&.btn-mini {
+						font-size: @baseFontSize - 2;
+					}
+
+
+					&.primary {
 						color: @color_one;
-						background-color: @white;
-						.caret {
-							border-top-color: @color_one;
-							border-bottom-color: @color_one;
-						}
-					}
-				}
-
-				.caret {
-					border-top-color: @color_one;
-					border-bottom-color: @color_one;
-				}
-
-				&.btn-large {
-					font-size: @baseFontSize + 6;
-					.caret {
-						margin-top: 9px;
-					}
-				}
-
-				&.btn-small {
-					font-size: @baseFontSize;
-
-				}
-
-				&.btn-mini {
-					font-size: @baseFontSize - 2;
-				}
-
-
-				&.primary {
-					color: @color_one;
-					&:hover, &:focus {
-						color: @white;
-						background-color: @color_one;
-						&.dropdown-toggle {
-							background-color: @color_one;
+						&:hover, &:focus {
 							color: @white;
-							.caret {
-								border-top-color: @white;
-								border-bottom-color: @white;
+							background-color: @color_one;
+							&.dropdown-toggle {
+								background-color: @color_one;
+								color: @white;
+								.caret {
+									border-top-color: @white;
+									border-bottom-color: @white;
+								}
 							}
 						}
 					}
-				}
 
-				&.btn-inverse {
-					border: 1px solid @btnInverseBackgroundHighlight;
-					color: @btnInverseBackgroundHighlight;
-					&:hover, &:focus {
-						color: @white;
-						background-color: @btnInverseBackgroundHighlight;
-						.caret {
-							border-top-color: @white;
-						}
-					}
-					.caret {
-						border-top-color: @btnInverseBackgroundHighlight;
-					}
-				}
-
-				&.btn-info {
-					border: 1px solid @btnInfoBackgroundHighlight;
-					color: @btnInfoBackgroundHighlight;
-					&:hover, &:focus {
-						color: @white;
-						background-color: @btnInfoBackgroundHighlight;
-						.caret {
-							border-top-color: @white;
-						}
-					}
-					.caret {
-						border-top-color: @btnInfoBackgroundHighlight;
-					}
-				}
-
-				&.btn-success {
-					border: 1px solid @btnSuccessBackgroundHighlight;
-					color: @btnSuccessBackgroundHighlight;
-					&:hover, &:focus {
-						color: @white;
-						background-color: @btnSuccessBackgroundHighlight;
-						.caret {
-							border-top-color: @white;
-						}
-					}
-					.caret {
-						border-top-color: @btnSuccessBackgroundHighlight;
-					}
-				}
-
-				&.btn-primary {
-					color: @color_one;
-					&:hover, &:focus {
-						color: @white;
-						background-color: @color_one;
-						&.dropdown-toggle {
-							background-color: @color_one;
+					&.btn-inverse {
+						border: 1px solid @btnInverseBackgroundHighlight;
+						color: @btnInverseBackgroundHighlight;
+						&:hover, &:focus {
 							color: @white;
+							background-color: @btnInverseBackgroundHighlight;
 							.caret {
 								border-top-color: @white;
-								border-bottom-color: @white;
+							}
+						}
+						.caret {
+							border-top-color: @btnInverseBackgroundHighlight;
+						}
+					}
+
+					&.btn-info {
+						border: 1px solid @btnInfoBackgroundHighlight;
+						color: @btnInfoBackgroundHighlight;
+						&:hover, &:focus {
+							color: @white;
+							background-color: @btnInfoBackgroundHighlight;
+							.caret {
+								border-top-color: @white;
+							}
+						}
+						.caret {
+							border-top-color: @btnInfoBackgroundHighlight;
+						}
+					}
+
+					&.btn-success {
+						border: 1px solid @btnSuccessBackgroundHighlight;
+						color: @btnSuccessBackgroundHighlight;
+						&:hover, &:focus {
+							color: @white;
+							background-color: @btnSuccessBackgroundHighlight;
+							.caret {
+								border-top-color: @white;
+							}
+						}
+						.caret {
+							border-top-color: @btnSuccessBackgroundHighlight;
+						}
+					}
+
+					&.btn-primary {
+						color: @color_one;
+						&:hover, &:focus {
+							color: @white;
+							background-color: @color_one;
+							&.dropdown-toggle {
+								background-color: @color_one;
+								color: @white;
+								.caret {
+									border-top-color: @white;
+									border-bottom-color: @white;
+								}
 							}
 						}
 					}
-				}
 
-				&.disabled {
-					color: @white;
-					background-color: @color_two;
-					&:hover, &:focus {
+					&.disabled {
 						color: @white;
 						background-color: @color_two;
-					}
-				}
-
-				&.btn-link {
-					border: none;
-					&:hover, &:focus {
-						color: @color_three;
-					}
-				}
-
-				&.btn-warning {
-					border: 1px solid @btnWarningBackgroundHighlight;
-					color: @btnWarningBackgroundHighlight;
-					&:hover, &:focus {
-						color: @white;
-						background-color: @btnWarningBackgroundHighlight;
-						.caret {
-							border-top-color: @white;
-						}
-					}
-					.caret {
-						border-top-color: @btnWarningBackgroundHighlight;
 						&:hover, &:focus {
 							color: @white;
+							background-color: @color_two;
 						}
 					}
-				}
 
-				&.btn-danger {
-					border: 1px solid @btnDangerBackgroundHighlight;
-					color: @btnDangerBackgroundHighlight;
-					&:hover, &:focus {
-						color: @white;
-						background-color: @btnDangerBackgroundHighlight;
-						.caret {
-							border-top-color: @white;
+					&.btn-link {
+						border: none;
+						&:hover, &:focus {
+							color: @color_three;
 						}
 					}
-					.caret {
-						border-top-color: @btnDangerBackgroundHighlight;
-					}
-					&.dropdown-toggle {
+
+					&.btn-warning {
+						border: 1px solid @btnWarningBackgroundHighlight;
+						color: @btnWarningBackgroundHighlight;
 						&:hover, &:focus {
+							color: @white;
+							background-color: @btnWarningBackgroundHighlight;
+							.caret {
+								border-top-color: @white;
+							}
+						}
+						.caret {
+							border-top-color: @btnWarningBackgroundHighlight;
+							&:hover, &:focus {
+								color: @white;
+							}
+						}
+					}
+
+					&.btn-danger {
+						border: 1px solid @btnDangerBackgroundHighlight;
+						color: @btnDangerBackgroundHighlight;
+						&:hover, &:focus {
+							color: @white;
 							background-color: @btnDangerBackgroundHighlight;
+							.caret {
+								border-top-color: @white;
+							}
+						}
+						.caret {
+							border-top-color: @btnDangerBackgroundHighlight;
+						}
+						&.dropdown-toggle {
+							&:hover, &:focus {
+								background-color: @btnDangerBackgroundHighlight;
+							}
 						}
 					}
-				}
 
-				&.btn-link {
-					&:hover, &:focus {
-						background-color: transparent;
-						text-decoration: none;
+					&.btn-link {
+						&:hover, &:focus {
+							background-color: transparent;
+							text-decoration: none;
+						}
 					}
-				}
 
-				&.disabled {
-					border-color: @color_two;
-					&:hover, &:focus {
-						background-color: @color_two;
+					&.disabled {
+						border-color: @color_two;
+						&:hover, &:focus {
+							background-color: @color_two;
+						}
 					}
 				}
 			}
@@ -1829,9 +1832,9 @@ dl {
 				padding-top: 10px;
 				&:hover, &:focus {
 					color: @linkColor;
-                    [class^="icon-"], [class*=" icon-"] {
-                        color: @linkColor;
-                    }
+					[class^="icon-"], [class*=" icon-"] {
+						color: @linkColor;
+					}
 				}
 			}
 			&.active {
@@ -1840,12 +1843,12 @@ dl {
 					color: @linkColor;
 					padding-left: 0;
 					padding-right: 0;
-                    [class^="icon-"], [class*=" icon-"] {
-                        color: @linkColor;
-                    }
-                    &:hover , &:focus {
+					[class^="icon-"], [class*=" icon-"] {
+						color: @linkColor;
+					}
+					&:hover , &:focus {
 						background-color: transparent;
-                    }
+					}
 				}
 			}
 		}
@@ -2085,7 +2088,7 @@ dl {
 	overflow: visible;
 	.relative;
 
- 	> .page-header {
+	> .page-header {
 		h1 {
 			text-align: center;
 			font-family: @sansFontFamily;
@@ -2172,7 +2175,7 @@ legend {
 			}
 			&:only-child {
 				.item-separator {
-				padding: 0px 0px 0px 0px;
+					padding: 0px 0px 0px 0px;
 				}
 			}
 			h2 {
