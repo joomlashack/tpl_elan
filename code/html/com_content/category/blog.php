@@ -29,12 +29,8 @@ $this->wrightLeadingItemElementsStructure = Array(
     'image',
     'icons',
     'title',
-    'content',
-    'div.wrapp-article-info',
-      'div.article-info-inner',
-         'article-info',
-      '/div',
-    '/div'
+    'article-info',
+    'content'
   	);
 
 $this->wrightIntroItemElementsStructure = Array(
