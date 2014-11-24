@@ -1166,6 +1166,39 @@ blockquote {
 }
 
 
+.slideTitleIn {
+	font-size: 30px;
+	padding: 15px;
+	vertical-align: middle;
+	h3 {
+		font-size: @baseFontSize + 16;
+		font-weight: 100;
+		letter-spacing: 0;
+		text-align: center;
+		text-transform: uppercase;
+		&:after {
+			content: '';
+			display: block;
+			height: 2px;
+			width: 125px;
+			background: @white;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.slideTitleContent {
+	p {
+		font-family: @altFontFamily;
+		font-size: @baseFontSize + 16;
+		font-weight: bold;
+		line-height: @baseLineHeight + 8;
+		text-align: center;
+	}
+}
+
 #sliderContainer {
 	div.slidermanDescriptionCont {
 		div.slidermanDescriptionText {
@@ -1524,8 +1557,6 @@ blockquote {
 				font-weight: lighter;
 				color: @color_one;
 				font-size: @baseFontSize + 2;
-				position: relative;
-				left: 7px;
 			}
 		}
 	}
