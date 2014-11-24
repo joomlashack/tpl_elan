@@ -1169,10 +1169,13 @@ blockquote {
 #sliderContainer {
 	div.slidermanDescriptionCont {
 		div.slidermanDescriptionText {
+			display: table;
 			color: @white;
 			div.slideTitle {
 				font-size: 30px;
 				padding: 15px;
+				display: table-cell;
+				vertical-align: middle;
 				h3 {
 					font-size: @baseFontSize + 16;
 					font-weight: 100;
@@ -1521,6 +1524,8 @@ blockquote {
 				font-weight: lighter;
 				color: @color_one;
 				font-size: @baseFontSize + 2;
+				position: relative;
+				left: 7px;
 			}
 		}
 	}
