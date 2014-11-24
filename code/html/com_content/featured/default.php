@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Wright
+ * @package     Elan
  * @subpackage  Overrider
  *
  * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.  All rights reserved.

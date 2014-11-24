@@ -237,10 +237,9 @@ defined('_JEXEC') or die('Restricted access');
             </footer>
         </div>
         <?php
-			if ($paramOption == 'com_content' && $paramView == 'article')
-				:
+			if ($paramOption == 'com_content' && $paramLayout == 'blog') :
 		?>
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_elan/js/elansinglearticle.js'></script>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_elan/js/elanarticleinfo.js'></script>
         <?php
 			endif;
 		?>

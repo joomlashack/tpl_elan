@@ -2100,7 +2100,7 @@ dl {
 	[class^="pull"], [class^="img-fulltext"] {
 		border-bottom: 2px solid @color_one;
 	}
-	
+
 	.img-fulltext-none {
 		border-bottom: 2px solid @color_one;
 		img {
@@ -2117,7 +2117,7 @@ dl {
 		}
 	}
 	.full-title + .article-info {
-		margin-bottom: 30px;	
+		margin-bottom: 30px;
 	}
 	> h2 {
 		margin-top: 30px;
@@ -2147,6 +2147,13 @@ legend {
 	}
 
 	.items-leading {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		padding: 0px;
+		border-top: 1px solid @grayLighter;
+		border-bottom: 1px solid @grayLighter;
+		float: left;
+
 		.item-image {
 			a {
 				img {
@@ -2154,13 +2161,14 @@ legend {
 				}
 			}
 		}
-		margin-top: 30px;
-		margin-bottom: 30px;
-		padding: 0px;
-		border-top: 1px solid @grayLighter;
-		border-bottom: 1px solid @grayLighter;
-		float: left;
+
+		.img-intro-left,
+		.img-intro-right {
+			max-width: 50%;
+		}
+
 		[class^="leading-"] {
+			position: relative;
 			padding-bottom: 30px;
 
 			[class^="img-intro"] {
@@ -2368,6 +2376,13 @@ legend {
 			}
 		}
 	}
+}
+
+.article-info-inner {
+	bottom: 10px;
+	position: absolute;
+	right: 0;
+	width: 47.6%;
 }
 
 .wrapper-pagination {
