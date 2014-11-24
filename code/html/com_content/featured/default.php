@@ -22,6 +22,16 @@ $this->wrightElementsStructure = Array(
     "legendbottom"
 	);
 
+$this->wrightLeadingItemElementsStructure = Array(
+	"image",
+    "title",
+    "icons",
+    "legendtop",
+    "article-info",
+    "content",
+    "legendbottom"
+	);
+
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
 include(Overrider::getOverride('com_content.featured'));
 ?>
