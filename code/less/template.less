@@ -644,6 +644,22 @@ a {
 			}
 		}
 	}
+	&.nav-tabs {
+		li {
+			&.dropdown {
+				&.open {
+					a {
+						&:hover, &:focus {
+							.caret {
+								border-top-color: @color_three;
+								border-bottom-color: @color_three;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 #sidebar1, #sidebar2 {
 	.module{
