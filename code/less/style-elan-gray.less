@@ -1,0 +1,307 @@
+
+#main-content {
+	border-bottom-color: #8B99A7;
+}
+
+#top-header {
+	.navbar {
+		.navbar-inner {
+			.nav {
+				border-top: 1px solid @tableBorder;
+			}
+		}
+	}
+}
+
+.breadcrumb {
+	border-bottom-color: @tableBorder;
+	> li {
+		border-right-color: @tableBorder;
+		span {
+			color: #ddd;
+		}
+	}
+}
+
+.pagination ul>li>a, .pagination ul>li>span{
+	background-color: @bodyBackground;
+}
+
+.pagination ul>.disabled>span, .pagination ul>.disabled>a,
+.pagination ul>.disabled>a:hover, .pagination ul>.disabled>a:focus{
+	color: @bodyBackground;
+}
+
+.blog , .blog-featured {
+	.items-row,
+	.items-leading {
+		border-bottom-color: @tableBorder;
+		border-top-color: @tableBorder;
+	}
+	.items-leading {
+		border-bottom-color: @tableBorder;
+		border-top-color: @tableBorder;
+	}
+	.items-more {
+		.nav-tabs.nav-stacked > li {
+			border-bottom-color: @tableBorder;
+		}
+	}
+}
+
+.nav.nav-tabs {
+	border-color: @tableBorder;
+}
+
+p.img_caption {
+	background-color: @bodyBackground;
+}
+.img-intro-left,
+.img-intro-right,
+.img-intro-none {
+	a {
+		color: @color_three;
+		&:hover, &:focus {
+			color: @white;
+		}
+	}
+}
+.list-striped, .row-striped {
+	border-top-color: darken(@bodyBackground, 10%);
+}
+.list-striped li:nth-child(odd), .list-striped dd:nth-child(odd),
+.row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd) {
+	background-color: @bodyBackground;
+
+	a {
+		color: @textColor;
+	}
+}
+.list-striped li:hover, .list-striped dd:hover, .row-striped .row:hover,
+.row-striped .row-fluid:hover {
+	background-color: darken(@bodyBackground, 5%);
+
+	a {
+		color: @textColor;
+	}
+}
+.list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+	border-bottom-color: darken(@bodyBackground, 10%);
+}
+
+.dropdown-menu {
+	.divider {
+		background-color: @color_three;
+	}
+	li a {
+		border-bottom-color: @wrapperBackground;
+	}
+}
+.form-actions {
+	border-top-color: transparent;
+}
+
+legend {
+	border-bottom-color: @tableBorder;
+}
+
+.panel {
+	border-left-color: @tableBorder;
+	border-right-color: @tableBorder;
+	border-top-color: @tableBorder;
+
+	&:last-child {
+		border-bottom-color: @tableBorder;
+	}
+}
+
+div.cat-children li, div.categories-list li {
+	border-bottom-color: @tableBorder;
+}
+
+div {
+	.bs-docs-example {
+		border-color: @tableBorder;
+		&:after {
+			background-color: @tableBorder;
+			border-color: @tableBorder;
+			color: @textColor;
+		}
+	}
+	code {
+		background-color: @tableBorder;
+		border-color: @tableBorder;
+		color: @white;
+	}
+}
+
+.module, .moduletable {
+	h3 {
+		color: #ddd;
+	}
+}
+
+blockquote {
+	background-image: url(../images/blockquote-up-gray.png);
+
+	p {
+		&:after {
+			background-image: url(../images/blockquote-down-gray.png);
+		}
+	}
+	small {
+		color: @grayLight;
+	}
+}
+
+.text-info {
+	color: lighten(@blue, 13%);
+}
+.text-error {
+	color: #D14;
+}
+.text-success {
+	color: lighten(@green, 16%);
+}
+
+.control-group.info .control-label,
+.control-group.info .help-block,
+.control-group.info .help-inline {
+	color: lighten(@blue, 13%);
+}
+.control-group.error .control-label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
+	color: #D14;
+}
+.control-group.success .control-label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
+	color: lighten(@green, 16%);
+}
+
+
+.table tbody tr.success>td,
+.table tbody tr.info>td,
+.table tbody tr.error>td,
+.table tbody tr.warning>td {
+	color: @color_three;
+}
+
+hr {
+	border-bottom: 0;
+}
+
+.input-append .add-on, .input-prepend .add-on {
+	background-color: @color_three;
+	border-color: @color_three;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input{
+	border-color: @color_one;
+	color: #546170;
+}
+
+.uneditable-input, .uneditable-textarea {
+	color: #999;
+}
+
+.img-polaroid {
+	background-color: @bodyBackground;
+}
+
+.label, .badge {
+	color: #546170;
+}
+.label-info, .badge-info {
+	color: @textColor;
+}
+.label-important, .badge-important {
+	color: @textColor;
+}
+.label-warning, .badge-warning {
+	color: @textColor;
+}
+.label-success, .badge-success {
+	color: @textColor;
+}
+.label-inverse, .badge-inverse {
+	color: @textColor;
+}
+.navbar .divider-vertical {
+	border-right: 0;
+}
+.nav-header {
+	text-shadow: none;
+}
+
+.thumbnail {
+	border-color: @tableBorder;
+}
+#sidebar1, #sidebar2 {
+	.module{
+		.nav {
+			> li {
+				> a {
+					&:hover, &:focus {
+						background-color: @tableBorder;
+					}
+				}
+			}
+		}
+	}
+}
+
+.module_ms6 , .moduletable_ms6 , .moduletext_ms6 {
+	h3 {
+		color:#DDD;
+	}
+}	
+
+.item-page {
+ 	> .page-header {
+		h1 {
+			color:#DDD;
+		}
+	}
+}
+
+dl {
+	&.article-info {
+		&.muted {
+			color: #DDD;
+		}
+	}
+}
+
+.nav-pills >li>a:hover, .nav-pills >li>a:focus{
+	background-color: @tableBorder;
+}
+
+#below-content h3 {
+	color: #ddd;
+}
+#above-content h3 {
+	color: #ddd;
+}
+.shackSliderslider {
+	border-bottom-color: @tableBorder;
+}
+#grid-top [class^="module_ms"] {
+	border-bottom-color: @tableBorder;
+}
