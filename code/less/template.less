@@ -2160,7 +2160,7 @@ dl {
 
 	img {
 		[class^="pull"] {
-			border-bottom: 2px solid @color_one;	
+			border-bottom: 2px solid @color_one;
 		}
 	}
 
@@ -3066,5 +3066,133 @@ div .bs-docs-example {
 .reset {
 	.form-actions {
 		padding-left: 20px;
+	}
+}
+
+// ----------------------------------------------------------------------------------
+// Shackslides 3
+
+#featured , #above-content{
+    div.jss-slider .jss-navigation {
+        .jss-navigation-buttons {
+			left: auto;
+			right: 0;
+			top: auto;
+			width: auto;
+
+            [class*='owl-'] {
+            	.rotate(0deg);
+            	background-color: @color_one;
+                border: 0;
+                height: 20px;
+                text-indent: 0;
+                width: 20px;
+            }
+
+            .owl-prev,
+            .owl-next {
+				background-color: @color_one;
+				height: 40px;
+				width: 40px;
+
+				&:hover, &:focus {
+					background-color: @color_three;
+				}
+
+				&:after {
+					color: @white;
+					font-family: FontAwesome;
+					font-size: 38px;
+					font-weight: lighter;
+					line-height: 38px;
+				}
+            }
+
+            .owl-prev {
+            	left: 0;
+
+				&:after {
+					content: '\f104';
+				}
+            }
+
+            .owl-next {
+            	margin-left: 1px;
+            	right: 0;
+
+				&:after {
+					content: '\f105';
+				}
+            }
+        }
+
+        .jss-navigation-dots {
+            .owl-dot {
+                &.active {
+                    > div {
+                        &:after {
+                            background-color: @color_one;
+                        }
+                    }
+                }
+            }
+        }
+    }
+	div.jss-slider .owl-carousel .jss-image-container .jss-title-description {
+		.jss-title {
+			height: auto;
+
+			h1, h2, h3, h4, h5, h6 {
+				color: @altFontFamily;
+			    font-weight: 100;
+			    letter-spacing: 0px;
+			    text-align: center;
+			    text-transform: uppercase;
+
+			    &:after {
+					background-color: @white;
+					display: block;
+					height: 2px;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 20px;
+					width: 125px;
+			    	content: "";
+			    }
+			}
+
+			h3 {
+				font-size: @baseFontSize + 12;
+			}
+
+		}
+
+		.jss-description {
+			display: block;
+			font-size: 30px;
+			font-weight: bold;
+			line-height: 30px;
+			text-align: center;
+
+			> * {
+				align-self: baseline;
+			}
+
+			.btn {
+				border-color: @white;
+				color: @white;
+
+				&:hover, &:focus {
+					border-color: @color_one;
+				}
+			}
+		}
+	}
+
+	div.jss-slider .owl-carousel .jss-image-container.jss-descpos-top .jss-title-description {
+		bottom: 0;
+		height: 80%;
+		margin: auto 0;
+		top: 0;
 	}
 }
