@@ -1757,16 +1757,54 @@ dl {
 		.custom {
 		}
 	}
+
+	a {
+		color: @color_four;
+
+		[class^="icon-"], [class*=" icon-"] {
+			color: @color_four;
+		}
+
+		&:hover, &:focus {
+			color: lighten(@color_four, 7%);
+
+			[class^="icon-"], [class*=" icon-"] {
+				color: lighten(@color_four, 7%);
+			}
+		}
+	}
+
 	.page-header {
 		a {
 			color: @white;
 		}
 	}
+
 	.readmore {
 		color: @white;
 		&:hover, &:focus {
 			color: @color_three;
 		}
+	}
+
+	.list-striped, .row-striped {
+		border-top-color: @color_four;
+	}
+
+	.list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1), .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+		background-color: @color_two;
+
+		a {
+			color: @color_four;
+		}
+	}
+
+	.list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+		border-bottom-color: @color_four;
+	}
+
+	.list-striped li:hover, .list-striped dd:hover, .row-striped .row:hover, .row-striped .row-fluid:hover {
+		background-color: darken(@color_two, 5%);
 	}
 }
 
