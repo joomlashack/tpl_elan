@@ -1,0 +1,3 @@
+[submodule "wright"]
+	path = wright
+	url = ../../joomlashack/wright.git
