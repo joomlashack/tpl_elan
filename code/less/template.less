@@ -813,15 +813,6 @@ a {
 						font-size: @baseFontSize - 2;
 						margin-left: 10px;
 					}
-
-					&:hover , &:focus {
-						&:after {
-							content: '\f106';
-							font-family: FontAwesome;
-							font-size: @baseFontSize - 2;
-							margin-left: 10px;
-						}
-					}
 				}
 				&.active {
 					&:focus, &:hover {
@@ -832,6 +823,7 @@ a {
 						}
 					}
 				}
+
 				&:focus, &:hover {
 					> a {
 						&:after {
@@ -970,42 +962,9 @@ a {
 			}
 			&.dropdown {
 				.dropdown-menu {
-					background-color: @dropdownInverseBackground;
 					li {
 						a {
-							color: @dropdownInverseLinkColor;
 							border-bottom-color: @dropdownInverseLinkBorderColor;
-							.caret {
-								border-top-color: @dropdownInverseLinkColor;
-							}
-							[class^="icon-"],
-							[class*=" icon-"] {
-								color: @dropdownInverseLinkColor;
-							}
-							&:hover,
-							&:focus {
-								background-color: @dropdownInverseLinkBackgroundHover;
-								color: @dropdownInverseLinkColorHover;
-								.caret {
-									border-top-color: @dropdownInverseLinkColorHover;
-								}
-								[class^="icon-"],
-								[class*=" icon-"] {
-									color: @dropdownInverseLinkColorHover;
-								}
-							}
-						}
-						&.active {
-							> a {
-								color: @dropdownInverseLinkColorActive;
-								.caret {
-									border-top-color: @dropdownInverseLinkColorActive;
-								}
-								[class^="icon-"],
-								[class*=" icon-"] {
-									color: @dropdownInverseLinkColorActive;
-								}
-							}
 						}
 					}
 				}
@@ -1071,10 +1030,10 @@ a {
 					display: none;
 				}
 				&:after {
+					border: 0;
 					content: '\f105';
 					font-family: FontAwesome;
-					position: absolute;
-					right: 12px;
+					margin-top: 0;
 				}
 			}
 		}
