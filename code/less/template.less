@@ -944,19 +944,18 @@ a {
 				padding-left: 0;
 				padding-right: 0;
 				&:before {
+					background-color: @color_one;
 					bottom: 0;
 					content: '';
 					height: 0;
-					left: 0;
 					position: absolute;
 					width: 100%;
 					.transition(all 0.3s);
 				}
 				&:hover,
 				&:focus {
-					position: relative;
 					&:before {
-						border-bottom: 3px solid @color_one;
+						height: 3px;
 					}
 				}
 			}
@@ -971,16 +970,8 @@ a {
 			}
 			&.active {
 				> a {
-					position: relative;
-
 					&:before {
-						border-bottom: 3px solid @color_one;
-						bottom: 0;
-						content: '';
-						height: 0;
-						left: 0;
-						position: absolute;
-						width: 100%;
+						height: 3px;
 					}
 				}
 			}
