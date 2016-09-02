@@ -71,7 +71,7 @@ defined('_JEXEC') or die('Restricted access');
 			?>
             <!-- Featured -->
             <div id="featured">
-                <w:module type="none" name="featured" chrome="xhtml" />
+                <w:module type="none" name="featured" />
             </div>
             <!-- Featured end -->
 			<?php
@@ -134,7 +134,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div class="row-fluid">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
-                        <w:module name="sidebar1" chrome="xhtml" />
+                        <w:module name="sidebar1" />
                     </aside>
                     <!-- sidebar1 end -->
                     <!-- main -->
@@ -145,7 +145,7 @@ defined('_JEXEC') or die('Restricted access');
 						?>
                         <!-- above-content -->
                         <div id="above-content">
-                            <w:module type="none" name="above-content" chrome="xhtml" />
+                            <w:module type="none" name="above-content" />
                         </div>
                         <!-- above-content end -->
 						<?php
@@ -160,7 +160,7 @@ defined('_JEXEC') or die('Restricted access');
 						?>
                         <!-- below-content -->
                         <div id="below-content">
-                            <w:module type="none" name="below-content" chrome="xhtml" />
+                            <w:module type="none" name="below-content" />
                         </div>
                         <!-- below-content end -->
 						<?php
@@ -170,7 +170,7 @@ defined('_JEXEC') or die('Restricted access');
                     <!-- main end -->
                     <!-- sidebar2 -->
                     <aside id="sidebar2">
-                        <w:module name="sidebar2" chrome="xhtml" />
+                        <w:module name="sidebar2" />
                     </aside>
                     <!-- sidebar2 end -->
                 </div>
@@ -202,6 +202,7 @@ defined('_JEXEC') or die('Restricted access');
 			?>
             <!-- footer -->
         </div>
+        <w:module type="none" name="debug" chrome="none" />
         <div class="wrapper-footer">
 			<footer id="footer" <?php
 				if ($this->params->get('stickyFooter', 1))
@@ -225,7 +226,7 @@ defined('_JEXEC') or die('Restricted access');
 							:
 					?>
                     <div class="<?php echo $wrightContainerClass ?>">
-                        <w:module type="<?php echo $wrightGridMode; ?>" name="footer" chrome="xhtml" />
+                        <w:module type="<?php echo $wrightGridMode; ?>" name="footer" />
                     </div>
 					<?php
 						endif;
