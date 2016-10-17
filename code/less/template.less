@@ -1466,67 +1466,15 @@ blockquote {
 	}
 }
 
-.shackSliderslider {
-	border-bottom: 1px solid @grayLighter;
-	padding-bottom: 30px;
-	#sliderNav {
-		ul {
-			li {
-				&.active {
-					a {
-						background-color: @color_three;
-					}
-				}
-				a {
-					border-radius: 0px;
-					-webkit-border-radius: 0px;
-					background-color: @color_one;
-					color: @white;
-					&:hover, &:focus {
-						background-color: @color_three;
-					}
-				}
-			}
-		}
-		a.sliderPrev {
-			padding-right: 5px;
-			color: transparent;
-			background-color: transparent;
-			background-image: none;
-			&:hover, &:focus {
-				background-color: transparent;
-				&:after {
-					color: @color_three;
-				}
-			}
-			&:after {
-				content: '\f104';
-				font-family: FontAwesome;
-				font-weight: lighter;
-				color: @color_one;
-				font-size: @baseFontSize + 2;
-			}
-		}
-		a.sliderNext {
-			padding-left: 0px;
-			background-color: transparent;
-			background-image: none;
-			margin: 0;
-			padding: 0;
-			&:hover, &:focus {
-				background-color: transparent;
-				&:after {
-					color: @color_three;
-				}
-			}
-			&:after {
-				content: '\f105';
-				font-family: FontAwesome;
-				font-weight: lighter;
-				color: @color_one;
-				font-size: @baseFontSize + 2;
-			}
-		}
+#featured #slider.jss-slider {
+
+	.jss-navigation {
+		bottom: 41px;
+		top: auto;
+	}
+
+	.owl-carousel .jss-image-container.jss-descpos-bottom .jss-image .jss-title-description {
+		top: 0;
 	}
 }
 
