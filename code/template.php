@@ -231,7 +231,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php
 						endif;
 					?>
-                    <div class="<?php echo $wrightContainerClass ?>">
+                    <div class="<?php echo $wrightContainerClass ?> footer-credits">
                         <w:footer />
                     </div>
                 </div>
