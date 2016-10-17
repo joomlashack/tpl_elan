@@ -1,3 +1,11 @@
+@import "/../wright/build/libraries/bootstrap/less/utilities";
+
+a {
+	transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-webkit-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+}
 
 .hero-unit {
 	border-radius: 0px;
@@ -205,6 +213,7 @@ input {
 
 #featured {
 	margin-bottom: 0px;
+
 	.container {
 		padding-left: -30px;
 		padding-right: -30px;
@@ -878,7 +887,7 @@ a {
 	}
 	.absolute {
 		.btn-buy {
-			padding-top: 30px;
+			padding: 15px;
 
 			&:hover, &:focus {
 				background-color: @color_one;
@@ -934,26 +943,19 @@ a {
 .navbar-inverse {
 	.nav {
 		> li {
-			margin-left: 22px;
 
 			&:first-child {
 				margin-left: 0;
 			}
 
 			> a {
-				padding-left: 0;
-				padding-right: 0;
-				&:before {
-					background-color: @color_one;
-					bottom: 0;
-					content: '';
-					height: 0;
-					position: absolute;
-					width: 100%;
-					.transition(all 0.3s);
-				}
+				padding-left: 10px;
+				padding-right: 10px;
+
 				&:hover,
 				&:focus {
+					.box-shadow(0 -3px 0 @color_one inset);
+
 					&:before {
 						height: 3px;
 					}
@@ -970,6 +972,13 @@ a {
 			}
 			&.active {
 				> a {
+					.box-shadow(0 -3px 0 @color_one inset);
+
+					&:hover,
+					&:focus {
+						.box-shadow(0 -3px 0 @color_one inset);
+					}
+
 					&:before {
 						height: 3px;
 					}
@@ -1055,12 +1064,19 @@ a {
 }
 
 blockquote {
-	background-image: url(../images/blockquote-up.png);
-	background-position: left top;
-	background-repeat: no-repeat;
 	padding: 0px;
 	border: 0;
 	padding-left: 20px;
+	background-image: none !important;
+
+	&:before {
+		content: "\f10d";
+		float: left;
+		font-family: FontAwesome;
+		margin-left: -17px;
+		color: @color_one;
+	}
+
 	&.pull-right {
 		padding-left: 20px;
 		border: none;
@@ -1072,14 +1088,12 @@ blockquote {
 		width: 100%;
 		line-height: @baseLineHeight;
 		&:after {
-			content: '';
-			background-image: url(../images/blockquote-down.png);
-			background-position: right bottom;
-			background-repeat: no-repeat;
+			content: "\f10e";
+			font-family: FontAwesome;
+			margin-left: 4px;
+			color: @color_one;
 			position: absolute;
 			bottom: 0;
-			width: 15px;
-			height: 15px;
 		}
 		&.small {
 			font-size: @baseFontSize;
@@ -1101,7 +1115,7 @@ blockquote {
 
 .header-inner {
 	.center-logo {
-		padding-top: 60px;
+		padding-top: 30px;
 		padding-bottom: 30px;
 		#logo {
 			text-align: center;
@@ -1140,7 +1154,7 @@ blockquote {
 	vertical-align: middle;
 	h3 {
 		font-size: @baseFontSize + 16;
-		font-weight: 100;
+		font-weight: 300;
 		letter-spacing: 0;
 		text-align: center;
 		text-transform: uppercase;
@@ -1179,7 +1193,7 @@ blockquote {
 				vertical-align: middle;
 				h3 {
 					font-size: @baseFontSize + 16;
-					font-weight: 100;
+					font-weight: 300;
 					letter-spacing: 0;
 					text-align: center;
 					text-transform: uppercase;
@@ -1466,67 +1480,14 @@ blockquote {
 	}
 }
 
-.shackSliderslider {
-	border-bottom: 1px solid @grayLighter;
-	padding-bottom: 30px;
-	#sliderNav {
-		ul {
-			li {
-				&.active {
-					a {
-						background-color: @color_three;
-					}
-				}
-				a {
-					border-radius: 0px;
-					-webkit-border-radius: 0px;
-					background-color: @color_one;
-					color: @white;
-					&:hover, &:focus {
-						background-color: @color_three;
-					}
-				}
-			}
-		}
-		a.sliderPrev {
-			padding-right: 5px;
-			color: transparent;
-			background-color: transparent;
-			background-image: none;
-			&:hover, &:focus {
-				background-color: transparent;
-				&:after {
-					color: @color_three;
-				}
-			}
-			&:after {
-				content: '\f104';
-				font-family: FontAwesome;
-				font-weight: lighter;
-				color: @color_one;
-				font-size: @baseFontSize + 2;
-			}
-		}
-		a.sliderNext {
-			padding-left: 0px;
-			background-color: transparent;
-			background-image: none;
-			margin: 0;
-			padding: 0;
-			&:hover, &:focus {
-				background-color: transparent;
-				&:after {
-					color: @color_three;
-				}
-			}
-			&:after {
-				content: '\f105';
-				font-family: FontAwesome;
-				font-weight: lighter;
-				color: @color_one;
-				font-size: @baseFontSize + 2;
-			}
-		}
+#featured #slider.jss-slider {
+
+	.jss-navigation .jss-navigation-buttons {
+		bottom: 41px;
+	}
+
+	.owl-carousel .jss-image-container.jss-descpos-bottom .jss-image .jss-title-description {
+		top: 0;
 	}
 }
 
@@ -1554,9 +1515,12 @@ blockquote {
 
 // ----------------------------------------------------------------------------------
 #toolbar {
+
 	.navbar-inverse {
+
 		.navbar-inner {
 			background-color: transparent;
+
 			.container , .container-fluid {
 				background-color: @navbarInverseBackground;
 				padding-left: 15px;
@@ -1564,6 +1528,12 @@ blockquote {
 				.box-sizing(border-box);
 			}
 		}
+	}
+
+	.navbar .nav {
+		float: none;
+		margin: 0 auto;
+		display: table;
 	}
 }
 #top-header {
@@ -2069,7 +2039,7 @@ dl {
 	h3 {
 		color: @white;
 		font-size: @baseFontSize + 16;
-		font-weight: 100;
+		font-weight: 300;
 		text-transform: uppercase;
 		margin: 0;
 		margin-bottom: 20px;
@@ -2085,7 +2055,7 @@ dl {
 	}
 	p {
 		color: white;
-		font-weight: 100;
+		font-weight: 300;
 	}
 	.btn {
 		color: @white;
@@ -2191,6 +2161,14 @@ legend {
 	}
 }
 
+.pull-left,
+.pull-right {
+
+	&.item-image {
+		max-width: 50%;
+	}
+}
+
 .blog-featured {
 	.page-header {
 		margin: 0px;
@@ -2198,8 +2176,7 @@ legend {
 		h1 {
 			color: @color_two;
 			font-family: @sansFontFamily;
-			font-size: @baseFontSize;
-			margin-bottom: 30px;
+			margin-bottom: 35px;
 			text-align: center;
 			text-transform: uppercase;
 		}
@@ -2961,17 +2938,38 @@ ul {
 	line-height: 14px;
 }
 
-.jssocialicons {
-	.clearfix();
-	margin-left: auto;
-	margin-right: auto;
-	display: table;
-	margin-bottom: 30px;
-	a {
-		&:hover, &:focus {
-			transform: scale(.75, .75);
+// Easy Social icons
+
+body #easy-social-icons {
+
+	ul.jssocialicons-horizontal{
+		.clearfix();
+		margin-left: 0;
+
+		> li {
+			display: inline-block;
+			float: none;
+
+			a {
+
+				&:hover, &:focus {
+					transform: scale(.75, .75);
+				}
+			}
+
+			&:last-of-type a {
+				margin-right: 0;
+			}
 		}
 	}
+}
+
+#footer #easy-social-icons {
+	margin-bottom: 20px;
+}
+
+#footer {
+	z-index: 1 !important;
 }
 
 .wrapper-footer, #footer {
@@ -3124,7 +3122,7 @@ div .bs-docs-example {
 
 			h1, h2, h3, h4, h5, h6 {
 				color: @altFontFamily;
-			    font-weight: 100;
+			    font-weight: 300;
 			    letter-spacing: 0px;
 			    text-align: center;
 			    text-transform: uppercase;
@@ -3174,5 +3172,26 @@ div .bs-docs-example {
 		height: 80%;
 		margin: auto 0;
 		top: 0;
+	}
+}
+
+.footer-credits {
+	background: @gray;
+	margin-top: 30px;
+}
+
+.dropdown-submenu > .dropdown-menu {
+	.border-radius(0);
+}
+
+dl.article-info {
+
+	&.muted {
+		margin-bottom: 15px;
+	}
+
+	dd {
+		display: inline-block;
+		margin-right: 5px;
 	}
 }
