@@ -54,6 +54,7 @@
         <position>sidebar2</position>
         <position>toolbar</position>
         <position>top</position>
+        <position>top2</position>
     </positions>
 
     <config>
