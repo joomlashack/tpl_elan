@@ -205,9 +205,14 @@ input {
 
 #featured {
 	margin-bottom: 0px;
+
 	.container {
 		padding-left: -30px;
 		padding-right: -30px;
+	}
+
+	#slider {
+		margin-bottom: -30px;
 	}
 }
 
@@ -878,7 +883,7 @@ a {
 	}
 	.absolute {
 		.btn-buy {
-			padding-top: 30px;
+			padding: 15px;
 
 			&:hover, &:focus {
 				background-color: @color_one;
@@ -1101,7 +1106,7 @@ blockquote {
 
 .header-inner {
 	.center-logo {
-		padding-top: 60px;
+		padding-top: 30px;
 		padding-bottom: 30px;
 		#logo {
 			text-align: center;
@@ -2139,6 +2144,14 @@ legend {
 	}
 }
 
+.pull-left,
+.pull-right {
+
+	&.item-image {
+		max-width: 50%;
+	}
+}
+
 .blog-featured {
 	.page-header {
 		margin: 0px;
@@ -2146,8 +2159,7 @@ legend {
 		h1 {
 			color: @color_two;
 			font-family: @sansFontFamily;
-			font-size: @baseFontSize;
-			margin-bottom: 30px;
+			margin-bottom: 40px;
 			text-align: center;
 			text-transform: uppercase;
 		}
@@ -2936,7 +2948,7 @@ body #easy-social-icons {
 }
 
 #footer #easy-social-icons {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 #footer {
@@ -3144,4 +3156,12 @@ div .bs-docs-example {
 		margin: auto 0;
 		top: 0;
 	}
+}
+
+a.joomlashack,
+div.joomlashack {
+	padding: 5px 10px;
+	background: @grayDark;
+	.border-radius(3px);
+	margin: 20px auto 0;
 }
