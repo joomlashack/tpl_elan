@@ -1,5 +1,12 @@
 @import "/../wright/build/libraries/bootstrap/less/utilities";
 
+a {
+	transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-webkit-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+}
+
 .hero-unit {
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
@@ -936,26 +943,19 @@ a {
 .navbar-inverse {
 	.nav {
 		> li {
-			margin-left: 22px;
 
 			&:first-child {
 				margin-left: 0;
 			}
 
 			> a {
-				padding-left: 0;
-				padding-right: 0;
-				&:before {
-					background-color: @color_one;
-					bottom: 0;
-					content: '';
-					height: 0;
-					position: absolute;
-					width: 100%;
-					.transition(all 0.3s);
-				}
+				padding-left: 10px;
+				padding-right: 10px;
+
 				&:hover,
 				&:focus {
+					.box-shadow(0 -3px 0 @color_one inset);
+
 					&:before {
 						height: 3px;
 					}
@@ -972,6 +972,13 @@ a {
 			}
 			&.active {
 				> a {
+					.box-shadow(0 -3px 0 @color_one inset);
+
+					&:hover,
+					&:focus {
+						.box-shadow(0 -3px 0 @color_one inset);
+					}
+
 					&:before {
 						height: 3px;
 					}
@@ -2155,7 +2162,7 @@ legend {
 		h1 {
 			color: @color_two;
 			font-family: @sansFontFamily;
-			margin-bottom: 40px;
+			margin-bottom: 35px;
 			text-align: center;
 			text-transform: uppercase;
 		}
@@ -3160,4 +3167,20 @@ div.joomlashack {
 	background: @grayDark;
 	.border-radius(3px);
 	margin: 20px auto 0;
+}
+
+.dropdown-submenu > .dropdown-menu {
+	.border-radius(0);
+}
+
+dl.article-info {
+
+	&.muted {
+		margin-bottom: 15px;
+	}
+
+	dd {
+		display: inline-block;
+		margin-right: 5px;
+	}
 }
