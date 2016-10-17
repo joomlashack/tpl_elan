@@ -1515,9 +1515,12 @@ blockquote {
 
 // ----------------------------------------------------------------------------------
 #toolbar {
+
 	.navbar-inverse {
+
 		.navbar-inner {
 			background-color: transparent;
+
 			.container , .container-fluid {
 				background-color: @navbarInverseBackground;
 				padding-left: 15px;
@@ -1525,6 +1528,12 @@ blockquote {
 				.box-sizing(border-box);
 			}
 		}
+	}
+
+	.navbar .nav {
+		float: none;
+		margin: 0 auto;
+		display: table;
 	}
 }
 #top-header {
