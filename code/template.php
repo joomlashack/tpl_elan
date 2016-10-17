@@ -226,7 +226,7 @@ defined('_JEXEC') or die('Restricted access');
 							:
 					?>
                     <div class="<?php echo $wrightContainerClass ?>">
-                        <w:module type="<?php echo $wrightGridMode; ?>" name="footer" />
+                        <w:module type="row-fluid" name="footer" />
                     </div>
 					<?php
 						endif;

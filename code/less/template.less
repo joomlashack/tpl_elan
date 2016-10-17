@@ -2961,17 +2961,34 @@ ul {
 	line-height: 14px;
 }
 
-.jssocialicons {
-	.clearfix();
-	margin-left: auto;
-	margin-right: auto;
-	display: table;
-	margin-bottom: 30px;
-	a {
-		&:hover, &:focus {
-			transform: scale(.75, .75);
+// Easy Social icons
+
+body #easy-social-icons {
+
+	ul.jssocialicons-horizontal{
+		.clearfix();
+		margin-left: 0;
+
+		> li {
+			display: inline-block;
+			float: none;
+
+			a {
+
+				&:hover, &:focus {
+					transform: scale(.75, .75);
+				}
+			}
+
+			&:last-of-type a {
+				margin-right: 0;
+			}
 		}
 	}
+}
+
+#footer #easy-social-icons {
+	margin-bottom: 30px;
 }
 
 #footer {
