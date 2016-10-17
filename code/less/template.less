@@ -1064,12 +1064,19 @@ a {
 }
 
 blockquote {
-	background-image: url(../images/blockquote-up.png);
-	background-position: left top;
-	background-repeat: no-repeat;
 	padding: 0px;
 	border: 0;
 	padding-left: 20px;
+	background-image: none !important;
+
+	&:before {
+		content: "\f10d";
+		float: left;
+		font-family: FontAwesome;
+		margin-left: -17px;
+		color: @color_one;
+	}
+
 	&.pull-right {
 		padding-left: 20px;
 		border: none;
@@ -1081,14 +1088,12 @@ blockquote {
 		width: 100%;
 		line-height: @baseLineHeight;
 		&:after {
-			content: '';
-			background-image: url(../images/blockquote-down.png);
-			background-position: right bottom;
-			background-repeat: no-repeat;
+			content: "\f10e";
+			font-family: FontAwesome;
+			margin-left: 4px;
+			color: @color_one;
 			position: absolute;
 			bottom: 0;
-			width: 15px;
-			height: 15px;
 		}
 		&.small {
 			font-size: @baseFontSize;
