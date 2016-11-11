@@ -229,11 +229,15 @@ defined('_JEXEC') or die('Restricted access');
                         <w:module type="row-fluid" name="footer" />
                     </div>
 					<?php
-						endif;
-					?>
+                        endif;
+                        if ($this->params->get('rebrand', '0') !== '1') :
+                    ?>
                     <div class="<?php echo $wrightContainerClass ?> footer-credits">
                         <w:footer />
                     </div>
+                    <?php
+						endif;
+                    ?>
                 </div>
             </footer>
         </div>
