@@ -33,7 +33,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php
             endif;
         ?>
-        <div class="main-wrapper <?php echo $wrightContainerClass ?> bg-white">
+        <div class="main-wrapper <?php echo $wrightContainerClass ?> bg-white full-height">
             <!-- header -->
             <header id="header">
                 <div class="header-inner">
@@ -193,45 +193,43 @@ defined('_JEXEC') or die('Restricted access');
 				endif;
 			?>
             <!-- footer -->
-        </div>
-        <w:module type="none" name="debug" chrome="none" />
-        <div class="wrapper-footer">
-			<footer id="footer" <?php
-				if ($this->params->get('stickyFooter', 1))
-					:
-				?> class="sticky"<?php
-				endif;
-				?>>
-                <?php
-					if ($this->countModules('bottom-menu'))
-						:
-				?>
-                <!-- bottom-menu -->
-                <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
-                <!-- bottom-menu end -->
-                <?php
-					endif;
-				?>
-                <div class="footer-content">
-					<?php
-						if ($this->countModules('footer'))
-							:
-					?>
-                    <div class="<?php echo $wrightContainerClass ?> bg-white p-t-1 p-b-1">
-                        <w:module type="row-fluid" name="footer" />
+            <w:module type="none" name="debug" chrome="none" />
+            <div class="wrapper-footer <?php echo $wrightContainerClass ?>">
+    			<footer id="footer" <?php
+    				if ($this->params->get('stickyFooter', 1))
+    					:
+    				?> class="sticky bg-white"<?php
+    				endif;
+    				?>>
+                    <?php
+    					if ($this->countModules('bottom-menu'))
+    						:
+    				?>
+                    <!-- bottom-menu -->
+                    <w:nav rowClass="<?php echo $wrightGridMode; ?>" name="bottom-menu" />
+                    <!-- bottom-menu end -->
+                    <?php
+    					endif;
+    				?>
+                    <div class="footer-content p-t-2 p-b-2">
+    					<?php
+    						if ($this->countModules('footer'))
+    							:
+    					?>
+                        <w:module type="none" name="footer" />
                     </div>
 					<?php
                         endif;
                         if ($this->params->get('rebrand', '0') !== '1') :
                     ?>
-                    <div class="<?php echo $wrightContainerClass ?> footer-credits">
+                    <div class="footer-credits clearfix">
                         <w:footer />
                     </div>
                     <?php
 						endif;
                     ?>
-                </div>
-            </footer>
+                </footer>
+            </div>
         </div>
         <?php
 			if ($paramOption == 'com_content' && $paramLayout == 'blog') :
