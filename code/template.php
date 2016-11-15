@@ -31,16 +31,8 @@ defined('_JEXEC') or die('Restricted access');
             <w:nav containerClass="<?php echo $wrightContainerClass ?> relative" rowClass="<?php echo $wrightGridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             <!-- toolbar end -->
         <?php
-			endif;
-		?>
-        <?php
-			if ($this->params->get('stickyFooter', 1))
-				:
-		?>
-        <div class="<?php echo $wrightContainerClass . ' wrapper-absolute' ?>"></div>
-		<?php
-			endif;
-		?>
+            endif;
+        ?>
         <div class="main-wrapper <?php echo $wrightContainerClass ?>">
             <!-- header -->
             <header id="header">
@@ -54,21 +46,21 @@ defined('_JEXEC') or die('Restricted access');
             </header>
             <!-- header end -->
             <?php
-				if ($this->countModules('menu'))
-					:
-			?>
+                if ($this->countModules('menu'))
+                    :
+            ?>
             <!-- menu -->
             <div id="top-header">
                 <w:nav rowClass="row-fluid" type="menu" name="menu" />
             </div>
             <!-- menu end -->
-			<?php
-				endif;
-			?>
-			<?php
-				if ($this->countModules('featured'))
-					:
-			?>
+            <?php
+                endif;
+            ?>
+            <?php
+                if ($this->countModules('featured'))
+                    :
+            ?>
             <!-- Featured -->
             <div id="featured">
                 <w:module type="none" name="featured" />
