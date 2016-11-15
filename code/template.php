@@ -33,7 +33,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php
             endif;
         ?>
-        <div class="main-wrapper <?php echo $wrightContainerClass ?>">
+        <div class="main-wrapper <?php echo $wrightContainerClass ?> bg-white">
             <!-- header -->
             <header id="header">
                 <div class="header-inner">
@@ -217,7 +217,7 @@ defined('_JEXEC') or die('Restricted access');
 						if ($this->countModules('footer'))
 							:
 					?>
-                    <div class="<?php echo $wrightContainerClass ?>">
+                    <div class="<?php echo $wrightContainerClass ?> bg-white">
                         <w:module type="row-fluid" name="footer" />
                     </div>
 					<?php
