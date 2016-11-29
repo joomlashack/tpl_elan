@@ -73,6 +73,7 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 		{
 			$wrightSingleArticleImage = $imagesArray->image_fulltext;
 			$wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
+			$wrightSingleArticleCaption = $imagesArray->image_fulltext_caption;
 		}
 	}
 }
