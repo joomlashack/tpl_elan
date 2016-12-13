@@ -1,10 +1,20 @@
 @import "/../wright/build/libraries/bootstrap/less/utilities";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('//fonts.googleapis.com/css?family=Roboto+Slab:100,400');
 
 a {
 	transition: all 0.2s linear 0s;
 	-moz-transition: all 0.2s linear 0s;
 	-webkit-transition: all 0.2s linear 0s;
 	-o-transition: all 0.2s linear 0s;
+}
+
+.bg-white {
+	background-color: @white;
+}
+
+.full-height {
+	min-height: 100vh;
 }
 
 .hero-unit {
@@ -153,18 +163,7 @@ input {
 	.relative;
 	padding-left: 20px;
 	padding-right: 20px;
-	z-index: 2;
 	.box-sizing(border-box);
-}
-
-.wrapper-absolute {
-	background-color: @wrapperBackground;
-	height: 100%;
-	z-index: 1;
-	.absolute;
-	.absolute-left;
-	.absolute-right;
-	.center-block();
 }
 
 #header, #menu, #grid-bottom3, #bottom-menu {
@@ -1554,6 +1553,12 @@ blockquote {
 		}
 	}
 }
+
+.wrapper-toolbar {
+	+ .full-height {
+		margin-top: -30px;
+	}
+}
 // ----------------------------------------------------------------------------------
 
 #breadcrumbs {
@@ -2934,9 +2939,6 @@ ul {
 	filter: none;
 	line-height: @baseLineHeight
 }
-.footer1, .footer2 {
-	line-height: 14px;
-}
 
 // Easy Social icons
 
@@ -2968,14 +2970,12 @@ body #easy-social-icons {
 	margin-bottom: 20px;
 }
 
-#footer {
-	z-index: 1 !important;
+#footer.sticky {
+	.absolute-left;
+	width: inherit;
 }
 
 .wrapper-footer, #footer {
-	background-image: none;
-	background-color: transparent;
-	filter: none;
 	.navbar-inner {
 		box-shadow: none;
 	}
@@ -2985,8 +2985,8 @@ body #easy-social-icons {
 	}
 
 	#bottom-menu {
-		margin-bottom: 30px;
 		.navbar {
+			.m-b-0;
 			.nav {
 				background-color: transparent;
 				display: table;
@@ -3177,7 +3177,6 @@ div .bs-docs-example {
 
 .footer-credits {
 	background: @gray;
-	margin-top: 30px;
 }
 
 .dropdown-submenu > .dropdown-menu {

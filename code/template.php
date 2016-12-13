@@ -19,8 +19,6 @@ defined('_JEXEC') or die('Restricted access');
 <html>
     <head>
         <w:head />
-        <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Roboto+Slab:100,400' rel='stylesheet' type='text/css'>
     </head>
     <body class="<?php echo $wrightBodyClass ?>">
         <?php
@@ -31,17 +29,9 @@ defined('_JEXEC') or die('Restricted access');
             <w:nav containerClass="<?php echo $wrightContainerClass ?> relative" rowClass="<?php echo $wrightGridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             <!-- toolbar end -->
         <?php
-			endif;
-		?>
-        <?php
-			if ($this->params->get('stickyFooter', 1))
-				:
-		?>
-        <div class="<?php echo $wrightContainerClass . ' wrapper-absolute' ?>"></div>
-		<?php
-			endif;
-		?>
-        <div class="main-wrapper <?php echo $wrightContainerClass ?>">
+            endif;
+        ?>
+        <div class="main-wrapper <?php echo $wrightContainerClass ?> bg-white full-height">
             <!-- header -->
             <header id="header">
                 <div class="header-inner">
@@ -54,21 +44,21 @@ defined('_JEXEC') or die('Restricted access');
             </header>
             <!-- header end -->
             <?php
-				if ($this->countModules('menu'))
-					:
-			?>
+                if ($this->countModules('menu'))
+                    :
+            ?>
             <!-- menu -->
             <div id="top-header">
                 <w:nav rowClass="row-fluid" type="menu" name="menu" />
             </div>
             <!-- menu end -->
-			<?php
-				endif;
-			?>
-			<?php
-				if ($this->countModules('featured'))
-					:
-			?>
+            <?php
+                endif;
+            ?>
+            <?php
+                if ($this->countModules('featured'))
+                    :
+            ?>
             <!-- Featured -->
             <div id="featured">
                 <w:module type="none" name="featured" />
@@ -123,8 +113,16 @@ defined('_JEXEC') or die('Restricted access');
 							:
 					?>
                     <div class="row-fluid">
-                    <div class="full-image span12">
-                        <img src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
+                    <div class="full-image span12 item-image">
+                        <img
+                        <?php if ($wrightSingleArticleCaption):
+                            echo 'class="caption ' . $this->params->get('wright_bootstrap_images','') . '"'.' title="' .htmlspecialchars($wrightSingleArticleCaption) . '"';  // Wright .v.3: Added image class
+                        /* Wright v.3: Image class when no caption present */
+                        else:
+                            echo 'class="' . $this->params->get('wright_bootstrap_images','') . '"';
+                        /* End Wright v.3: Image class when no caption present */
+                    endif; ?>
+                    src="<?php echo htmlspecialchars($wrightSingleArticleImage); ?>" alt="<?php echo htmlspecialchars($wrightSingleArticleAlt); ?>" />
                     </div>
                     </div>
                     <?php
@@ -193,7 +191,7 @@ defined('_JEXEC') or die('Restricted access');
 					:
 			?>
             <!-- grid-bottom2 -->
-            <div id="grid-bottom2">
+            <div id="grid-bottom2" class="m-b-0">
                 <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" extradivs="module" />
             </div>
             <!-- grid-bottom2 end -->
@@ -201,41 +199,43 @@ defined('_JEXEC') or die('Restricted access');
 				endif;
 			?>
             <!-- footer -->
-        </div>
-        <w:module type="none" name="debug" chrome="none" />
-        <div class="wrapper-footer">
-			<footer id="footer" <?php
-				if ($this->params->get('stickyFooter', 1))
-					:
-				?> class="sticky"<?php
-				endif;
-				?>>
-                <?php
-					if ($this->countModules('bottom-menu'))
-						:
-				?>
-                <!-- bottom-menu -->
-                <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode; ?>" name="bottom-menu" wrapClass="navbar-transparent" />
-                <!-- bottom-menu end -->
-                <?php
-					endif;
-				?>
-                <div class="footer-content">
-					<?php
-						if ($this->countModules('footer'))
-							:
-					?>
-                    <div class="<?php echo $wrightContainerClass ?>">
-                        <w:module type="row-fluid" name="footer" />
+            <w:module type="none" name="debug" chrome="none" />
+            <div class="wrapper-footer <?php echo $wrightContainerClass ?>">
+    			<footer id="footer" <?php
+    				if ($this->params->get('stickyFooter', 1))
+    					:
+    				?> class="sticky bg-white"<?php
+    				endif;
+    				?>>
+                    <?php
+    					if ($this->countModules('bottom-menu'))
+    						:
+    				?>
+                    <!-- bottom-menu -->
+                    <w:nav rowClass="<?php echo $wrightGridMode; ?>" name="bottom-menu" />
+                    <!-- bottom-menu end -->
+                    <?php
+    					endif;
+    				?>
+                    <div class="footer-content p-t-2 p-b-2">
+    					<?php
+    						if ($this->countModules('footer'))
+    							:
+    					?>
+                        <w:module type="none" name="footer" />
                     </div>
 					<?php
-						endif;
-					?>
-                    <div class="<?php echo $wrightContainerClass ?> footer-credits">
+                        endif;
+                        if ($this->params->get('rebrand', '0') !== '1') :
+                    ?>
+                    <div class="footer-credits clearfix">
                         <w:footer />
                     </div>
-                </div>
-            </footer>
+                    <?php
+						endif;
+                    ?>
+                </footer>
+            </div>
         </div>
         <?php
 			if ($paramOption == 'com_content' && $paramLayout == 'blog') :
