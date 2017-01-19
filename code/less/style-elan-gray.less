@@ -3,6 +3,11 @@
 	border-bottom-color: #8B99A7;
 }
 
+.main-wrapper.bg-white,
+#footer.bg-white {
+	background-color: @wrapperBackground;
+}
+
 #top-header {
 	.navbar {
 		.navbar-inner {
@@ -45,6 +50,13 @@
 	.items-more {
 		.nav-tabs.nav-stacked > li {
 			border-bottom-color: @tableBorder;
+		}
+	}
+
+	.page-header {
+
+		h1 {
+			color: @white;
 		}
 	}
 }
@@ -132,12 +144,6 @@ div {
 		background-color: @tableBorder;
 		border-color: @tableBorder;
 		color: @white;
-	}
-}
-
-.module, .moduletable {
-	h3 {
-		color: #ddd;
 	}
 }
 
