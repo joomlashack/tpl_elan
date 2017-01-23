@@ -15,7 +15,18 @@ $app = JFactory::getApplication();
 $params = $this->item->params;
 $images = json_decode($this->item->images);
 
-$this->wrightElementsStructure = Array("image","title","icons","article-info","legendtop","content","legendbottom");
+$this->wrightElementsStructure = Array(
+    "image",
+    "title",
+    "icons",
+    "article-info",
+    "legendtop",
+    "content",
+    "legendbottom",
+    "article-info-below",
+    "article-info-split",
+    "bottom"
+);
 
 if ($params->get('access-view'))
 {
@@ -24,7 +35,17 @@ if ($params->get('access-view'))
 
 	if ($imageExist && $imageFloat == 'none')
 	{
-		$this->wrightElementsStructure = Array("title","icons","article-info","legendtop","content","legendbottom");
+		$this->wrightElementsStructure = Array(
+            "title",
+            "icons",
+            "article-info",
+            "legendtop",
+            "content",
+            "legendbottom",
+            "article-info-below",
+            "article-info-split",
+            "bottom"
+        );
 	}
 }
 
