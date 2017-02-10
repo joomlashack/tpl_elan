@@ -3,7 +3,7 @@
  * @package     Wright
  * @subpackage  Overrider
  *
- * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.  All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2017 Joomlashack. Meritage Assets.  All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -49,5 +49,5 @@ if ($params->get('access-view'))
 	}
 }
 
-require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
+require_once JPATH_THEMES.'/'. $app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php';
 include Overrider::getOverride('com_content.article');

@@ -3,7 +3,7 @@
  * @package     Elan
  * @subpackage  Overrider
  *
- * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.  All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2017 Joomlashack. Meritage Assets.  All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,22 +16,26 @@ $this->wrightElementsStructure = Array(
 	"image",
     "title",
     "icons",
+    "article-info",
     "legendtop",
     "content",
-    "article-info",
-    "legendbottom"
-	);
+    "legendbottom",
+    "article-info-below",
+    "article-info-split"
+);
 
 $this->wrightLeadingItemElementsStructure = Array(
 	"image",
     "title",
     "icons",
-    "legendtop",
     "article-info",
+    "legendtop",
     "content",
-    "legendbottom"
-	);
+    "legendbottom",
+    "article-info-below",
+    "article-info-split"
+);
 
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_content.featured'));
+require_once JPATH_THEMES.'/'. $app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php';
+include Overrider::getOverride('com_content.featured');
 ?>
