@@ -8,7 +8,7 @@
     <authorUrl>https://www.joomlashack.com</authorUrl>
     <copyright>Copyright Joomlashack 2017. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>1.2.5</version>
+    <version>1.2.6</version>
     <description>TPL_JS_ELAN_XML_DESCRIPTION</description>
 
     <languages folder="language">
@@ -58,7 +58,7 @@
     </positions>
 
     <config>
-        <fields name="params" addfieldpath="/templates/js_elan/wright/parameters/joomla_2.5">
+        <fields name="params" addfieldpath="/templates/js_elan/wright/parameters/joomla_3.0">
             <fieldset name="basic">
                 <!-- Start of default Wright params -->
 				<field name="rebrand" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC">
