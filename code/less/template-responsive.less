@@ -349,6 +349,11 @@
 }
 @media (max-width: 767px) {
 
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	#logo img {
 		max-width: 192px;
 		margin: 0 auto;
@@ -428,7 +433,7 @@
 	}
 
 	.main-wrapper {
-		
+
 		&.wrapper-absolute {
 			padding-left: 10px;
 			padding-right: 10px;
@@ -993,6 +998,26 @@
 
 		.jss-title * {
 			margin-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 550px) {
+
+	#featured div.jss-slider .owl-carousel .jss-image-container .jss-title-description .jss-title {
+
+		h1
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+
+			&:after {
+				background-color: transparent;
+				height: 0;
+				margin-top: 0;
+			}
 		}
 	}
 }
