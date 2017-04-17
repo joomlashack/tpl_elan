@@ -232,33 +232,23 @@
 	}
 	#top-header {
 		border-top: 1px solid @color_three;
+
 		.navbar .navbar-inner {
 			background-color: transparent;
+			padding: 0;
+
 			.btn-navbar {
-				background-color: transparent;
-				box-shadow: none;
-				background-image: none;
-				font-family: @altFontFamily;
-				border-radius: 0px;
-				border: 0px;
+				border: none;
 				text-shadow: none;
 				float: none;
-				margin-left: 0px;
-				padding-left: 0px;
-				padding-right: 0px;
-				margin-right: 0px;
-				color: @color_three;
-				
-				&:after {
-					content: '\f107';
-					font-family: FontAwesome;
-					color: @color_three;
-					font-size: @baseFontSize + 2;
-					text-transform: uppercase;
-					font-weight: 100;
-				}
-				span {
-					display: none;
+				padding: 20px 0;
+				margin: 0;
+				text-align: left;
+
+				.icon-bar {
+					.box-shadow(none);
+					background: @color_three;
+					width: 30px;
 				}
 			}
 			.nav {
@@ -438,8 +428,7 @@
 	}
 
 	.main-wrapper {
-		padding-left: 0px;
-		padding-right: 0px;
+		
 		&.wrapper-absolute {
 			padding-left: 10px;
 			padding-right: 10px;
@@ -514,39 +503,6 @@
 	.wrapper-menu {
 		margin-left: 0px;
 		margin-right: 0px;
-	}
-
-	#top-header {
-		border-top: 1px solid @color_three;
-		.wrapper-menu {
-			margin-left: 0px;
-			margin-right: 0px;
-		}
-		.navbar-inner {
-			background-color: transparent;
-			.btn-navbar {
-				background-color: transparent;
-				box-shadow: none;
-				background-image: none;
-				font-family: @altFontFamily;
-				border-radius: 0px;
-				border: 0px;
-				text-shadow: none;
-				float: none;
-				margin-left: 0px;
-				&:after {
-					content: 'Menu \f107';
-					font-family: FontAwesome;
-					color: @color_three;
-					font-size: @baseFontSize + 2;
-					text-transform: uppercase;
-					font-weight: 100;
-				}
-				span {
-					display: none;
-				}
-			}
-		}
 	}
 
 	[class^="img-intro"] {
