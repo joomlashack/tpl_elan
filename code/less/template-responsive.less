@@ -198,8 +198,13 @@
 				}
 			}
 		}
-		.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
-			padding: 0;
+		.navbar-fixed-top,
+		.navbar-fixed-bottom {
+			position: relative;
+
+			.navbar-inner {
+				padding: 0;
+			}
 		}
 	}
 	#bottom-menu {
