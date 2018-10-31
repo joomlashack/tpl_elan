@@ -113,7 +113,7 @@ defined('_JEXEC') or die('Restricted access');
 							:
 					?>
                     <div class="row-fluid">
-                    <div class="full-image span12 item-image">
+                    <div class="full-image span12 item-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
                         <img
                         <?php if ($wrightSingleArticleCaption):
                             echo 'class="caption ' . $this->params->get('wright_bootstrap_images','') . '"'.' title="' .htmlspecialchars($wrightSingleArticleCaption) . '"';  // Wright .v.3: Added image class
@@ -122,7 +122,7 @@ defined('_JEXEC') or die('Restricted access');
                             echo 'class="' . $this->params->get('wright_bootstrap_images','') . '"';
                         /* End Wright v.3: Image class when no caption present */
                     endif; ?>
-                    src="<?php echo htmlspecialchars($wrightSingleArticleImage); ?>" alt="<?php echo htmlspecialchars($wrightSingleArticleAlt); ?>" />
+                    src="<?php echo htmlspecialchars($wrightSingleArticleImage); ?>" alt="<?php echo htmlspecialchars($wrightSingleArticleAlt); ?>" itemprop="url" content="<?php echo JURI::base() . htmlspecialchars($images->image_fulltext); ?>" />
                     </div>
                     </div>
                     <?php
