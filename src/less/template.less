@@ -1545,7 +1545,10 @@ blockquote {
 	.navbar .nav {
 		float: none;
 		margin: 0 auto;
-		display: table;
+
+		@media (min-width: 980px) {
+			display: table;
+		}
 	}
 }
 #top-header {
@@ -1560,10 +1563,13 @@ blockquote {
 
 			.nav {
 				border-top: 1px solid @color_two;
-				display: table;
 				margin-left: auto;
 				margin-right: auto;
 				float: none;
+
+				@media (min-width: 980px) {
+					display: table;
+				}
 			}
 		}
 	}
@@ -3014,10 +3020,13 @@ body #easy-social-icons {
 			.m-b-0;
 			.nav {
 				background-color: transparent;
-				display: table;
 				margin-left: auto;
 				margin-right: auto;
 				float: none;
+
+				@media (min-width: 980px) {
+					display: table;
+				}
 			}
 		}
 	}
