@@ -809,33 +809,36 @@ a {
 				}
 			}
 
-			&.dropdown {
-				> a {
-					.caret {
-						display: none;
+			@media (min-width: 980px) {
+
+				&.dropdown {
+					> a {
+						.caret {
+							display: none;
+						}
+
+						&:after {
+							content: '\f107';
+							font-family: FontAwesome;
+							font-size: @baseFontSize - 2;
+							margin-left: 10px;
+						}
+					}
+					&.active {
+						&:focus, &:hover {
+							> a {
+								&:after {
+									content: '\f106';
+								}
+							}
+						}
 					}
 
-					&:after {
-						content: '\f107';
-						font-family: FontAwesome;
-						font-size: @baseFontSize - 2;
-						margin-left: 10px;
-					}
-				}
-				&.active {
 					&:focus, &:hover {
 						> a {
 							&:after {
 								content: '\f106';
 							}
-						}
-					}
-				}
-
-				&:focus, &:hover {
-					> a {
-						&:after {
-							content: '\f106';
 						}
 					}
 				}
