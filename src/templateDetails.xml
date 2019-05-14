@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<extension version="3.0" type="template" method="upgrade" client="site">
+<extension version="3.9" type="template" method="upgrade" client="site">
     <name>js_elan</name>
-    <creationDate>February 27 2019</creationDate>
+    <creationDate>May 14 2019</creationDate>
     <author>Joomlashack</author>
     <authorEmail>support@joomlashack.com</authorEmail>
     <authorUrl>https://www.joomlashack.com</authorUrl>
     <copyright>Copyright Joomlashack 2019. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>1.4.2</version>
+    <version>1.4.3</version>
     <description>TPL_JS_ELAN_XML_DESCRIPTION</description>
 
     <languages folder="language">
