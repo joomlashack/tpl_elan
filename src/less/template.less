@@ -2669,24 +2669,11 @@ dl {
 			margin-bottom: 30px;
 		}
 		font-size: @baseFontSize - 1;
-		[class ^= "icon-"] , [class *= " icon-"] {
-			margin-right: 0px;
-			text-decoration: none;
-			display: none;
-			&:before {
-				display: none;
-				content: '';
-			}
-		}
 
 		dd {
 			min-height: 0px;
 			line-height: @baseLineHeight;
-			padding: 0px;
-			[class ^= "icon-"] , [class *= " icon-"] {
-				display: none;
-				width: 0px;
-			}
+			padding: 0 5px;
 		}
 
 		dd > div:hover , dd:hover {
