@@ -2985,12 +2985,23 @@ body #easy-social-icons {
   margin-bottom: 20px;
 }
 
-#footer.sticky {
-  .absolute-left;
-  width: inherit;
+#footer {
+  width: 100%;
+
+  &.sticky {
+    .absolute-left;
+  }
 }
 
-.wrapper-footer, #footer {
+.wrapper-footer.container-fluid {
+  margin-right: -20px;
+  margin-left: -20px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.wrapper-footer,
+#footer {
   .navbar-inner {
     box-shadow: none;
   }
