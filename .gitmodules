@@ -1,3 +1,3 @@
 [submodule "wright"]
 	path = wright
-	url = ../../joomlashack/wright.git
+url=git@github.com:joomlashack/tpl_wright
